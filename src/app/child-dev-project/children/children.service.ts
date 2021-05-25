@@ -15,6 +15,7 @@ import moment, { Moment } from "moment";
 import { LoggingService } from "../../core/logging/logging.service";
 import { DatabaseIndexingService } from "../../core/entity/database-indexing/database-indexing.service";
 import { QueryOptions } from "../../core/database/database";
+import { groupBy } from "../../utils/utils";
 
 @Injectable()
 export class ChildrenService {
@@ -53,55 +54,29 @@ export class ChildrenService {
         const childCurrentSchoolInfo = await this.getCurrentSchoolInfoForChild(
           loadedChild.getId()
         );
-        await this.migrateToNewChildSchoolRelationModel(
-          loadedChild,
-          childCurrentSchoolInfo
-        );
-        loadedChild.schoolClass = childCurrentSchoolInfo.schoolClass;
-        loadedChild.schoolId = childCurrentSchoolInfo.schoolId;
+        loadedChild.schoolClass = childCurrentSchoolInfo.schoolClass || "";
+        loadedChild.schoolId = childCurrentSchoolInfo.schoolId || "";
       }
       results.next(loadedChildren);
       results.complete();
     });
-
     return results;
   }
 
-  /**
-   * DATA MODEL UPGRADE
-   * Check if the Child Entity still contains direct links to schoolId and schoolClass
-   * and create a new ChildSchoolRelation if necessary.
-   * @param loadedChild Child entity to be checked and migrated
-   * @param childCurrentSchoolInfo Currently available school information according to new data model from ChildSchoolRelation entities
-   */
-  private async migrateToNewChildSchoolRelationModel(
-    loadedChild: Child,
-    childCurrentSchoolInfo: { schoolId: string; schoolClass: string }
-  ) {
-    if (!loadedChild.schoolClass && !loadedChild.schoolId) {
-      // no data from old model -> skip migration
-      return;
-    }
-
-    if (
-      loadedChild.schoolId !== childCurrentSchoolInfo.schoolId ||
-      loadedChild.schoolClass !== childCurrentSchoolInfo.schoolClass
-    ) {
-      // generate a ChildSchoolRelation entity from the information of the previous data model
-      const autoMigratedChildSchoolRelation = new ChildSchoolRelation();
-      autoMigratedChildSchoolRelation.childId = loadedChild.getId();
-      autoMigratedChildSchoolRelation.schoolId = loadedChild.schoolId;
-      autoMigratedChildSchoolRelation.schoolClass = loadedChild.schoolClass;
-      await this.entityMapper.save(autoMigratedChildSchoolRelation);
-      this.logger?.debug(
-        "migrated Child entity to new ChildSchoolRelation model " +
-          loadedChild._id
-      );
-      console.log(autoMigratedChildSchoolRelation);
-    }
-
-    // save the Child entity to remove the deprecated attributes from the doc in the database
-    await this.entityMapper.save(loadedChild);
+  async getChildrenImproved(): Promise<Child[]> {
+    const children = await this.entityMapper.loadType(Child);
+    const allRelations = await this.entityMapper.loadType(ChildSchoolRelation);
+    const relationsMap = groupBy(allRelations, "childId");
+    children.forEach((child) => {
+      const activeRelation = relationsMap
+        .get(child.getId())
+        .find((relation) => relation.isActive);
+      if (activeRelation) {
+        child.schoolId = activeRelation.schoolId;
+        child.schoolClass = activeRelation.schoolClass;
+      }
+    });
+    return children;
   }
 
   /**

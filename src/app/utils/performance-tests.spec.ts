@@ -17,76 +17,140 @@
 
 import { TestBed, waitForAsync } from "@angular/core/testing";
 import { SessionService } from "../core/session/session-service/session.service";
-import { AppConfig } from "../core/app-config/app-config";
 import { AppModule } from "../app.module";
-import { SyncState } from "../core/session/session-states/sync-state.enum";
 import moment from "moment";
+import { LoggingService } from "../core/logging/logging.service";
+import { NewLocalSessionService } from "../core/session/session-service/new-local-session.service";
+import { EntitySchemaService } from "../core/entity/schema/entity-schema.service";
+import { Database } from "../core/database/database";
+import { DemoDataService } from "../core/demo-data/demo-data.service";
+import { SchoolsService } from "../child-dev-project/schools/schools.service";
+import { EntityMapperService } from "../core/entity/entity-mapper.service";
+import { School } from "../child-dev-project/schools/model/school";
 import { ChildrenService } from "../child-dev-project/children/children.service";
-import { deleteDB } from "idb";
+import { PouchDatabase } from "../core/database/pouch-database";
+import { RollCallSetupComponent } from "../child-dev-project/attendance/add-day-attendance/roll-call-setup/roll-call-setup.component";
+import { User } from "../core/user/user";
 
-const TEST_REMOTE_DATABASE_URL = "http://dev.aam-digital.com/db/";
-// WARNING - do not check in credentials into public git repository
-const TEST_REMOTE_DATABASE_USER = "[edit before running test]";
-const TEST_REMOTE_DATABASE_PASSWORD = "[edit before running test]";
-
-/**
- * These performance tests are actually integration tests that interact with a remote database.
- *
- * You need to enable CORS for the tests to run by editing karma.conf.js replacing `browsers: ['Chrome'],` with the following:
-browsers: ['Chrome_without_security'],
-customLaunchers:{
-  Chrome_without_security:{
-    base: 'Chrome',
-    flags: ['--disable-web-security']
-  }
-},
- */
 xdescribe("Performance Tests", () => {
-  beforeEach(
+  let mockDatabase: PouchDatabase;
+
+  beforeEach(async () => {
+    jasmine.DEFAULT_TIMEOUT_INTERVAL = 150000;
+
+    const loggingService = new LoggingService();
+    // Uncomment this line to run performance tests with the InBrowser database.
+    // mockDatabase = PouchDatabase.createWithIndexedDB(
+    mockDatabase = PouchDatabase.createWithInMemoryDB(
+      "performance_db",
+      loggingService
+    );
+    const schemaService = new EntitySchemaService();
+    const mockSessionService = new NewLocalSessionService(
+      loggingService,
+      schemaService,
+      mockDatabase
+    );
+    mockSessionService.currentUser = new User();
+
+    await TestBed.configureTestingModule({
+      imports: [AppModule],
+      providers: [
+        { provide: Database, useValue: mockDatabase },
+        { provide: SessionService, useValue: mockSessionService },
+        { provide: EntitySchemaService, useValue: schemaService },
+        { provide: LoggingService, useValue: loggingService },
+      ],
+    }).compileComponents();
+    const demoDataService = TestBed.inject(DemoDataService);
+    const setup = new Timer();
+    await demoDataService.publishDemoData();
+    console.log("finished publishing demo data", setup.getDuration());
+  });
+
+  afterEach(
     waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [AppModule],
-      }).compileComponents();
-
-      AppConfig.settings = {
-        database: {
-          name: "app",
-          remote_url: TEST_REMOTE_DATABASE_URL,
-          timeout: 60000,
-          useTemporaryDatabase: false,
-        },
-      } as any;
-
-      jasmine.DEFAULT_TIMEOUT_INTERVAL = 150000;
+      return mockDatabase.destroy();
     })
   );
 
-  it("sync initial and indexing", async () => {
-    // delete previously synced database; uncomment this to start with a clean state and test an initial sync.
-    // await deleteAllIndexedDB(db => true);
-
-    const session = TestBed.inject<SessionService>(SessionService);
-    const syncTimer = new Timer(true);
-    await session.login(
-      TEST_REMOTE_DATABASE_USER,
-      TEST_REMOTE_DATABASE_PASSWORD
+  it("school service get children of schools", async () => {
+    const entityMapper = TestBed.inject(EntityMapperService);
+    const schools = await entityMapper.loadType(School);
+    const schoolsService = TestBed.inject(SchoolsService);
+    await mockDatabase.getIndexCreationPromises();
+    await comparePerformance(
+      (school) => schoolsService.getChildrenForSchool(school.getId()),
+      (school) => schoolsService.getChildrenForSchoolImproved(school.getId()),
+      "Loading children of schools",
+      schools
     );
-    await session.getSyncState().waitForChangeTo(SyncState.COMPLETED);
-    syncTimer.stop();
-    console.log("sync time", syncTimer.getDuration());
+  });
 
-    // delete index views from previous test runs; comment this to test queries on existing indices
-    // await deleteAllIndexedDB(db => db.includes("mrview"));
+  it("load children with school info", async () => {
+    const childrenService = TestBed.inject(ChildrenService);
+    await mockDatabase.getIndexCreationPromises();
+    await comparePerformance(
+      () => childrenService.getChildren().toPromise(),
+      () => childrenService.getChildrenImproved(),
+      "ChildrenService getChildren"
+    );
+  });
 
-    const childrenService = TestBed.inject<ChildrenService>(ChildrenService);
-    const indexTimer = new Timer(true);
-    await childrenService.createDatabaseIndices();
-    indexTimer.stop();
-    console.log("indexing time", indexTimer.getDuration());
-
-    expect(indexTimer.getDuration()).toBe(0); // display indexing time as failed assertion; see console for details
+  it("init activities in componentn", async () => {
+    const fixture = TestBed.createComponent(RollCallSetupComponent);
+    const rollCallSetup = fixture.componentInstance;
+    await mockDatabase.getIndexCreationPromises();
+    await comparePerformance(
+      () => rollCallSetup.loadActivities(),
+      () => rollCallSetup.loadActivitiesImproved(),
+      "RollCallSetupComponent loadActivities"
+    );
   });
 });
+
+async function comparePerformance<V, R>(
+  currentFunction: (val?: V) => Promise<R>,
+  improvedFunction: (val?: V) => Promise<R>,
+  description: string,
+  input?: V[]
+) {
+  const diffs: number[] = [];
+  if (input) {
+    for (const el of input) {
+      const diff = await getExecutionDiff(
+        () => currentFunction(el),
+        () => improvedFunction(el)
+      );
+      diffs.push(diff);
+    }
+    const avgDiff = diffs.reduce((sum, cur) => sum + cur, 0) / diffs.length;
+    fail("<" + description + "> Average improvement: " + avgDiff + "ms");
+  } else {
+    const diff = await getExecutionDiff(currentFunction, improvedFunction);
+    fail("<" + description + "> Execution time improvement " + diff + "ms");
+  }
+}
+
+async function getExecutionDiff<R>(
+  currentFunction: () => Promise<R>,
+  improvedFunction: () => Promise<R>
+): Promise<number> {
+  const currentTimer = new Timer();
+  const currentResult = await currentFunction();
+  const currentDuration = currentTimer.getDuration();
+  const improvedTimer = new Timer();
+  const improvedResult = await improvedFunction();
+  const improvedDuration = improvedTimer.getDuration();
+  expect(improvedResult).toEqual(
+    currentResult,
+    "current " +
+      JSON.stringify(currentResult) +
+      " improved " +
+      JSON.stringify(improvedResult)
+  );
+  return currentDuration - improvedDuration;
+}
 
 /**
  * Utility class to calculate duration of an action.
@@ -95,7 +159,7 @@ class Timer {
   private startTime;
   private stopTime;
 
-  constructor(start: boolean) {
+  constructor(start: boolean = true) {
     if (start) {
       this.start();
     }
@@ -112,22 +176,5 @@ class Timer {
 
   getDuration() {
     return -this.startTime.diff(this.stopTime ?? moment(), "milliseconds");
-  }
-}
-
-/**
- * Delete all indexedDB databases in the browser matching the given filter.
- * @param filterFun Filter function taking a database name and returning true if this should be deleted.
- */
-export async function deleteAllIndexedDB(
-  filterFun: (dbName: string) => boolean
-): Promise<void> {
-  // @ts-ignore
-  const databases = await indexedDB.databases();
-  for (const db of databases) {
-    if (filterFun(db.name)) {
-      console.log("deleting indexedDB", db.name);
-      await deleteDB(db.name);
-    }
   }
 }
