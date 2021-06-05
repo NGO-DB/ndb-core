@@ -14,6 +14,7 @@
               [src]="entity?.photo?.value"
               class="child-pic"
               alt="child's photo"
+              i18n-alt="Short description of a child's photo"
             />
 
             <input
@@ -37,6 +38,7 @@
             >
               <input
                 #photoFileInput
+                i18n-matTooltip="Tooltip when uploading a photo"
                 matTooltip="filename for child photo uploaded by server administrator"
                 matInput
                 [formControlName]="row.id"
@@ -64,7 +66,10 @@
               [title]="row.placeholder"
               type="text"
             />
-            <mat-error *ngIf="this.form.get(row.id).invalid && validateForm">
+            <mat-error
+              *ngIf="this.form.get(row.id).invalid && validateForm"
+              i18n="indicates that a certain value is required|The value is any sort of form-value e.g. the name or address of a person"
+              >
               {{ row.placeholder }} is required
             </mat-error>
           </mat-form-field>
@@ -112,6 +117,7 @@
               ></mat-icon>
               <input
                 matInput
+                i18n-placeholder="Placeholder when no age is set"
                 placeholder="Age"
                 type="string"
                 [value]="calculateAge(dateOfBirth.value)"
@@ -195,6 +201,7 @@
     mat-stroked-button
     class="edit-button"
     (click)="save()"
+    i18n="Generic save button"
   >
     Save
   </button>
@@ -204,6 +211,7 @@
     mat-stroked-button
     class="edit-button"
     (click)="switchEdit()"
+    i18n="Generic cancel button"
   >
     Cancel
   </button>
@@ -217,6 +225,7 @@
         entity: entity?.getConstructor(),
         operation: operationType.UPDATE
       }"
+      i18n="Generic edit button"
     >
       Edit
     </button>

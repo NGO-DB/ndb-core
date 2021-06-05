@@ -8,6 +8,7 @@ import { Note } from "../../notes/model/note";
 import { calculateAverageAttendance } from "../model/calculate-average-event-attendance";
 import { NullAttendanceStatusType } from "../model/attendance-status";
 import { OnInitDynamicComponent } from "../../../core/view/dynamic-components/on-init-dynamic-component.interface";
+import { PercentPipe } from "@angular/common";
 
 @Component({
   selector: "app-attendance-details",
@@ -24,17 +25,17 @@ export class AttendanceDetailsComponent
   eventsColumns: Array<ColumnDescription> = [
     {
       name: "date",
-      label: "Date",
+      label: $localize`Date`,
       inputType: ColumnDescriptionInputType.DATE,
     },
     {
       name: "subject",
-      label: "Event",
+      label: $localize`Event`,
       inputType: ColumnDescriptionInputType.TEXT,
     },
     {
       name: "getAttendance",
-      label: "Attended",
+      label: $localize`:How a child attended, e.g. too late, in time, excused, e.t.c:Attended`,
       inputType: ColumnDescriptionInputType.FUNCTION,
       valueFunction: (note: Note) => {
         if (this.focusedChild) {
@@ -50,11 +51,25 @@ export class AttendanceDetailsComponent
   ];
   UnknownStatus = NullAttendanceStatusType;
 
-  constructor() {}
+  constructor(private percentPipe: PercentPipe) {}
 
   onInitFromDynamicConfig(config?: { forChild?: string }) {
     if (config?.forChild) {
       this.focusedChild = config.forChild;
+    }
+  }
+
+  get attendance(): string {
+    if (this.focusedChild) {
+      return this.percentPipe.transform(
+        this.entity?.getAttendancePercentage(this.focusedChild),
+        "1.0-0"
+      );
+    } else {
+      return this.percentPipe.transform(
+        this.entity?.getAttendancePercentageAverage(),
+        "1.0-0"
+      );
     }
   }
 }
