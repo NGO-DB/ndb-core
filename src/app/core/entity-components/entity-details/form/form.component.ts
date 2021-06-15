@@ -138,9 +138,7 @@ export class FormComponent implements OnInitDynamicComponent, OnInit {
   private assignFormValuesToEntity(entity: Entity, form: FormGroup) {
     Object.keys(form.controls).forEach((key) => {
       const value = form.get(key).value;
-      if (value !== null) {
-        entity[key] = value;
-      }
+      entity[key] = value;
     });
   }
 
