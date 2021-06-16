@@ -207,6 +207,8 @@ export const defaultJsonConfig = {
       "title": "Notes & Reports",
       "includeEventNotes": false,
       "showEventNotesToggle": true,
+      "addNew": "Add note",
+      "filterPlaceholder": "i.e. title, author",
       "columns": [
         {
           "component": "DisplayDate",
@@ -304,6 +306,8 @@ export const defaultJsonConfig = {
     "component": "SchoolsList",
     "config": {
       "title": "Schools List",
+      "addNew": "Add school",
+      "filterPlaceholder": "i.e. School name",
       "columns": [
         {
           "component": "DisplayText",
@@ -458,6 +462,8 @@ export const defaultJsonConfig = {
     "component": "ChildrenList",
     "config": {
       "title": "Children List",
+      "addNew": "Add participant",
+      "filterPlaceholder": "i.e. Participant name",
       "columns": [
         {
           "component": "DisplayText",
@@ -616,8 +622,7 @@ export const defaultJsonConfig = {
               "gender",
               "schoolClass",
               "schoolId",
-              "center",
-              "status"
+              "center"
             ]
           },
           {
@@ -629,7 +634,6 @@ export const defaultJsonConfig = {
               "schoolClass",
               "schoolId",
               "schoolAttendance",
-              "coachingAttendance",
               "motherTongue"
             ]
           },
@@ -653,6 +657,9 @@ export const defaultJsonConfig = {
             "columns": [
               "projectNumber",
               "name",
+              "gender",
+              "age",
+              "dateOfBirth",
               "center",
               "health_BMI",
               "health_vaccinationStatus",
@@ -662,10 +669,7 @@ export const defaultJsonConfig = {
               "health_lastDentalCheckup",
               "health_lastENTCheckup",
               "health_lastVitaminD",
-              "health_lastDeworming",
-              "gender",
-              "age",
-              "dateOfBirth"
+              "health_lastDeworming"
             ]
           },
           {
@@ -1103,6 +1107,8 @@ export const defaultJsonConfig = {
     "component": "ActivityList",
     "config": {
       "title": "Recurring Activities",
+      "addNew": "Add activity",
+      "filterPlaceholder": "",
       "columns": [
         {
           "component": "DisplayText",
