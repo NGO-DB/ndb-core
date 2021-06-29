@@ -33,7 +33,15 @@ export class FormComponent implements OnInitDynamicComponent, OnInit {
   isAdminUser: boolean;
   enablePhotoUpload = false;
 
-  editing: boolean = false;
+  get editing(): boolean {
+    return this._editing;
+  }
+  set editing(editing: boolean) {
+    this._editing = editing;
+    this.initForm();
+    this.enablePhotoUpload = this.childPhotoService.canSetImage();
+  }
+  _editing: boolean = false;
   form: FormGroup;
   validateForm: boolean = false;
   config: FormConfig;
@@ -59,14 +67,8 @@ export class FormComponent implements OnInitDynamicComponent, OnInit {
     this.initForm();
     if (config.creatingNew) {
       this.creatingNew = true;
-      this.switchEdit();
+      this.editing = true;
     }
-  }
-
-  switchEdit() {
-    this.editing = !this.editing;
-    this.initForm();
-    this.enablePhotoUpload = this.childPhotoService.canSetImage();
   }
 
   calculateAge(selectedDateOfBirth: string) {
@@ -83,9 +85,11 @@ export class FormComponent implements OnInitDynamicComponent, OnInit {
     this.assignFormValuesToEntity(this.entity, this.form);
     try {
       await this.entityMapperService.save<Entity>(this.entity);
-      this.router.navigate([getParentUrl(this.router), this.entity.getId()]);
+      await this.router.navigate([
+        getParentUrl(this.router),
+        this.entity.getId(),
+      ]);
       this.alertService.addInfo("Saving Successful");
-      this.switchEdit();
       return this.entity;
     } catch (err) {
       this.alertService.addDanger(
