@@ -1,0 +1,1123 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  SearchComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/core/ui/search/search.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>General search box that provides results out of any kind of entities from the system
+as soon as the user starts typing.</p>
+<p>This is usually displayed in the app header to be available to the user anywhere, allowing to navigate quickly.</p>
+
+    </p>
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-search</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./search.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./search.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#formControl" >formControl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#ILLEGAL_INPUT" >ILLEGAL_INPUT</a>
+                            </li>
+                            <li>
+                                <a href="#INPUT_DEBOUNCE_TIME_MS" >INPUT_DEBOUNCE_TIME_MS</a>
+                            </li>
+                            <li>
+                                <a href="#MIN_CHARACTERS_FOR_SEARCH" >MIN_CHARACTERS_FOR_SEARCH</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#NO_RESULTS" >NO_RESULTS</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#NOTHING_ENTERED" >NOTHING_ENTERED</a>
+                            </li>
+                            <li>
+                                <a href="#results" >results</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#SEARCH_IN_PROGRESS" >SEARCH_IN_PROGRESS</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#SHOW_RESULTS" >SHOW_RESULTS</a>
+                            </li>
+                            <li>
+                                <a href="#state" >state</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#TOO_FEW_CHARACTERS" >TOO_FEW_CHARACTERS</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#clickOption" >clickOption</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#searchResults" >searchResults</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(indexingService: <a href="../injectables/DatabaseIndexingService.html" target="_self">DatabaseIndexingService</a>, entitySchemaService: <a href="../injectables/EntitySchemaService.html" target="_self">EntitySchemaService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/core/ui/search/search.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>indexingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DatabaseIndexingService.html" target="_self" >DatabaseIndexingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>entitySchemaService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EntitySchemaService.html" target="_self" >EntitySchemaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clickOption"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>clickOption</b></span>
+                        <a href="#clickOption"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>clickOption(optionElement)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/app/core/ui/search/search.component.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>optionElement</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchResults"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>searchResults</b></span>
+                        <a href="#searchResults"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>searchResults(next: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/app/core/ui/search/search.component.ts:68</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>next</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Entity.html" target="_self" >Promise&lt;Entity[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formControl"></a>
+                    <span class="name">
+                        <span ><b>formControl</b></span>
+                        <a href="#formControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/core/ui/search/search.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ILLEGAL_INPUT"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>ILLEGAL_INPUT</b></span>
+                        <a href="#ILLEGAL_INPUT"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>5</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/core/ui/search/search.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="INPUT_DEBOUNCE_TIME_MS"></a>
+                    <span class="name">
+                        <span ><b>INPUT_DEBOUNCE_TIME_MS</b></span>
+                        <a href="#INPUT_DEBOUNCE_TIME_MS"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>400</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/core/ui/search/search.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="MIN_CHARACTERS_FOR_SEARCH"></a>
+                    <span class="name">
+                        <span ><b>MIN_CHARACTERS_FOR_SEARCH</b></span>
+                        <a href="#MIN_CHARACTERS_FOR_SEARCH"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>3</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/core/ui/search/search.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="NO_RESULTS"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>NO_RESULTS</b></span>
+                        <a href="#NO_RESULTS"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>3</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/core/ui/search/search.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="NOTHING_ENTERED"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>NOTHING_ENTERED</b></span>
+                        <a href="#NOTHING_ENTERED"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/core/ui/search/search.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="results"></a>
+                    <span class="name">
+                        <span ><b>results</b></span>
+                        <a href="#results"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Entity.html" target="_self" >Observable&lt;Entity[]&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/core/ui/search/search.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="SEARCH_IN_PROGRESS"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>SEARCH_IN_PROGRESS</b></span>
+                        <a href="#SEARCH_IN_PROGRESS"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>2</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/core/ui/search/search.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="SHOW_RESULTS"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>SHOW_RESULTS</b></span>
+                        <a href="#SHOW_RESULTS"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>4</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/core/ui/search/search.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="state"></a>
+                    <span class="name">
+                        <span ><b>state</b></span>
+                        <a href="#state"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.NOTHING_ENTERED</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/core/ui/search/search.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="TOO_FEW_CHARACTERS"></a>
+                    <span class="name">
+                            <span class="modifier">Readonly</span>
+                        <span ><b>TOO_FEW_CHARACTERS</b></span>
+                        <a href="#TOO_FEW_CHARACTERS"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>1</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/core/ui/search/search.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &quot;@angular/core&quot;;
+import { Entity, EntityConstructor } from &quot;../../entity/model/entity&quot;;
+import { EntitySchemaService } from &quot;../../entity/schema/entity-schema.service&quot;;
+import { Observable } from &quot;rxjs&quot;;
+import { concatMap, debounceTime, skipUntil, tap } from &quot;rxjs/operators&quot;;
+import { DatabaseIndexingService } from &quot;../../entity/database-indexing/database-indexing.service&quot;;
+import { Router } from &quot;@angular/router&quot;;
+import { ENTITY_MAP } from &quot;../../entity-components/entity-details/entity-details.component&quot;;
+import { fromPromise } from &quot;rxjs/internal-compatibility&quot;;
+import { FormControl } from &quot;@angular/forms&quot;;
+
+/**
+ * General search box that provides results out of any kind of entities from the system
+ * as soon as the user starts typing.
+ *
+ * This is usually displayed in the app header to be available to the user anywhere, allowing to navigate quickly.
+ */
+@Component({
+  selector: &quot;app-search&quot;,
+  templateUrl: &quot;./search.component.html&quot;,
+  styleUrls: [&quot;./search.component.scss&quot;],
+})
+export class SearchComponent {
+  MIN_CHARACTERS_FOR_SEARCH: number &#x3D; 3;
+  INPUT_DEBOUNCE_TIME_MS: number &#x3D; 400;
+
+  readonly NOTHING_ENTERED &#x3D; 0;
+  readonly TOO_FEW_CHARACTERS &#x3D; 1;
+  readonly SEARCH_IN_PROGRESS &#x3D; 2;
+  readonly NO_RESULTS &#x3D; 3;
+  readonly SHOW_RESULTS &#x3D; 4;
+  readonly ILLEGAL_INPUT &#x3D; 5;
+
+  state &#x3D; this.NOTHING_ENTERED;
+
+  formControl &#x3D; new FormControl();
+
+  results: Observable&lt;Entity[]&gt;;
+
+  constructor(
+    private indexingService: DatabaseIndexingService,
+    private entitySchemaService: EntitySchemaService,
+    private router: Router
+  ) {
+    this.results &#x3D; this.formControl.valueChanges.pipe(
+      debounceTime(this.INPUT_DEBOUNCE_TIME_MS),
+      skipUntil(this.createSearchIndex()),
+      tap((next) &#x3D;&gt; (this.state &#x3D; this.updateState(next))),
+      concatMap((next: string) &#x3D;&gt; this.searchResults(next))
+    );
+  }
+
+  private updateState(next: any): number {
+    if (typeof next !&#x3D;&#x3D; &quot;string&quot;) {
+      return this.ILLEGAL_INPUT;
+    }
+    if (next.length &#x3D;&#x3D;&#x3D; 0) {
+      return this.NOTHING_ENTERED;
+    }
+    if (!this.isRelevantSearchInput(next)) {
+      return this.ILLEGAL_INPUT;
+    }
+    return next.length &lt; this.MIN_CHARACTERS_FOR_SEARCH
+      ? this.TOO_FEW_CHARACTERS
+      : this.SEARCH_IN_PROGRESS;
+  }
+
+  async searchResults(next: string): Promise&lt;Entity[]&gt; {
+    if (this.state !&#x3D;&#x3D; this.SEARCH_IN_PROGRESS) {
+      return [];
+    }
+    const searchTerms &#x3D; next.toLowerCase().split(&quot; &quot;);
+    const entities &#x3D; await this.indexingService.queryIndexRaw(
+      &quot;search_index/by_name&quot;,
+      {
+        startkey: searchTerms[0],
+        endkey: searchTerms[0] + &quot;\ufff0&quot;,
+        include_docs: true,
+      }
+    );
+    const filtered &#x3D; this.prepareResults(entities.rows, searchTerms);
+    const uniques &#x3D; this.uniquify(filtered);
+    this.state &#x3D; uniques.length &#x3D;&#x3D;&#x3D; 0 ? this.NO_RESULTS : this.SHOW_RESULTS;
+    return uniques;
+  }
+
+  async clickOption(optionElement) {
+    // TODO this requires to routes to be called similar to the entities, can we ensure this?
+    const resultEntity: Entity &#x3D; optionElement.value;
+    await this.router.navigate([
+      resultEntity.getType().toLowerCase(),
+      resultEntity.getId(),
+    ]);
+
+    this.formControl.setValue(&quot;&quot;);
+  }
+
+  /**
+   * Check if the input should start an actual search.
+   * Only search for words starting with a char or number -&gt; no searching for space or no input
+   * @param searchText
+   */
+  private isRelevantSearchInput(searchText: string): boolean {
+    return /^[a-zA-Z]+|\d+$/.test(searchText);
+  }
+
+  private createSearchIndex(): Observable&lt;void&gt; {
+    // &#x60;emit(x)&#x60; to add x as a key to the index that can be searched
+    const searchMapFunction &#x3D; &#x60;
+      (doc) &#x3D;&gt; {
+        if (doc.hasOwnProperty(&quot;searchIndices&quot;)) {
+           doc.searchIndices.forEach(word &#x3D;&gt; emit(word.toString().toLowerCase()));
+        }
+      }&#x60;;
+
+    const designDoc &#x3D; {
+      _id: &quot;_design/search_index&quot;,
+      views: {
+        by_name: {
+          map: searchMapFunction,
+        },
+      },
+    };
+
+    return fromPromise(this.indexingService.createIndex(designDoc));
+  }
+
+  private prepareResults(
+    rows: [{ key: string; id: string; doc: object }],
+    searchTerms: string[]
+  ): Entity[] {
+    return rows
+      .map((doc) &#x3D;&gt; this.transformDocToEntity(doc))
+      .filter((entity) &#x3D;&gt;
+        this.containsSecondarySearchTerms(entity, searchTerms)
+      );
+  }
+
+  private containsSecondarySearchTerms(
+    entity: Entity,
+    searchTerms: string[]
+  ): boolean {
+    const searchIndices &#x3D; entity.searchIndices.join(&quot; &quot;).toLowerCase();
+    return searchTerms.every((s) &#x3D;&gt; searchIndices.includes(s));
+  }
+
+  private uniquify(entities: Entity[]): Entity[] {
+    const uniques &#x3D; new Map&lt;string, Entity&gt;();
+    entities.forEach((e) &#x3D;&gt; {
+      uniques.set(e.getId(), e);
+    });
+    return [...uniques.values()];
+  }
+
+  private transformDocToEntity(doc: {
+    key: string;
+    id: string;
+    doc: object;
+  }): Entity {
+    const ctor: EntityConstructor&lt;any&gt; &#x3D;
+      ENTITY_MAP.get(Entity.extractTypeFromId(doc.id)) || Entity;
+    const entity &#x3D; new ctor(doc.id);
+    this.entitySchemaService.loadDataIntoEntity(entity, doc.doc);
+    return entity;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;desktop-search-bar&quot; fxHide.xs&#x3D;&quot;true&quot; fxHide&#x3D;&quot;false&quot;&gt;
+  &lt;mat-form-field fxFill class&#x3D;&quot;search-field&quot; floatLabel&#x3D;&quot;never&quot;&gt;
+    &lt;span matPrefix&gt;
+      &lt;mat-icon matPrefix class&#x3D;&quot;search-icon&quot; fontIcon&#x3D;&quot;fa-search&quot;&gt;&lt;/mat-icon&gt;
+    &lt;/span&gt;
+    &lt;mat-label&gt;Search&lt;/mat-label&gt;
+    &lt;input
+      matInput
+      title&#x3D;&quot;Search&quot;
+      [formControl]&#x3D;&quot;formControl&quot;
+      [matAutocomplete]&#x3D;&quot;autoResults&quot;
+    /&gt;
+  &lt;/mat-form-field&gt;
+
+  &lt;mat-autocomplete
+    #autoResults&#x3D;&quot;matAutocomplete&quot;
+    (optionSelected)&#x3D;&quot;clickOption($event.option)&quot;
+  &gt;
+    &lt;ng-container [ngSwitch]&#x3D;&quot;state&quot;&gt;
+      &lt;mat-option *ngSwitchCase&#x3D;&quot;TOO_FEW_CHARACTERS&quot; class&#x3D;&quot;result-hint&quot; [disabled]&#x3D;&quot;true&quot;&gt;
+        &lt;p&gt;Insert at least {{ MIN_CHARACTERS_FOR_SEARCH }} characters&lt;/p&gt;
+      &lt;/mat-option&gt;
+
+      &lt;mat-option class&#x3D;&quot;result-hint&quot; *ngSwitchCase&#x3D;&quot;SEARCH_IN_PROGRESS&quot; [disabled]&#x3D;&quot;true&quot;&gt;
+        &lt;p&gt;Search in progress...&lt;/p&gt;
+      &lt;/mat-option&gt;
+
+      &lt;mat-option class&#x3D;&quot;result-hint&quot; *ngSwitchCase&#x3D;&quot;NO_RESULTS&quot; [disabled]&#x3D;&quot;true&quot;&gt;
+        &lt;p&gt;There were no results&lt;/p&gt;
+      &lt;/mat-option&gt;
+
+      &lt;mat-option class&#x3D;&quot;result-hint&quot; *ngSwitchCase&#x3D;&quot;ILLEGAL_INPUT&quot; [disabled]&#x3D;&quot;true&quot;&gt;
+        &lt;p&gt;Please only enter numbers or letters&lt;/p&gt;
+      &lt;/mat-option&gt;
+
+      &lt;mat-option *ngFor&#x3D;&quot;let res of results | async&quot; [value]&#x3D;&quot;res&quot;&gt;
+        &lt;app-display-entity [entityToDisplay]&#x3D;&quot;res&quot;&gt;&lt;/app-display-entity&gt;
+      &lt;/mat-option&gt;
+    &lt;/ng-container&gt;
+
+  &lt;/mat-autocomplete&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./search.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.search-icon {
+  font-size: 15pt;
+}
+
+.search-field {
+  color: white;
+
+  span {
+    margin-right: 6px;
+  }
+}
+
+.desktop-search-bar {
+  font-size: 16px;
+}
+
+.search-header {
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.header-icon {
+  color: white;
+  font-size: 15pt;
+}
+
+.result-hint {
+  background-color: lightgrey;
+  font-style: italic;
+  font-size: 14px;
+  height: 36px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="desktop-search-bar" fxHide.xs="true" fxHide="false">  <mat-form-field fxFill class="search-field" floatLabel="never">    <span matPrefix>      <mat-icon matPrefix class="search-icon" fontIcon="fa-search"></mat-icon>    </span>    <mat-label>Search</mat-label>    <input      matInput      title="Search"      [formControl]="formControl"      [matAutocomplete]="autoResults"    />  </mat-form-field>  <mat-autocomplete    #autoResults="matAutocomplete"    (optionSelected)="clickOption($event.option)"  >    <ng-container [ngSwitch]="state">      <mat-option *ngSwitchCase="TOO_FEW_CHARACTERS" class="result-hint" [disabled]="true">        <p>Insert at least {{ MIN_CHARACTERS_FOR_SEARCH }} characters</p>      </mat-option>      <mat-option class="result-hint" *ngSwitchCase="SEARCH_IN_PROGRESS" [disabled]="true">        <p>Search in progress...</p>      </mat-option>      <mat-option class="result-hint" *ngSwitchCase="NO_RESULTS" [disabled]="true">        <p>There were no results</p>      </mat-option>      <mat-option class="result-hint" *ngSwitchCase="ILLEGAL_INPUT" [disabled]="true">        <p>Please only enter numbers or letters</p>      </mat-option>      <mat-option *ngFor="let res of results | async" [value]="res">        <app-display-entity [entityToDisplay]="res"></app-display-entity>      </mat-option>    </ng-container>  </mat-autocomplete></div></div>'
+    var COMPONENTS = [{'name': 'ActivityAttendanceSectionComponent', 'selector': 'app-activity-attendance-section'},{'name': 'ActivityCardComponent', 'selector': 'app-activity-card'},{'name': 'ActivityListComponent', 'selector': 'app-activity-list'},{'name': 'AddDayAttendanceComponent', 'selector': 'app-add-day-attendance'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AlertComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppVersionComponent', 'selector': 'app-version'},{'name': 'AserComponent', 'selector': 'app-aser'},{'name': 'AttendanceBlockComponent', 'selector': 'app-attendance-block'},{'name': 'AttendanceCalendarComponent', 'selector': 'app-attendance-calendar'},{'name': 'AttendanceDayBlockComponent', 'selector': 'app-attendance-day-block]'},{'name': 'AttendanceDetailsComponent', 'selector': 'app-attendance-details'},{'name': 'AttendanceManagerComponent', 'selector': 'app-attendance-manager'},{'name': 'AttendanceStatusSelectComponent', 'selector': 'app-attendance-status-select'},{'name': 'AttendanceWeekDashboardComponent', 'selector': 'app-attendance-week-dashboard'},{'name': 'BackgroundProcessingIndicatorComponent', 'selector': 'app-background-processing-indicator'},{'name': 'BmiBlockComponent', 'selector': 'app-bmi-block'},{'name': 'ButtonComponent', 'selector': 'storybook-button'},{'name': 'ChangelogComponent', 'selector': ''},{'name': 'ChildBlockComponent', 'selector': 'app-child-block'},{'name': 'ChildMeetingNoteAttendanceComponent', 'selector': 'app-child-meeting-note-attendance'},{'name': 'ChildrenBmiDashboardComponent', 'selector': 'app-children-bmi-dashboard'},{'name': 'ChildrenCountDashboardComponent', 'selector': 'app-children-count-dashboard'},{'name': 'ChildrenListComponent', 'selector': 'app-children-list'},{'name': 'ChildrenOverviewComponent', 'selector': 'app-children-overview'},{'name': 'CloudFileServiceUserSettingsComponent', 'selector': 'app-cloud-file-service-user-settings'},{'name': 'ComingSoonComponent', 'selector': 'app-coming-soon'},{'name': 'CompareRevComponent', 'selector': 'app-compare-rev'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'ConflictResolutionListComponent', 'selector': 'app-conflict-resolution-list'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardShortcutWidgetComponent', 'selector': 'app-dashboard-shortcut-widget'},{'name': 'DemoDataGeneratingProgressDialogComponent', 'selector': ''},{'name': 'DisabledWrapperComponent', 'selector': 'app-disabled-wrapper'},{'name': 'DisplayCheckmarkComponent', 'selector': 'app-display-tick'},{'name': 'DisplayConfigurableEnumComponent', 'selector': 'app-display-configurable-enum'},{'name': 'DisplayDateComponent', 'selector': 'app-display-date'},{'name': 'DisplayEntityArrayComponent', 'selector': 'app-display-entity-array'},{'name': 'DisplayEntityComponent', 'selector': 'app-display-entity'},{'name': 'DisplayPercentageComponent', 'selector': 'app-display-percentage'},{'name': 'DisplayTextComponent', 'selector': 'app-display-text'},{'name': 'DisplayUnitComponent', 'selector': 'app-display-unit'},{'name': 'EditAgeComponent', 'selector': 'app-edit-age'},{'name': 'EditBooleanComponent', 'selector': 'app-edit-boolean'},{'name': 'EditConfigurableEnumComponent', 'selector': 'app-edit-configurable-enum'},{'name': 'EditDateComponent', 'selector': 'app-edit-date'},{'name': 'EditEntityArrayComponent', 'selector': 'app-edit-entity-array'},{'name': 'EditLongTextComponent', 'selector': 'app-edit-long-text'},{'name': 'EditNumberComponent', 'selector': 'app-edit-number'},{'name': 'EditPercentageComponent', 'selector': 'app-edit-percentage'},{'name': 'EditPhotoComponent', 'selector': 'app-edit-photo'},{'name': 'EditSingleEntityComponent', 'selector': 'app-edit-single-entity'},{'name': 'EditTextComponent', 'selector': 'app-edit-text'},{'name': 'EducationalMaterialComponent', 'selector': 'app-educational-material'},{'name': 'EntityDetailsComponent', 'selector': 'app-entity-details'},{'name': 'EntityFormComponent', 'selector': 'app-entity-form'},{'name': 'EntityListComponent', 'selector': 'app-entity-list'},{'name': 'EntitySelectComponent', 'selector': 'app-entity-select'},{'name': 'EntitySubrecordComponent', 'selector': 'app-entity-subrecord'},{'name': 'ExportDataComponent', 'selector': 'app-export-data'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormDialogWrapperComponent', 'selector': 'app-form-dialog-wrapper'},{'name': 'GroupedChildAttendanceComponent', 'selector': 'app-grouped-child-attendance'},{'name': 'HeaderComponent', 'selector': 'storybook-header'},{'name': 'HealthCheckupComponent', 'selector': 'app-health-checkup'},{'name': 'HistoricalDataComponent', 'selector': 'app-historical-data'},{'name': 'HowToComponent', 'selector': 'app-help'},{'name': 'InitialSyncDialogComponent', 'selector': ''},{'name': 'ListFilterComponent', 'selector': 'app-list-filter'},{'name': 'ListPaginatorComponent', 'selector': 'app-list-paginator'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'NoRecentNotesDashboardComponent', 'selector': 'app-no-recent-notes-dashboard'},{'name': 'NoteDetailsComponent', 'selector': 'app-note-details'},{'name': 'NotesManagerComponent', 'selector': 'app-notes-manager'},{'name': 'NotesOfChildComponent', 'selector': 'app-notes-of-child'},{'name': 'PageComponent', 'selector': 'storybook-page'},{'name': 'PreviousSchoolsComponent', 'selector': 'app-previous-schools'},{'name': 'PrimaryActionComponent', 'selector': 'app-primary-action'},{'name': 'ProgressDashboardComponent', 'selector': 'app-progress-dashboard'},{'name': 'ReadonlyFunctionComponent', 'selector': 'app-readonly-function'},{'name': 'RecentAttendanceBlocksComponent', 'selector': 'app-recent-attendance-blocks'},{'name': 'RecentNotesDashboardComponent', 'selector': 'app-recent-notes-dashboard'},{'name': 'ReportingComponent', 'selector': 'app-reporting'},{'name': 'ReportRowComponent', 'selector': 'app-report-row'},{'name': 'RollCallComponent', 'selector': 'app-roll-call'},{'name': 'RollCallSetupComponent', 'selector': 'app-roll-call-setup'},{'name': 'SchoolBlockComponent', 'selector': 'app-school-block'},{'name': 'SchoolsListComponent', 'selector': 'app-schools-list'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SyncStatusComponent', 'selector': 'app-sync-status'},{'name': 'UiComponent', 'selector': 'app-ui'},{'name': 'UserAccountComponent', 'selector': 'app-user-account'},{'name': 'UserListComponent', 'selector': 'app-user-list'}];
+    var DIRECTIVES = [{'name': 'ConfigurableEnumDirective', 'selector': '[appConfigurableEnum]'},{'name': 'DisableEntityOperationDirective', 'selector': '[appDisabledEntityOperation]'},{'name': 'DynamicComponentDirective', 'selector': '[appDynamicComponent]'}];
+    var ACTUAL_COMPONENT = {'name': 'SearchComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SearchComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

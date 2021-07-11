@@ -1,0 +1,983 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >LoggingService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/core/logging/logging.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Centrally managed logging to allow log messages to be filtered by level and even sent to a remote logging service
+that allows developers to monitor and analyse problems.</p>
+<p>Logging to the remote monitoring server is set only for warnings and errors.</p>
+<p>To allow remote logging, call Sentry.init during bootstrap in your AppModule or somewhere early on during startup.</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#debug" >debug</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#error" >error</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#info" >info</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#initRemoteLogging" >initRemoteLogging</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#log" >log</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#setLoggingContext" >setLoggingContext</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#setLoggingContextUser" >setLoggingContextUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#warn" >warn</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="debug"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>debug</b></span>
+                        <a href="#debug"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>debug(message: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/core/logging/logging.service.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Log the message with &quot;debug&quot; level - for very detailed, non-essential information.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="error"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>error</b></span>
+                        <a href="#error"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>error(message: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/core/logging/logging.service.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Log the message with &quot;error&quot; level - for unexpected critical events that cannot be handled and will affect functions.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="info"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>info</b></span>
+                        <a href="#info"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>info(message: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/core/logging/logging.service.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Log the message with &quot;info&quot; level - for relevant information that occurs during regular functioning of the app.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initRemoteLogging"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>initRemoteLogging</b></span>
+                        <a href="#initRemoteLogging"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initRemoteLogging(options: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/core/logging/logging.service.ts:25</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initialize the remote logging module with the given options.
+If set up this will be used to send errors to a remote endpoint for analysis.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="log"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>log</b></span>
+                        <a href="#log"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>log(message: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, logLevel: <a href="../undefineds/LogLevel.html" target="_self">LogLevel</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/app/core/logging/logging.service.ts:95</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Generic logging of a message.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>Message to be logged</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>logLevel</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#LogLevel" target="_self" >LogLevel</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>LogLevel.INFO</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Optional log level - default is &quot;info&quot;</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setLoggingContext"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>setLoggingContext</b></span>
+                        <a href="#setLoggingContext"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setLoggingContext(tagName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/core/logging/logging.service.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update a piece of context information that will be attached to all log messages for easier debugging,
+especially in remote logging.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tagName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Identifier of the key-value pair</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Value of the key-value pair</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setLoggingContextUser"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>setLoggingContextUser</b></span>
+                        <a href="#setLoggingContextUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setLoggingContextUser(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/core/logging/logging.service.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update the username to be attached to all log messages for easier debugging,
+especially in remote logging.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="warn"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>warn</b></span>
+                        <a href="#warn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>warn(message: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/core/logging/logging.service.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Log the message with &quot;warning&quot; level - for unexpected events that the app can still handle gracefully.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+import { LogLevel } from &quot;./log-level&quot;;
+import * as Sentry from &quot;@sentry/browser&quot;;
+import { environment } from &quot;../../../environments/environment&quot;;
+
+/* tslint:disable:no-console */
+
+/**
+ * Centrally managed logging to allow log messages to be filtered by level and even sent to a remote logging service
+ * that allows developers to monitor and analyse problems.
+ *
+ * Logging to the remote monitoring server is set only for warnings and errors.
+ *
+ * To allow remote logging, call Sentry.init during bootstrap in your AppModule or somewhere early on during startup.
+ */
+@Injectable({
+  providedIn: &quot;root&quot;,
+})
+export class LoggingService {
+  /**
+   * Initialize the remote logging module with the given options.
+   * If set up this will be used to send errors to a remote endpoint for analysis.
+   * @param options
+   */
+  static initRemoteLogging(options: any) {
+    if (!options.dsn) {
+      // abort if no target url is set
+      return;
+    }
+
+    const defaultOptions &#x3D; {
+      release: &quot;ndb-core@&quot; + environment.appVersion,
+    };
+    Sentry.init(Object.assign(defaultOptions, options));
+  }
+
+  /**
+   * Update a piece of context information that will be attached to all log messages for easier debugging,
+   * especially in remote logging.
+   * @param tagName Identifier of the key-value pair
+   * @param value Value of the key-value pair
+   */
+  static setLoggingContext(tagName: string, value: any) {
+    Sentry.configureScope((scope) &#x3D;&gt; {
+      scope.setTag(tagName, value);
+    });
+  }
+
+  /**
+   * Update the username to be attached to all log messages for easier debugging,
+   * especially in remote logging.
+   * @param username
+   */
+  static setLoggingContextUser(username: string) {
+    Sentry.setUser({ username: username });
+  }
+
+  /**
+   * Log the message with &quot;debug&quot; level - for very detailed, non-essential information.
+   * @param message
+   */
+  public debug(message: any) {
+    this.log(message, LogLevel.DEBUG);
+  }
+
+  /**
+   * Log the message with &quot;info&quot; level - for relevant information that occurs during regular functioning of the app.
+   * @param message
+   */
+  public info(message: any) {
+    this.log(message, LogLevel.INFO);
+  }
+
+  /**
+   * Log the message with &quot;warning&quot; level - for unexpected events that the app can still handle gracefully.
+   * @param message
+   */
+  public warn(message: any) {
+    this.log(message, LogLevel.WARN);
+  }
+
+  /**
+   * Log the message with &quot;error&quot; level - for unexpected critical events that cannot be handled and will affect functions.
+   * @param message
+   */
+  public error(message: any) {
+    this.log(message, LogLevel.ERROR);
+  }
+
+  /**
+   * Generic logging of a message.
+   * @param message Message to be logged
+   * @param logLevel Optional log level - default is &quot;info&quot;
+   */
+  public log(message: any, logLevel: LogLevel &#x3D; LogLevel.INFO) {
+    this.logToConsole(message, logLevel);
+
+    if (logLevel !&#x3D;&#x3D; LogLevel.DEBUG &amp;&amp; logLevel !&#x3D;&#x3D; LogLevel.INFO) {
+      this.logToRemoteMonitoring(message, logLevel);
+    }
+  }
+
+  private logToConsole(message: any, logLevel: LogLevel) {
+    switch (+logLevel) {
+      case LogLevel.DEBUG:
+        console.debug(message);
+        break;
+      case LogLevel.INFO:
+        console.info(message);
+        break;
+      case LogLevel.WARN:
+        console.warn(message);
+        break;
+      case LogLevel.ERROR:
+        console.error(message);
+        break;
+      default:
+        console.log(message);
+        break;
+    }
+  }
+
+  private logToRemoteMonitoring(message: any, logLevel: LogLevel) {
+    if (logLevel &#x3D;&#x3D;&#x3D; LogLevel.ERROR) {
+      Sentry.captureException(message);
+    } else {
+      Sentry.captureMessage(message, this.translateLogLevel(logLevel));
+    }
+  }
+
+  private translateLogLevel(logLevel: LogLevel): Sentry.Severity {
+    switch (+logLevel) {
+      case LogLevel.DEBUG:
+        return Sentry.Severity.Debug;
+      case LogLevel.INFO:
+        return Sentry.Severity.Info;
+      case LogLevel.WARN:
+        return Sentry.Severity.Warning;
+      case LogLevel.ERROR:
+        return Sentry.Severity.Error;
+      default:
+        return Sentry.Severity.Info;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoggingService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

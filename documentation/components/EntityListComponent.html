@@ -1,0 +1,1807 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  EntityListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/core/entity-components/entity-list/entity-list.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>This component allows to create a full blown table with pagination, filtering, searching and grouping.
+The filter and grouping settings are written into the URL params to allow going back to the previous view.
+The pagination settings are stored for each user.
+The columns can be any kind of component.
+The column components will be provided with the Entity object, the id for this column, as well as its static config.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-entity-list</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./entity-list.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./entity-list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addNewClick" >addNewClick</a>
+                            </li>
+                            <li>
+                                <a href="#allEntities" >allEntities</a>
+                            </li>
+                            <li>
+                                <a href="#columnGroups" >columnGroups</a>
+                            </li>
+                            <li>
+                                <a href="#columns" >columns</a>
+                            </li>
+                            <li>
+                                <a href="#columnsToDisplay" >columnsToDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#defaultColumnGroup" >defaultColumnGroup</a>
+                            </li>
+                            <li>
+                                <a href="#elementClick" >elementClick</a>
+                            </li>
+                            <li>
+                                <a href="#entityConstructor" >entityConstructor</a>
+                            </li>
+                            <li>
+                                <a href="#entityTable" >entityTable</a>
+                            </li>
+                            <li>
+                                <a href="#filteredEntities" >filteredEntities</a>
+                            </li>
+                            <li>
+                                <a href="#filtersConfig" >filtersConfig</a>
+                            </li>
+                            <li>
+                                <a href="#filterSelections" >filterSelections</a>
+                            </li>
+                            <li>
+                                <a href="#filterString" >filterString</a>
+                            </li>
+                            <li>
+                                <a href="#listConfig" >listConfig</a>
+                            </li>
+                            <li>
+                                <a href="#listName" >listName</a>
+                            </li>
+                            <li>
+                                <a href="#mobileColumnGroup" >mobileColumnGroup</a>
+                            </li>
+                            <li>
+                                <a href="#operationType" >operationType</a>
+                            </li>
+                            <li>
+                                <a href="#selectedColumnGroup" >selectedColumnGroup</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#applyFilter" >applyFilter</a>
+                            </li>
+                            <li>
+                                <a href="#columnGroupClick" >columnGroupClick</a>
+                            </li>
+                            <li>
+                                <a href="#filterOptionSelected" >filterOptionSelected</a>
+                            </li>
+                            <li>
+                                <a href="#getNewRecordFactory" >getNewRecordFactory</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allEntities" >allEntities</a>
+                            </li>
+                            <li>
+                                <a href="#entityConstructor" >entityConstructor</a>
+                            </li>
+                            <li>
+                                <a href="#listConfig" >listConfig</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addNewClick" >addNewClick</a>
+                            </li>
+                            <li>
+                                <a href="#elementClick" >elementClick</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(media: MediaObserver, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, filterGeneratorService: <a href="../injectables/FilterGeneratorService.html" target="_self">FilterGeneratorService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:64</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>media</td>
+                                                  
+                                                        <td>
+                                                                    <code>MediaObserver</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>filterGeneratorService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FilterGeneratorService.html" target="_self" >FilterGeneratorService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allEntities"></a>
+                        <b>allEntities</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>T[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:42</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="entityConstructor"></a>
+                        <b>entityConstructor</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Entity.html" target="_self" >EntityConstructor&lt;T&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:45</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listConfig"></a>
+                        <b>listConfig</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/EntityListConfig.html" target="_self" >EntityListConfig</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:44</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addNewClick"></a>
+                        <b>addNewClick</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:47</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="elementClick"></a>
+                        <b>elementClick</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:46</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="applyFilter"></a>
+                    <span class="name">
+                        <span ><b>applyFilter</b></span>
+                        <a href="#applyFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>applyFilter(filterValue: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:166</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filterValue</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="columnGroupClick"></a>
+                    <span class="name">
+                        <span ><b>columnGroupClick</b></span>
+                        <a href="#columnGroupClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>columnGroupClick(columnGroupName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="161"
+                            class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:161</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>columnGroupName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterOptionSelected"></a>
+                    <span class="name">
+                        <span ><b>filterOptionSelected</b></span>
+                        <a href="#filterOptionSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filterOptionSelected(filter: <a href="../interfaces/FilterComponentSettings.html" target="_self">FilterComponentSettings&lt;T&gt;</a>, selectedOption: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="172"
+                            class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:172</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filter</td>
+                                    <td>
+                                                <code><a href="../interfaces/FilterComponentSettings.html" target="_self" >FilterComponentSettings&lt;T&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>selectedOption</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNewRecordFactory"></a>
+                    <span class="name">
+                        <span ><b>getNewRecordFactory</b></span>
+                        <a href="#getNewRecordFactory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNewRecordFactory()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="221"
+                            class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:221</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>T</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addNewClick"></a>
+                    <span class="name">
+                        <span ><b>addNewClick</b></span>
+                        <a href="#addNewClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new EventEmitter()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Output()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="allEntities"></a>
+                    <span class="name">
+                        <span ><b>allEntities</b></span>
+                        <a href="#allEntities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>T[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Input()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="columnGroups"></a>
+                    <span class="name">
+                        <span ><b>columnGroups</b></span>
+                        <a href="#columnGroups"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/GroupConfig.html" target="_self" >GroupConfig[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="columns"></a>
+                    <span class="name">
+                        <span ><b>columns</b></span>
+                        <a href="#columns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FormFieldConfig.html" target="_self" >(FormFieldConfig | string)[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="columnsToDisplay"></a>
+                    <span class="name">
+                        <span ><b>columnsToDisplay</b></span>
+                        <a href="#columnsToDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="defaultColumnGroup"></a>
+                    <span class="name">
+                        <span ><b>defaultColumnGroup</b></span>
+                        <a href="#defaultColumnGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:54</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="elementClick"></a>
+                    <span class="name">
+                        <span ><b>elementClick</b></span>
+                        <a href="#elementClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new EventEmitter&lt;T&gt;()</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Output()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="entityConstructor"></a>
+                    <span class="name">
+                        <span ><b>entityConstructor</b></span>
+                        <a href="#entityConstructor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Entity.html" target="_self" >EntityConstructor&lt;T&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Input()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="entityTable"></a>
+                    <span class="name">
+                        <span ><b>entityTable</b></span>
+                        <a href="#entityTable"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Entity.html" target="_self" >EntitySubrecordComponent&lt;T&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(EntitySubrecordComponent)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:49</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredEntities"></a>
+                    <span class="name">
+                        <span ><b>filteredEntities</b></span>
+                        <a href="#filteredEntities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>T[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filtersConfig"></a>
+                    <span class="name">
+                        <span ><b>filtersConfig</b></span>
+                        <a href="#filtersConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FilterConfig.html" target="_self" >FilterConfig[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterSelections"></a>
+                    <span class="name">
+                        <span ><b>filterSelections</b></span>
+                        <a href="#filterSelections"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FilterComponentSettings.html" target="_self" >FilterComponentSettings&lt;T&gt;[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterString"></a>
+                    <span class="name">
+                        <span ><b>filterString</b></span>
+                        <a href="#filterString"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listConfig"></a>
+                    <span class="name">
+                        <span ><b>listConfig</b></span>
+                        <a href="#listConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/EntityListConfig.html" target="_self" >EntityListConfig</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Input()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listName"></a>
+                    <span class="name">
+                        <span ><b>listName</b></span>
+                        <a href="#listName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mobileColumnGroup"></a>
+                    <span class="name">
+                        <span ><b>mobileColumnGroup</b></span>
+                        <a href="#mobileColumnGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="operationType"></a>
+                    <span class="name">
+                        <span ><b>operationType</b></span>
+                        <a href="#operationType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>OperationType</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedColumnGroup"></a>
+                    <span class="name">
+                        <span ><b>selectedColumnGroup</b></span>
+                        <a href="#selectedColumnGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/core/entity-components/entity-list/entity-list.component.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  AfterViewInit,
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  SimpleChanges,
+  ViewChild,
+} from &quot;@angular/core&quot;;
+import { MediaChange, MediaObserver } from &quot;@angular/flex-layout&quot;;
+import { ActivatedRoute, Router } from &quot;@angular/router&quot;;
+import {
+  ColumnGroupsConfig,
+  EntityListConfig,
+  FilterConfig,
+  GroupConfig,
+} from &quot;./EntityListConfig&quot;;
+import { Entity, EntityConstructor } from &quot;../../entity/model/entity&quot;;
+import { OperationType } from &quot;../../permissions/entity-permissions.service&quot;;
+import { FormFieldConfig } from &quot;../entity-form/entity-form/FormConfig&quot;;
+import { EntitySubrecordComponent } from &quot;../entity-subrecord/entity-subrecord/entity-subrecord.component&quot;;
+import { FilterGeneratorService } from &quot;./filter-generator.service&quot;;
+import { FilterComponentSettings } from &quot;./filter-component.settings&quot;;
+import { entityFilterPredicate } from &quot;./filter-predicate&quot;;
+
+/**
+ * This component allows to create a full blown table with pagination, filtering, searching and grouping.
+ * The filter and grouping settings are written into the URL params to allow going back to the previous view.
+ * The pagination settings are stored for each user.
+ * The columns can be any kind of component.
+ * The column components will be provided with the Entity object, the id for this column, as well as its static config.
+ */
+@Component({
+  selector: &quot;app-entity-list&quot;,
+  templateUrl: &quot;./entity-list.component.html&quot;,
+  styleUrls: [&quot;./entity-list.component.scss&quot;],
+})
+export class EntityListComponent&lt;T extends Entity&gt;
+  implements OnChanges, OnInit, AfterViewInit {
+  @Input() allEntities: T[] &#x3D; [];
+  filteredEntities: T[] &#x3D; [];
+  @Input() listConfig: EntityListConfig;
+  @Input() entityConstructor: EntityConstructor&lt;T&gt;;
+  @Output() elementClick &#x3D; new EventEmitter&lt;T&gt;();
+  @Output() addNewClick &#x3D; new EventEmitter();
+
+  @ViewChild(EntitySubrecordComponent) entityTable: EntitySubrecordComponent&lt;T&gt;;
+
+  listName &#x3D; &quot;&quot;;
+  columns: (FormFieldConfig | string)[] &#x3D; [];
+  columnGroups: GroupConfig[] &#x3D; [];
+  defaultColumnGroup &#x3D; &quot;&quot;;
+  mobileColumnGroup &#x3D; &quot;&quot;;
+  filtersConfig: FilterConfig[] &#x3D; [];
+
+  operationType &#x3D; OperationType;
+
+  columnsToDisplay: string[] &#x3D; [];
+  selectedColumnGroup: string &#x3D; &quot;&quot;;
+
+  filterSelections: FilterComponentSettings&lt;T&gt;[] &#x3D; [];
+  filterString &#x3D; &quot;&quot;;
+
+  constructor(
+    private media: MediaObserver,
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private filterGeneratorService: FilterGeneratorService
+  ) {}
+
+  ngOnInit() {
+    this.media.asObservable().subscribe((change: MediaChange[]) &#x3D;&gt; {
+      switch (change[0].mqAlias) {
+        case &quot;xs&quot;:
+        case &quot;sm&quot;: {
+          this.displayColumnGroup(this.mobileColumnGroup);
+          break;
+        }
+        case &quot;md&quot;: {
+          this.displayColumnGroup(this.defaultColumnGroup);
+          break;
+        }
+      }
+    });
+  }
+
+  ngAfterViewInit() {
+    this.entityTable.recordsDataSource.filterPredicate &#x3D; (data, filter) &#x3D;&gt;
+      entityFilterPredicate(data.record, filter);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.hasOwnProperty(&quot;listConfig&quot;)) {
+      this.listName &#x3D; this.listConfig.title;
+      this.addColumnsFromColumnGroups();
+      this.initColumnGroups(this.listConfig.columnGroups);
+      this.filtersConfig &#x3D; this.listConfig.filters || [];
+      this.displayColumnGroup(this.defaultColumnGroup);
+    }
+    if (changes.hasOwnProperty(&quot;allEntities&quot;)) {
+      this.filteredEntities &#x3D; this.allEntities;
+      this.initFilterSelections();
+    }
+    this.loadUrlParams();
+  }
+
+  private addColumnsFromColumnGroups() {
+    this.columns &#x3D; this.listConfig.columns || [];
+    this.listConfig.columnGroups?.groups?.forEach((group) &#x3D;&gt;
+      group.columns
+        .filter(
+          (columnId) &#x3D;&gt;
+            !this.columns.some((column) &#x3D;&gt;
+              // Check if the column is already defined as object or string
+              typeof column &#x3D;&#x3D;&#x3D; &quot;string&quot;
+                ? column &#x3D;&#x3D;&#x3D; columnId
+                : column.id &#x3D;&#x3D;&#x3D; columnId
+            )
+        )
+        .forEach((column) &#x3D;&gt; this.columns.push(column))
+    );
+  }
+
+  private initColumnGroups(columnGroup?: ColumnGroupsConfig) {
+    if (columnGroup &amp;&amp; columnGroup.groups.length &gt; 0) {
+      this.columnGroups &#x3D; columnGroup.groups;
+      this.defaultColumnGroup &#x3D;
+        columnGroup.default || columnGroup.groups[0].name;
+      this.mobileColumnGroup &#x3D; columnGroup.mobile || columnGroup.groups[0].name;
+    } else {
+      this.columnGroups &#x3D; [
+        {
+          name: &quot;default&quot;,
+          columns: this.columns.map((c) &#x3D;&gt; (typeof c &#x3D;&#x3D;&#x3D; &quot;string&quot; ? c : c.id)),
+        },
+      ];
+      this.defaultColumnGroup &#x3D; &quot;default&quot;;
+      this.mobileColumnGroup &#x3D; &quot;default&quot;;
+    }
+  }
+
+  private loadUrlParams() {
+    this.activatedRoute.queryParams.subscribe((params) &#x3D;&gt; {
+      if (params[&quot;view&quot;]) {
+        this.displayColumnGroup(params[&quot;view&quot;]);
+      }
+      this.filterSelections.forEach((f) &#x3D;&gt; {
+        if (params.hasOwnProperty(f.filterSettings.name)) {
+          f.selectedOption &#x3D; params[f.filterSettings.name];
+        }
+      });
+      this.applyFilterSelections();
+      if (params[&quot;search&quot;]) {
+        this.applyFilter(params[&quot;search&quot;]);
+      }
+    });
+  }
+
+  columnGroupClick(columnGroupName: string) {
+    this.displayColumnGroup(columnGroupName);
+    this.updateUrl(&quot;view&quot;, columnGroupName);
+  }
+
+  applyFilter(filterValue: string) {
+    filterValue &#x3D; filterValue.trim();
+    filterValue &#x3D; filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+    this.entityTable.recordsDataSource.filter &#x3D; filterValue;
+  }
+
+  filterOptionSelected(
+    filter: FilterComponentSettings&lt;T&gt;,
+    selectedOption: string
+  ) {
+    filter.selectedOption &#x3D; selectedOption;
+    this.applyFilterSelections();
+    this.updateUrl(filter.filterSettings.name, selectedOption);
+  }
+
+  private applyFilterSelections() {
+    let filteredData &#x3D; this.allEntities;
+
+    this.filterSelections.forEach((f) &#x3D;&gt; {
+      filteredData &#x3D; filteredData.filter(
+        f.filterSettings.getFilterFunction(f.selectedOption)
+      );
+    });
+
+    this.filteredEntities &#x3D; filteredData;
+  }
+
+  private updateUrl(key: string, value: string) {
+    const params &#x3D; {};
+    params[key] &#x3D; value;
+    this.router.navigate([], {
+      relativeTo: this.activatedRoute,
+      queryParams: params,
+      queryParamsHandling: &quot;merge&quot;,
+    });
+  }
+
+  private async initFilterSelections(): Promise&lt;void&gt; {
+    this.filterSelections &#x3D; await this.filterGeneratorService.generate(
+      this.filtersConfig,
+      this.entityConstructor,
+      this.allEntities
+    );
+  }
+
+  private displayColumnGroup(columnGroupName: string) {
+    const selectedColumns &#x3D; this.columnGroups.find(
+      (c) &#x3D;&gt; c.name &#x3D;&#x3D;&#x3D; columnGroupName
+    )?.columns;
+    if (selectedColumns) {
+      this.columnsToDisplay &#x3D; selectedColumns;
+      this.selectedColumnGroup &#x3D; columnGroupName;
+    }
+  }
+
+  getNewRecordFactory(): () &#x3D;&gt; T {
+    return () &#x3D;&gt; new this.entityConstructor();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1&gt;{{ listName }}&lt;/h1&gt;
+
+&lt;mat-expansion-panel expanded&#x3D;&quot;true&quot; class&#x3D;&quot;filter-panel mat-elevation-z2&quot;&gt;
+  &lt;div fxLayout&#x3D;&quot;row&quot; fxLayoutGap&#x3D;&quot;10px&quot; fxLayoutAlign&#x3D;&quot;none end&quot;&gt;
+    &lt;!-- text search --&gt;
+    &lt;div fxFlex&#x3D;&quot;50&quot;&gt;
+      &lt;mat-form-field style&#x3D;&quot;width: 100%&quot;&gt;
+        &lt;input
+          matInput
+          placeholder&#x3D;&quot;Filter&quot;
+          (ngModelChange)&#x3D;&quot;applyFilter($event)&quot;
+          [(ngModel)]&#x3D;&quot;filterString&quot;
+        /&gt;
+        &lt;button
+          mat-icon-button
+          *ngIf&#x3D;&quot;filterString&quot;
+          matSuffix
+          aria-label&#x3D;&quot;Clear&quot;
+          (click)&#x3D;&quot;filterString &#x3D; &#x27;&#x27;; applyFilter(&#x27;&#x27;)&quot;
+        &gt;
+          &lt;mat-icon fontIcon&#x3D;&quot;fa-times&quot;&gt;&lt;/mat-icon&gt;
+        &lt;/button&gt;
+      &lt;/mat-form-field&gt;
+    &lt;/div&gt;
+    &lt;!-- number of table entries --&gt;
+    &lt;div fxFlex&#x3D;&quot;25&quot; fxHide.xs&#x3D;&quot;true&quot; class&#x3D;&quot;align-form-field&quot;&gt;
+      (Showing {{ filteredEntities.length }} entries)
+    &lt;/div&gt;
+    &lt;!-- add new button --&gt;
+    &lt;div fxFlex&#x3D;&quot;25&quot; class&#x3D;&quot;align-form-field&quot;&gt;
+      &lt;button
+        mat-stroked-button
+        color&#x3D;&quot;accent&quot;
+        (click)&#x3D;&quot;addNewClick.emit()&quot;
+        angulartics2On&#x3D;&quot;click&quot;
+        angularticsCategory&#x3D;&quot;UserAction&quot;
+        [angularticsAction]&#x3D;&quot;
+          listName.toLowerCase().replace(&#x27; &#x27;, &#x27;_&#x27;) + &#x27;_add_new&#x27;
+        &quot;
+        *appDisabledEntityOperation&#x3D;&quot;{
+          entity: entityConstructor,
+          operation: operationType.CREATE
+        }&quot;
+      &gt;
+        &lt;mat-icon
+          class&#x3D;&quot;button-icon&quot;
+          aria-label&#x3D;&quot;add element&quot;
+          fontIcon&#x3D;&quot;fa-plus-circle&quot;
+        &gt;&lt;/mat-icon&gt;
+        &lt;span fxHide.lt-md&#x3D;&quot;true&quot;&gt; Add New &lt;/span&gt;
+      &lt;/button&gt;
+      &lt;app-export-data
+        [data]&#x3D;&quot;allEntities&quot;
+        format&#x3D;&quot;csv&quot;
+        [filename]&#x3D;&quot;listName.replace(&#x27; &#x27;, &#x27;&#x27;)&quot;
+        angulartics2On&#x3D;&quot;click&quot;
+        angularticsCategory&#x3D;&quot;UserAction&quot;
+        [angularticsAction]&#x3D;&quot;
+          listName.toLowerCase().replace(&#x27; &#x27;, &#x27;_&#x27;) + &#x27;_csv_export&#x27;
+        &quot;
+      &gt;
+        &lt;mat-icon
+          class&#x3D;&quot;button-icon&quot;
+          aria-label&#x3D;&quot;download csv&quot;
+          fontIcon&#x3D;&quot;fa-download&quot;
+        &gt;&lt;/mat-icon&gt;
+        &lt;span fxHide.lt-md&#x3D;&quot;true&quot;&gt; Download CSV &lt;/span&gt;
+      &lt;/app-export-data&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div
+    *ngIf&#x3D;&quot;filterSelections.length &gt; 0&quot;
+    class&#x3D;&quot;toggle-selection-section&quot;
+    fxLayout&#x3D;&quot;row wrap&quot;
+    fxLayoutGap&#x3D;&quot;10px grid&quot;
+  &gt;
+    &lt;app-list-filter
+      *ngFor&#x3D;&quot;let filter of filterSelections&quot;
+      [filterConfig]&#x3D;&quot;filter.filterSettings&quot;
+      [(selectedOption)]&#x3D;&quot;filter.selectedOption&quot;
+      [displayAsToggle]&#x3D;&quot;filter.display !&#x3D;&#x3D; &#x27;dropdown&#x27;&quot;
+      (selectedOptionChange)&#x3D;&quot;filterOptionSelected(filter, $event)&quot;
+    &gt;
+    &lt;/app-list-filter&gt;
+  &lt;/div&gt;
+
+  &lt;div
+    *ngIf&#x3D;&quot;columnGroups.length &gt; 1&quot;
+    class&#x3D;&quot;toggle-selection-section&quot;
+    fxHide.lt-sm
+  &gt;
+    &lt;mat-button-toggle-group
+      name&#x3D;&quot;columnSelection&quot;
+      [(value)]&#x3D;&quot;selectedColumnGroup&quot;
+    &gt;
+      &lt;mat-button-toggle
+        *ngFor&#x3D;&quot;let item of columnGroups&quot;
+        [value]&#x3D;&quot;item.name&quot;
+        (click)&#x3D;&quot;columnGroupClick(item.name)&quot;
+      &gt;
+        {{ item.name }}
+      &lt;/mat-button-toggle&gt;
+    &lt;/mat-button-toggle-group&gt;
+  &lt;/div&gt;
+&lt;/mat-expansion-panel&gt;
+
+&lt;div class&#x3D;&quot;mat-elevation-z2 table-list&quot;&gt;
+  &lt;app-entity-subrecord
+    [records]&#x3D;&quot;filteredEntities&quot;
+    [columns]&#x3D;&quot;columns&quot;
+    [editable]&#x3D;&quot;false&quot;
+    [showEntity]&#x3D;&quot;elementClick.emit.bind(elementClick)&quot;
+    [columnsToDisplay]&#x3D;&quot;columnsToDisplay&quot;
+  &gt;&lt;/app-entity-subrecord&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./entity-list.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.filter-panel {
+  padding-top: 10px;
+  border-radius: 0;
+}
+
+.toggle-selection-section {
+  margin-top: 10px;
+}
+
+.table-list {
+  margin-top: 10px;
+}
+
+.table-list td {
+  padding-left: 8px;
+}
+
+.button-icon {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+.align-form-field {
+  padding-bottom: 1.25em;
+}
+
+.cell-with-blocks {
+  white-space: nowrap;
+  overflow: hidden;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1>{{ listName }}</h1><mat-expansion-panel expanded="true" class="filter-panel mat-elevation-z2">  <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="none end">    <!-- text search -->    <div fxFlex="50">      <mat-form-field style="width: 100%">        <input          matInput          placeholder="Filter"          (ngModelChange)="applyFilter($event)"          [(ngModel)]="filterString"        />        <button          mat-icon-button          *ngIf="filterString"          matSuffix          aria-label="Clear"          (click)="filterString = \'\'; applyFilter(\'\')"        >          <mat-icon fontIcon="fa-times"></mat-icon>        </button>      </mat-form-field>    </div>    <!-- number of table entries -->    <div fxFlex="25" fxHide.xs="true" class="align-form-field">      (Showing {{ filteredEntities.length }} entries)    </div>    <!-- add new button -->    <div fxFlex="25" class="align-form-field">      <button        mat-stroked-button        color="accent"        (click)="addNewClick.emit()"        angulartics2On="click"        angularticsCategory="UserAction"        [angularticsAction]="          listName.toLowerCase().replace(\' \', \'_\') + \'_add_new\'        "        *appDisabledEntityOperation="{          entity: entityConstructor,          operation: operationType.CREATE        }"      >        <mat-icon          class="button-icon"          aria-label="add element"          fontIcon="fa-plus-circle"        ></mat-icon>        <span fxHide.lt-md="true"> Add New </span>      </button>      <app-export-data        [data]="allEntities"        format="csv"        [filename]="listName.replace(\' \', \'\')"        angulartics2On="click"        angularticsCategory="UserAction"        [angularticsAction]="          listName.toLowerCase().replace(\' \', \'_\') + \'_csv_export\'        "      >        <mat-icon          class="button-icon"          aria-label="download csv"          fontIcon="fa-download"        ></mat-icon>        <span fxHide.lt-md="true"> Download CSV </span>      </app-export-data>    </div>  </div>  <div    *ngIf="filterSelections.length > 0"    class="toggle-selection-section"    fxLayout="row wrap"    fxLayoutGap="10px grid"  >    <app-list-filter      *ngFor="let filter of filterSelections"      [filterConfig]="filter.filterSettings"      [(selectedOption)]="filter.selectedOption"      [displayAsToggle]="filter.display !== \'dropdown\'"      (selectedOptionChange)="filterOptionSelected(filter, $event)"    >    </app-list-filter>  </div>  <div    *ngIf="columnGroups.length > 1"    class="toggle-selection-section"    fxHide.lt-sm  >    <mat-button-toggle-group      name="columnSelection"      [(value)]="selectedColumnGroup"    >      <mat-button-toggle        *ngFor="let item of columnGroups"        [value]="item.name"        (click)="columnGroupClick(item.name)"      >        {{ item.name }}      </mat-button-toggle>    </mat-button-toggle-group>  </div></mat-expansion-panel><div class="mat-elevation-z2 table-list">  <app-entity-subrecord    [records]="filteredEntities"    [columns]="columns"    [editable]="false"    [showEntity]="elementClick.emit.bind(elementClick)"    [columnsToDisplay]="columnsToDisplay"  ></app-entity-subrecord></div></div>'
+    var COMPONENTS = [{'name': 'ActivityAttendanceSectionComponent', 'selector': 'app-activity-attendance-section'},{'name': 'ActivityCardComponent', 'selector': 'app-activity-card'},{'name': 'ActivityListComponent', 'selector': 'app-activity-list'},{'name': 'AddDayAttendanceComponent', 'selector': 'app-add-day-attendance'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AlertComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppVersionComponent', 'selector': 'app-version'},{'name': 'AserComponent', 'selector': 'app-aser'},{'name': 'AttendanceBlockComponent', 'selector': 'app-attendance-block'},{'name': 'AttendanceCalendarComponent', 'selector': 'app-attendance-calendar'},{'name': 'AttendanceDayBlockComponent', 'selector': 'app-attendance-day-block]'},{'name': 'AttendanceDetailsComponent', 'selector': 'app-attendance-details'},{'name': 'AttendanceManagerComponent', 'selector': 'app-attendance-manager'},{'name': 'AttendanceStatusSelectComponent', 'selector': 'app-attendance-status-select'},{'name': 'AttendanceWeekDashboardComponent', 'selector': 'app-attendance-week-dashboard'},{'name': 'BackgroundProcessingIndicatorComponent', 'selector': 'app-background-processing-indicator'},{'name': 'BmiBlockComponent', 'selector': 'app-bmi-block'},{'name': 'ButtonComponent', 'selector': 'storybook-button'},{'name': 'ChangelogComponent', 'selector': ''},{'name': 'ChildBlockComponent', 'selector': 'app-child-block'},{'name': 'ChildMeetingNoteAttendanceComponent', 'selector': 'app-child-meeting-note-attendance'},{'name': 'ChildrenBmiDashboardComponent', 'selector': 'app-children-bmi-dashboard'},{'name': 'ChildrenCountDashboardComponent', 'selector': 'app-children-count-dashboard'},{'name': 'ChildrenListComponent', 'selector': 'app-children-list'},{'name': 'ChildrenOverviewComponent', 'selector': 'app-children-overview'},{'name': 'CloudFileServiceUserSettingsComponent', 'selector': 'app-cloud-file-service-user-settings'},{'name': 'ComingSoonComponent', 'selector': 'app-coming-soon'},{'name': 'CompareRevComponent', 'selector': 'app-compare-rev'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'ConflictResolutionListComponent', 'selector': 'app-conflict-resolution-list'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardShortcutWidgetComponent', 'selector': 'app-dashboard-shortcut-widget'},{'name': 'DemoDataGeneratingProgressDialogComponent', 'selector': ''},{'name': 'DisabledWrapperComponent', 'selector': 'app-disabled-wrapper'},{'name': 'DisplayCheckmarkComponent', 'selector': 'app-display-tick'},{'name': 'DisplayConfigurableEnumComponent', 'selector': 'app-display-configurable-enum'},{'name': 'DisplayDateComponent', 'selector': 'app-display-date'},{'name': 'DisplayEntityArrayComponent', 'selector': 'app-display-entity-array'},{'name': 'DisplayEntityComponent', 'selector': 'app-display-entity'},{'name': 'DisplayPercentageComponent', 'selector': 'app-display-percentage'},{'name': 'DisplayTextComponent', 'selector': 'app-display-text'},{'name': 'DisplayUnitComponent', 'selector': 'app-display-unit'},{'name': 'EditAgeComponent', 'selector': 'app-edit-age'},{'name': 'EditBooleanComponent', 'selector': 'app-edit-boolean'},{'name': 'EditConfigurableEnumComponent', 'selector': 'app-edit-configurable-enum'},{'name': 'EditDateComponent', 'selector': 'app-edit-date'},{'name': 'EditEntityArrayComponent', 'selector': 'app-edit-entity-array'},{'name': 'EditLongTextComponent', 'selector': 'app-edit-long-text'},{'name': 'EditNumberComponent', 'selector': 'app-edit-number'},{'name': 'EditPercentageComponent', 'selector': 'app-edit-percentage'},{'name': 'EditPhotoComponent', 'selector': 'app-edit-photo'},{'name': 'EditSingleEntityComponent', 'selector': 'app-edit-single-entity'},{'name': 'EditTextComponent', 'selector': 'app-edit-text'},{'name': 'EducationalMaterialComponent', 'selector': 'app-educational-material'},{'name': 'EntityDetailsComponent', 'selector': 'app-entity-details'},{'name': 'EntityFormComponent', 'selector': 'app-entity-form'},{'name': 'EntityListComponent', 'selector': 'app-entity-list'},{'name': 'EntitySelectComponent', 'selector': 'app-entity-select'},{'name': 'EntitySubrecordComponent', 'selector': 'app-entity-subrecord'},{'name': 'ExportDataComponent', 'selector': 'app-export-data'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormDialogWrapperComponent', 'selector': 'app-form-dialog-wrapper'},{'name': 'GroupedChildAttendanceComponent', 'selector': 'app-grouped-child-attendance'},{'name': 'HeaderComponent', 'selector': 'storybook-header'},{'name': 'HealthCheckupComponent', 'selector': 'app-health-checkup'},{'name': 'HistoricalDataComponent', 'selector': 'app-historical-data'},{'name': 'HowToComponent', 'selector': 'app-help'},{'name': 'InitialSyncDialogComponent', 'selector': ''},{'name': 'ListFilterComponent', 'selector': 'app-list-filter'},{'name': 'ListPaginatorComponent', 'selector': 'app-list-paginator'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'NoRecentNotesDashboardComponent', 'selector': 'app-no-recent-notes-dashboard'},{'name': 'NoteDetailsComponent', 'selector': 'app-note-details'},{'name': 'NotesManagerComponent', 'selector': 'app-notes-manager'},{'name': 'NotesOfChildComponent', 'selector': 'app-notes-of-child'},{'name': 'PageComponent', 'selector': 'storybook-page'},{'name': 'PreviousSchoolsComponent', 'selector': 'app-previous-schools'},{'name': 'PrimaryActionComponent', 'selector': 'app-primary-action'},{'name': 'ProgressDashboardComponent', 'selector': 'app-progress-dashboard'},{'name': 'ReadonlyFunctionComponent', 'selector': 'app-readonly-function'},{'name': 'RecentAttendanceBlocksComponent', 'selector': 'app-recent-attendance-blocks'},{'name': 'RecentNotesDashboardComponent', 'selector': 'app-recent-notes-dashboard'},{'name': 'ReportingComponent', 'selector': 'app-reporting'},{'name': 'ReportRowComponent', 'selector': 'app-report-row'},{'name': 'RollCallComponent', 'selector': 'app-roll-call'},{'name': 'RollCallSetupComponent', 'selector': 'app-roll-call-setup'},{'name': 'SchoolBlockComponent', 'selector': 'app-school-block'},{'name': 'SchoolsListComponent', 'selector': 'app-schools-list'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SyncStatusComponent', 'selector': 'app-sync-status'},{'name': 'UiComponent', 'selector': 'app-ui'},{'name': 'UserAccountComponent', 'selector': 'app-user-account'},{'name': 'UserListComponent', 'selector': 'app-user-list'}];
+    var DIRECTIVES = [{'name': 'ConfigurableEnumDirective', 'selector': '[appConfigurableEnum]'},{'name': 'DisableEntityOperationDirective', 'selector': '[appDisabledEntityOperation]'},{'name': 'DynamicComponentDirective', 'selector': '[appDynamicComponent]'}];
+    var ACTUAL_COMPONENT = {'name': 'EntityListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'EntityListComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

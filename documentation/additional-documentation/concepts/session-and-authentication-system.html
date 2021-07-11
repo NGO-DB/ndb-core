@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+	   <link rel="stylesheet" href="../../styles/style.css">
+        <link rel="stylesheet" href="../../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content additional-page">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+<h1 id="session-handling-authentication--synchronisation">Session Handling, Authentication &amp; Synchronisation</h1>
+<p>This document aims at describing the architecture of the offline-first session handling, focussing on the <code>(Synced)SessionService</code>.</p>
+<!-- TOC -->
+
+<ul>
+<li><a href="#state">State</a></li>
+<li><a href="#login-flow">Login Flow</a></li>
+<li><a href="#class-diagrams">Class Diagrams</a></li>
+<li><a href="#sequence-diagrams-for-login">Sequence Diagrams for Login</a><ul>
+<li><a href="#usual-flows">Usual Flows</a><ul>
+<li><a href="#correct-password">Correct Password</a></li>
+<li><a href="#wrong-password">Wrong Password</a></li>
+</ul>
+</li>
+<li><a href="#offline-flows">Offline Flows</a><ul>
+<li><a href="#correct-password-1">Correct Password</a></li>
+<li><a href="#wrong-password-1">Wrong Password</a></li>
+</ul>
+</li>
+<li><a href="#password-changed">Password Changed</a><ul>
+<li><a href="#use-old-password">Use old password</a></li>
+<li><a href="#use-new-password">Use new password</a></li>
+</ul>
+</li>
+<li><a href="#sync-failed-flows">Sync Failed Flows</a><ul>
+<li><a href="#local-login-succeeded">Local Login succeeded</a></li>
+<li><a href="#local-login-failed">Local Login failed</a></li>
+</ul>
+</li>
+<li><a href="#initial-sync-flows">Initial Sync Flows</a><ul>
+<li><a href="#online-with-correct-password">Online with correct password</a></li>
+<li><a href="#online-with-wrong-password">Online with wrong password</a></li>
+<li><a href="#offline">Offline</a></li>
+<li><a href="#other-sync-failures">Other sync failures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+
+<p>There are some modules involved in Session Handling:</p>
+<ul>
+<li><strong>Database</strong>: Contains an abstraction over database with a common interface, the implementation of that interface for PouchDB (<code>PouchDatabase</code>), and another implementation providing mock data (<code>MockDatabase</code>).</li>
+<li><strong>Entity</strong>: Contains an EntityMapper to be used with the database abstraction. Other modules may choose to implement the abstract class <code>Entity</code> and add annotations of the <code>EntitySchemaService</code> in order to be saved in the database.</li>
+<li><strong>User</strong>: Users are one such entity, providing additional methods to check its hashed password stored in the database.</li>
+<li><strong>Session</strong>: Contains the services holding everything together: <code>SessionService</code> provides an abstract class specifying the interface of an actual implementation (its not an interface, as interfaces will be optimized by the TypeScript compiler and can&#39;t be used for injection - which is necessary in our case.) There are also two such implementations: <code>MockSessionService</code> implements a local session backed by a <code>MockDatabase</code> to be used during development and unit tests, <code>SyncedSessionService</code> the production version with sync backed by <code>PouchDatabase</code>.</li>
+</ul>
+<h2 id="state">State</h2>
+<p>Lets talk about state for a second. With an offline-first synced session, there is lots of state involved needing to be synced. The following diagrams provide an overview on state and transitions:</p>
+<p><img src="../../images/session_state.png" alt="State and State Transitions" class="img-responsive"></p>
+<ul>
+<li><strong>LoginState</strong>: Central state of the application: Is the user logged in or not? One can go directly from <code>loginFailed</code> to <code>loggedIn</code> by just entering the correct credentials at the UI after a failed attempt.</li>
+<li><strong>ConnectionState</strong>: ConnectionState describes the connection to the remote database. <code>disconnected</code> describes that no connection shall be established, i.e. before login and after logout. The remote database may reject a login (i.e. due to wrong credentials), causing state <code>rejected</code>. Additionally, the connection state may switch between <code>offline</code> and <code>connected</code>, when the user&#39;s browser goes offline or online after connection was established at least once.</li>
+<li><strong>SyncState</strong>: SyncState describes the state of database synchronization. Initially, that state is <code>unsynced</code>. The synchronization started after a successful connection to the remote database may change that state.</li>
+</ul>
+<p>To keep track of those states, a helper class was implemented. <code>StateEnum</code> is the (TypeScript-)Enumeration containing the states that are described by a given <code>StateHandler</code>.</p>
+<p><img src="../../images/state_handler.png" alt="StateHandler Helper" class="img-responsive"></p>
+<p>LoginState depends primarily on the local database, as a login must be possible in case the user is offline. ConnectionState depends only on the remote database. While SyncState is conceptually somewhere <em>between</em> the two, it is also associated with the local database, as the local login depends on the synchronization, when there is no database available (i.e. when the application is first started in a fresh browser).</p>
+<h2 id="login-flow">Login Flow</h2>
+<p><em>Note: Please refer to the code in the <code>SyncedSessionService</code> for details - there are lots of comments to make clear, what is happening when. Feel free to also take a look at the sequence-diagrams below that capture the flow in various scenarios</em></p>
+<ul>
+<li>Login is attempted at both the local and the remote database in parallel. The result of the local login is returned as promise.</li>
+<li>The local login will wait for the first initial synchronization of the local database in case it was empty, so users are available for offline login.</li>
+<li>The login at the remote database will return the ConnectionState as a promise. The following situations are possible:<ol>
+<li>The user may be <code>offline</code>. In this case, the remote login will be queued for retry at a later point in time. If the local login went through, this won&#39;t affect the user&#39;s ability to work with the application. If the local database is empty (and the local login is therefor waiting for a first login), the SyncedSessionService will set the SyncState to <code>failed</code> so the local login won&#39;t be pending forever, but can be aborted by the local session.</li>
+<li>The remote database may connect successfully (state <code>connected</code>), in which case the SyncedSessionService will start a synchronization. If the local database was empty, the local login waits until this synchronization is finished. After a successful sync, a liveSync will be queued for starting at the next tick (not immediately, as listeners to the EventChangedStream may not be notified due to the way browsers handle promise execution in Microtasks).</li>
+<li>When the remote database rejects connection (state <code>rejected</code>), but the local login was successful, we have inconsistent authentication due to changed passwords. In this case, the login will be failed by the SyncedSessionService. Keep in mind that the user has been able to work with his old password until the rejection from the remote database is present.</li>
+</ol>
+</li>
+</ul>
+<h2 id="class-diagrams">Class Diagrams</h2>
+<p>The local session depends on the user entity being loaded from the database. Doing this the standard way with the EntityMapperService would result in a circular dependency, which is why that specific part of code must be duplicated in the LocalSession.</p>
+<p>The following diagram shows most classes and services in the session. The <code>MockSessionService</code> and the abstract base class <code>SessionService</code>, as well as the <code>EntitySchemaService</code> used in the <code>LocalSession</code> to construct the the <code>User</code> are omitted for layout-reasons. The <code>databaseProvider</code> is created by the Session module and depends on the <code>SyncedSessionService</code> (or <code>MockSessionService</code>, depending on app configuration)-</p>
+<p><img src="../../images/session_classes.png" alt="class diagrams" class="img-responsive"></p>
+<h2 id="sequence-diagrams-for-login">Sequence Diagrams for Login</h2>
+<h3 id="usual-flows">Usual Flows</h3>
+<p>Local database is present, remote password was not changed.</p>
+<h4 id="correct-password">Correct Password</h4>
+<p><img src="../../images/new-session-flows/normal__right_pwd.svg" alt="" class="img-responsive"></p>
+<h4 id="wrong-password">Wrong Password</h4>
+<p><img src="../../images/new-session-flows/normal__wrong_pwd.svg" alt="" class="img-responsive"></p>
+<h3 id="offline-flows">Offline Flows</h3>
+<p>Local Database is present, but we are offline</p>
+<h4 id="correct-password-1">Correct Password</h4>
+<p><img src="../../images/new-session-flows/offline__right_pwd.svg" alt="" class="img-responsive"></p>
+<h4 id="wrong-password-1">Wrong Password</h4>
+<p><img src="../../images/new-session-flows/offline__wrong_pwd.svg" alt="" class="img-responsive"></p>
+<p>We must retry with wait here, as we might be in a situation where the remote password changed and we should actually be able to log in. See these flows for details.</p>
+<h3 id="password-changed">Password Changed</h3>
+<p>Local Database is present, but we changed the password and password state is inconsistent between local and remote.</p>
+<h4 id="use-old-password">Use old password</h4>
+<p>Works locally but not on the remote.</p>
+<p><img src="../../images/new-session-flows/pwd_changed__old_pwd.svg" alt="" class="img-responsive"></p>
+<h4 id="use-new-password">Use new password</h4>
+<p>Works on the remote but not locally.</p>
+<p><img src="../../images/new-session-flows/pwd_changed__new_pwd.svg" alt="" class="img-responsive"></p>
+<h3 id="sync-failed-flows">Sync Failed Flows</h3>
+<p>So the remote session connected, but for some reason other than being offline the sync fails. I don&#39;t know how, but this might happen.</p>
+<h4 id="local-login-succeeded">Local Login succeeded</h4>
+<p>Easiest case. Just start the liveSync and hope everything works out eventually. There should be some sync-indicator listening to the sync state to make the user aware that something is going wrong in the background.</p>
+<p><img src="../../images/new-session-flows/sync_failed__local_login_success.svg" alt="" class="img-responsive"></p>
+<h4 id="local-login-failed">Local Login failed</h4>
+<p>This is most probably a changed password case. However, as the sync failed, we cannot log the user in locally, so we have to keep the login failed. We also don&#39;t start a liveSync here, as it confuses the hell out of the UI to be not logged in but have a running (and intermittently failing) liveSync here. We might want to revisit this behavior, though.</p>
+<p><img src="../../images/new-session-flows/sync_failed__local_login_failure.svg" alt="" class="img-responsive"></p>
+<h3 id="initial-sync-flows">Initial Sync Flows</h3>
+<p>The local database is initial. We must wait for a first sync before we can log anyone in.</p>
+<h4 id="online-with-correct-password">Online with correct password</h4>
+<p><img src="../../images/new-session-flows/initial__online_correct_pwd.svg" alt="" class="img-responsive"></p>
+<h4 id="online-with-wrong-password">Online with wrong password</h4>
+<p><img src="../../images/new-session-flows/initial__online_wrong_pwd.svg" alt="" class="img-responsive"></p>
+<h4 id="offline">Offline</h4>
+<p>We can&#39;t have the local login pending for too long. We also don&#39;t want the login explicitly failed (resulting in wrong password messages), so we just switch back to logged off.</p>
+<p><img src="../../images/new-session-flows/initial__offline.svg" alt="" class="img-responsive"></p>
+<h4 id="other-sync-failures">Other sync failures</h4>
+<p>We don&#39;t know what to do in this case. We can&#39;t have the local login pending forever. We also don&#39;t want the login explicitly failed (resulting in wrong password messages), so we just switch back to logged off.</p>
+<p><img src="../../images/new-session-flows/initial__sync_failed.svg" alt="" class="img-responsive"></p>
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 2;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'additional-page';
+            var COMPODOC_CURRENT_PAGE_URL = 'session-and-authentication-system.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../../js/libs/custom-elements.min.js"></script>
+       <script src="../../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../../js/menu-wc.js" defer></script>
+       <script nomodule src="../../js/menu-wc_es5.js" defer></script>
+
+       <script src="../../js/libs/bootstrap-native.js"></script>
+
+       <script src="../../js/libs/es6-shim.min.js"></script>
+       <script src="../../js/libs/EventDispatcher.js"></script>
+       <script src="../../js/libs/promise.min.js"></script>
+       <script src="../../js/libs/zepto.min.js"></script>
+
+       <script src="../../js/compodoc.js"></script>
+
+       <script src="../../js/tabs.js"></script>
+       <script src="../../js/menu.js"></script>
+       <script src="../../js/libs/clipboard.min.js"></script>
+       <script src="../../js/libs/prism.js"></script>
+       <script src="../../js/sourceCode.js"></script>
+          <script src="../../js/search/search.js"></script>
+          <script src="../../js/search/lunr.min.js"></script>
+          <script src="../../js/search/search-lunr.js"></script>
+          <script src="../../js/search/search_index.js"></script>
+       <script src="../../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1114 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ActivityAttendanceSectionComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+                    <code><a href="../interfaces/OnInitDynamicComponent.html" target="_self" >OnInitDynamicComponent</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-activity-attendance-section</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./activity-attendance-section.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./activity-attendance-section.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activity" >activity</a>
+                            </li>
+                            <li>
+                                <a href="#allRecords" >allRecords</a>
+                            </li>
+                            <li>
+                                <a href="#columns" >columns</a>
+                            </li>
+                            <li>
+                                <a href="#displayedEvents" >displayedEvents</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#forChild" >forChild</a>
+                            </li>
+                            <li>
+                                <a href="#records" >records</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#init" >init</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#onInitFromDynamicConfig" >onInitFromDynamicConfig</a>
+                            </li>
+                            <li>
+                                <a href="#showDetails" >showDetails</a>
+                            </li>
+                            <li>
+                                <a href="#updateDisplayedRecords" >updateDisplayedRecords</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activity" >activity</a>
+                            </li>
+                            <li>
+                                <a href="#forChild" >forChild</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(attendanceService: <a href="../injectables/AttendanceService.html" target="_self">AttendanceService</a>, percentPipe: <a href="https://angular.io/api/common/PercentPipe" target="_blank">PercentPipe</a>, formDialog: <a href="../injectables/FormDialogService.html" target="_self">FormDialogService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:61</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>attendanceService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AttendanceService.html" target="_self" >AttendanceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>percentPipe</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/PercentPipe" target="_blank" >PercentPipe</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formDialog</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FormDialogService.html" target="_self" >FormDialogService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="activity"></a>
+                        <b>activity</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classess/RecurringActivity.html" target="_self" >RecurringActivity</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:20</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="forChild"></a>
+                        <b>forChild</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:21</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="init"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>init</b></span>
+                        <a href="#init"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>init(loadAll: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>loadAll</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onInitFromDynamicConfig"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>onInitFromDynamicConfig</b></span>
+                        <a href="#onInitFromDynamicConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onInitFromDynamicConfig(config: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>config</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showDetails"></a>
+                    <span class="name">
+                        <span ><b>showDetails</b></span>
+                        <a href="#showDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showDetails(activity: <a href="../classes/ActivityAttendance.html" target="_self">ActivityAttendance</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>activity</td>
+                                    <td>
+                                                <code><a href="../classes/ActivityAttendance.html" target="_self" >ActivityAttendance</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateDisplayedRecords"></a>
+                    <span class="name">
+                        <span ><b>updateDisplayedRecords</b></span>
+                        <a href="#updateDisplayedRecords"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateDisplayedRecords(includeRecordsWithoutParticipation: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>includeRecordsWithoutParticipation</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activity"></a>
+                    <span class="name">
+                        <span ><b>activity</b></span>
+                        <a href="#activity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classess/RecurringActivity.html" target="_self" >RecurringActivity</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Input()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="allRecords"></a>
+                    <span class="name">
+                        <span ><b>allRecords</b></span>
+                        <a href="#allRecords"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/ActivityAttendance.html" target="_self" >ActivityAttendance[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="columns"></a>
+                    <span class="name">
+                        <span ><b>columns</b></span>
+                        <a href="#columns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/FormFieldConfig.html" target="_self" >FormFieldConfig[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      id: &quot;periodFrom&quot;,
+      label: &quot;Month&quot;,
+      view: &quot;DisplayDate&quot;,
+      additional: &quot;YYYY-MM&quot;,
+    },
+    {
+      id: &quot;presentEvents&quot;,
+      label: &quot;Present&quot;,
+      view: &quot;ReadonlyFunction&quot;,
+      additional: (e: ActivityAttendance) &#x3D;&gt;
+        this.forChild
+          ? e.countEventsPresent(this.forChild)
+          : e.countEventsPresentAverage(true),
+    },
+    {
+      id: &quot;totalEvents&quot;,
+      label: &quot;Events&quot;,
+      view: &quot;ReadonlyFunction&quot;,
+      additional: (e: ActivityAttendance) &#x3D;&gt; e.countEventsTotal(),
+    },
+    {
+      id: &quot;attendancePercentage&quot;,
+      label: &quot;Attended&quot;,
+      view: &quot;ReadonlyFunction&quot;,
+      additional: (e: ActivityAttendance) &#x3D;&gt;
+        this.percentPipe.transform(
+          this.forChild
+            ? e.getAttendancePercentage(this.forChild)
+            : e.getAttendancePercentageAverage(),
+          &quot;1.0-0&quot;
+        ),
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayedEvents"></a>
+                    <span class="name">
+                        <span ><b>displayedEvents</b></span>
+                        <a href="#displayedEvents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Note.html" target="_self" >Note[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="forChild"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>forChild</b></span>
+                        <a href="#forChild"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Input()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="records"></a>
+                    <span class="name">
+                        <span ><b>records</b></span>
+                        <a href="#records"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/ActivityAttendance.html" target="_self" >ActivityAttendance[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/child-dev-project/attendance/activity-attendance-section/activity-attendance-section.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnChanges, SimpleChanges } from &quot;@angular/core&quot;;
+import { OnInitDynamicComponent } from &quot;../../../core/view/dynamic-components/on-init-dynamic-component.interface&quot;;
+import { RecurringActivity } from &quot;../model/recurring-activity&quot;;
+import { AttendanceDetailsComponent } from &quot;../attendance-details/attendance-details.component&quot;;
+import { AttendanceService } from &quot;../attendance.service&quot;;
+import { PercentPipe } from &quot;@angular/common&quot;;
+import { ActivityAttendance } from &quot;../model/activity-attendance&quot;;
+import { Note } from &quot;../../notes/model/note&quot;;
+import moment from &quot;moment&quot;;
+import { FormFieldConfig } from &quot;../../../core/entity-components/entity-form/entity-form/FormConfig&quot;;
+import { FormDialogService } from &quot;../../../core/form-dialog/form-dialog.service&quot;;
+
+@Component({
+  selector: &quot;app-activity-attendance-section&quot;,
+  templateUrl: &quot;./activity-attendance-section.component.html&quot;,
+  styleUrls: [&quot;./activity-attendance-section.component.scss&quot;],
+})
+export class ActivityAttendanceSectionComponent
+  implements OnChanges, OnInitDynamicComponent {
+  @Input() activity: RecurringActivity;
+  @Input() forChild?: string;
+
+  records: ActivityAttendance[] &#x3D; [];
+  allRecords: ActivityAttendance[] &#x3D; [];
+  displayedEvents: Note[] &#x3D; [];
+
+  columns: FormFieldConfig[] &#x3D; [
+    {
+      id: &quot;periodFrom&quot;,
+      label: &quot;Month&quot;,
+      view: &quot;DisplayDate&quot;,
+      additional: &quot;YYYY-MM&quot;,
+    },
+    {
+      id: &quot;presentEvents&quot;,
+      label: &quot;Present&quot;,
+      view: &quot;ReadonlyFunction&quot;,
+      additional: (e: ActivityAttendance) &#x3D;&gt;
+        this.forChild
+          ? e.countEventsPresent(this.forChild)
+          : e.countEventsPresentAverage(true),
+    },
+    {
+      id: &quot;totalEvents&quot;,
+      label: &quot;Events&quot;,
+      view: &quot;ReadonlyFunction&quot;,
+      additional: (e: ActivityAttendance) &#x3D;&gt; e.countEventsTotal(),
+    },
+    {
+      id: &quot;attendancePercentage&quot;,
+      label: &quot;Attended&quot;,
+      view: &quot;ReadonlyFunction&quot;,
+      additional: (e: ActivityAttendance) &#x3D;&gt;
+        this.percentPipe.transform(
+          this.forChild
+            ? e.getAttendancePercentage(this.forChild)
+            : e.getAttendancePercentageAverage(),
+          &quot;1.0-0&quot;
+        ),
+    },
+  ];
+
+  constructor(
+    private attendanceService: AttendanceService,
+    private percentPipe: PercentPipe,
+    private formDialog: FormDialogService
+  ) {}
+
+  async ngOnChanges(changes: SimpleChanges) {
+    if (
+      changes.hasOwnProperty(&quot;activity&quot;) ||
+      changes.hasOwnProperty(&quot;forChild&quot;)
+    ) {
+      await this.init();
+    }
+  }
+
+  async onInitFromDynamicConfig(config: any) {
+    this.activity &#x3D; config.entity as RecurringActivity;
+    await this.init();
+  }
+
+  async init(loadAll: boolean &#x3D; false) {
+    if (loadAll) {
+      this.allRecords &#x3D; await this.attendanceService.getActivityAttendances(
+        this.activity
+      );
+    } else {
+      this.allRecords &#x3D; await this.attendanceService.getActivityAttendances(
+        this.activity,
+        moment().startOf(&quot;month&quot;).subtract(6, &quot;months&quot;).toDate()
+      );
+    }
+    this.updateDisplayedRecords(false);
+  }
+
+  updateDisplayedRecords(includeRecordsWithoutParticipation: boolean) {
+    if (includeRecordsWithoutParticipation || !this.forChild) {
+      this.records &#x3D; this.allRecords;
+    } else {
+      this.records &#x3D; this.allRecords.filter(
+        (r) &#x3D;&gt;
+          r.countEventsAbsent(this.forChild) +
+            r.countEventsPresent(this.forChild) &gt;
+          0
+      );
+    }
+
+    if (this.records?.length &gt; 0) {
+      this.records.sort(
+        (a, b) &#x3D;&gt; b.periodFrom.getTime() - a.periodFrom.getTime()
+      );
+      this.displayedEvents &#x3D; this.records[0].events;
+    }
+  }
+
+  showDetails(activity: ActivityAttendance) {
+    this.formDialog.openDialog(AttendanceDetailsComponent, activity, {
+      forChild: this.forChild,
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-attendance-calendar
+  [records]&#x3D;&quot;displayedEvents&quot;
+  [highlightForChild]&#x3D;&quot;forChild&quot;
+  [activity]&#x3D;&quot;activity&quot;
+&gt;
+&lt;/app-attendance-calendar&gt;
+
+&lt;app-entity-subrecord
+  [records]&#x3D;&quot;records&quot;
+  [columns]&#x3D;&quot;columns&quot;
+  [showEntity]&#x3D;&quot;showDetails.bind(this)&quot;
+  [editable]&#x3D;&quot;false&quot;
+&gt;
+&lt;/app-entity-subrecord&gt;
+
+&lt;div style&#x3D;&quot;margin-top: 16px&quot;&gt;
+  &lt;mat-slide-toggle
+    (change)&#x3D;&quot;updateDisplayedRecords($event.checked)&quot;
+    matTooltip&#x3D;&quot;Activate to also show entries for the activity that do not have any events with actual participation of this person&quot;
+  &gt;
+    Also show unrelated
+  &lt;/mat-slide-toggle&gt;
+  &amp;nbsp;
+  &lt;button mat-stroked-button (click)&#x3D;&quot;init(true)&quot;&gt;Load all records&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./activity-attendance-section.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-attendance-calendar  [records]="displayedEvents"  [highlightForChild]="forChild"  [activity]="activity"></app-attendance-calendar><app-entity-subrecord  [records]="records"  [columns]="columns"  [showEntity]="showDetails.bind(this)"  [editable]="false"></app-entity-subrecord><div style="margin-top: 16px">  <mat-slide-toggle    (change)="updateDisplayedRecords($event.checked)"    matTooltip="Activate to also show entries for the activity that do not have any events with actual participation of this person"  >    Also show unrelated  </mat-slide-toggle>  &nbsp;  <button mat-stroked-button (click)="init(true)">Load all records</button></div></div>'
+    var COMPONENTS = [{'name': 'ActivityAttendanceSectionComponent', 'selector': 'app-activity-attendance-section'},{'name': 'ActivityCardComponent', 'selector': 'app-activity-card'},{'name': 'ActivityListComponent', 'selector': 'app-activity-list'},{'name': 'AddDayAttendanceComponent', 'selector': 'app-add-day-attendance'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AlertComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppVersionComponent', 'selector': 'app-version'},{'name': 'AserComponent', 'selector': 'app-aser'},{'name': 'AttendanceBlockComponent', 'selector': 'app-attendance-block'},{'name': 'AttendanceCalendarComponent', 'selector': 'app-attendance-calendar'},{'name': 'AttendanceDayBlockComponent', 'selector': 'app-attendance-day-block]'},{'name': 'AttendanceDetailsComponent', 'selector': 'app-attendance-details'},{'name': 'AttendanceManagerComponent', 'selector': 'app-attendance-manager'},{'name': 'AttendanceStatusSelectComponent', 'selector': 'app-attendance-status-select'},{'name': 'AttendanceWeekDashboardComponent', 'selector': 'app-attendance-week-dashboard'},{'name': 'BackgroundProcessingIndicatorComponent', 'selector': 'app-background-processing-indicator'},{'name': 'BmiBlockComponent', 'selector': 'app-bmi-block'},{'name': 'ButtonComponent', 'selector': 'storybook-button'},{'name': 'ChangelogComponent', 'selector': ''},{'name': 'ChildBlockComponent', 'selector': 'app-child-block'},{'name': 'ChildMeetingNoteAttendanceComponent', 'selector': 'app-child-meeting-note-attendance'},{'name': 'ChildrenBmiDashboardComponent', 'selector': 'app-children-bmi-dashboard'},{'name': 'ChildrenCountDashboardComponent', 'selector': 'app-children-count-dashboard'},{'name': 'ChildrenListComponent', 'selector': 'app-children-list'},{'name': 'ChildrenOverviewComponent', 'selector': 'app-children-overview'},{'name': 'CloudFileServiceUserSettingsComponent', 'selector': 'app-cloud-file-service-user-settings'},{'name': 'ComingSoonComponent', 'selector': 'app-coming-soon'},{'name': 'CompareRevComponent', 'selector': 'app-compare-rev'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'ConflictResolutionListComponent', 'selector': 'app-conflict-resolution-list'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardShortcutWidgetComponent', 'selector': 'app-dashboard-shortcut-widget'},{'name': 'DemoDataGeneratingProgressDialogComponent', 'selector': ''},{'name': 'DisabledWrapperComponent', 'selector': 'app-disabled-wrapper'},{'name': 'DisplayCheckmarkComponent', 'selector': 'app-display-tick'},{'name': 'DisplayConfigurableEnumComponent', 'selector': 'app-display-configurable-enum'},{'name': 'DisplayDateComponent', 'selector': 'app-display-date'},{'name': 'DisplayEntityArrayComponent', 'selector': 'app-display-entity-array'},{'name': 'DisplayEntityComponent', 'selector': 'app-display-entity'},{'name': 'DisplayPercentageComponent', 'selector': 'app-display-percentage'},{'name': 'DisplayTextComponent', 'selector': 'app-display-text'},{'name': 'DisplayUnitComponent', 'selector': 'app-display-unit'},{'name': 'EditAgeComponent', 'selector': 'app-edit-age'},{'name': 'EditBooleanComponent', 'selector': 'app-edit-boolean'},{'name': 'EditConfigurableEnumComponent', 'selector': 'app-edit-configurable-enum'},{'name': 'EditDateComponent', 'selector': 'app-edit-date'},{'name': 'EditEntityArrayComponent', 'selector': 'app-edit-entity-array'},{'name': 'EditLongTextComponent', 'selector': 'app-edit-long-text'},{'name': 'EditNumberComponent', 'selector': 'app-edit-number'},{'name': 'EditPercentageComponent', 'selector': 'app-edit-percentage'},{'name': 'EditPhotoComponent', 'selector': 'app-edit-photo'},{'name': 'EditSingleEntityComponent', 'selector': 'app-edit-single-entity'},{'name': 'EditTextComponent', 'selector': 'app-edit-text'},{'name': 'EducationalMaterialComponent', 'selector': 'app-educational-material'},{'name': 'EntityDetailsComponent', 'selector': 'app-entity-details'},{'name': 'EntityFormComponent', 'selector': 'app-entity-form'},{'name': 'EntityListComponent', 'selector': 'app-entity-list'},{'name': 'EntitySelectComponent', 'selector': 'app-entity-select'},{'name': 'EntitySubrecordComponent', 'selector': 'app-entity-subrecord'},{'name': 'ExportDataComponent', 'selector': 'app-export-data'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormDialogWrapperComponent', 'selector': 'app-form-dialog-wrapper'},{'name': 'GroupedChildAttendanceComponent', 'selector': 'app-grouped-child-attendance'},{'name': 'HeaderComponent', 'selector': 'storybook-header'},{'name': 'HealthCheckupComponent', 'selector': 'app-health-checkup'},{'name': 'HistoricalDataComponent', 'selector': 'app-historical-data'},{'name': 'HowToComponent', 'selector': 'app-help'},{'name': 'InitialSyncDialogComponent', 'selector': ''},{'name': 'ListFilterComponent', 'selector': 'app-list-filter'},{'name': 'ListPaginatorComponent', 'selector': 'app-list-paginator'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'NoRecentNotesDashboardComponent', 'selector': 'app-no-recent-notes-dashboard'},{'name': 'NoteDetailsComponent', 'selector': 'app-note-details'},{'name': 'NotesManagerComponent', 'selector': 'app-notes-manager'},{'name': 'NotesOfChildComponent', 'selector': 'app-notes-of-child'},{'name': 'PageComponent', 'selector': 'storybook-page'},{'name': 'PreviousSchoolsComponent', 'selector': 'app-previous-schools'},{'name': 'PrimaryActionComponent', 'selector': 'app-primary-action'},{'name': 'ProgressDashboardComponent', 'selector': 'app-progress-dashboard'},{'name': 'ReadonlyFunctionComponent', 'selector': 'app-readonly-function'},{'name': 'RecentAttendanceBlocksComponent', 'selector': 'app-recent-attendance-blocks'},{'name': 'RecentNotesDashboardComponent', 'selector': 'app-recent-notes-dashboard'},{'name': 'ReportingComponent', 'selector': 'app-reporting'},{'name': 'ReportRowComponent', 'selector': 'app-report-row'},{'name': 'RollCallComponent', 'selector': 'app-roll-call'},{'name': 'RollCallSetupComponent', 'selector': 'app-roll-call-setup'},{'name': 'SchoolBlockComponent', 'selector': 'app-school-block'},{'name': 'SchoolsListComponent', 'selector': 'app-schools-list'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SyncStatusComponent', 'selector': 'app-sync-status'},{'name': 'UiComponent', 'selector': 'app-ui'},{'name': 'UserAccountComponent', 'selector': 'app-user-account'},{'name': 'UserListComponent', 'selector': 'app-user-list'}];
+    var DIRECTIVES = [{'name': 'ConfigurableEnumDirective', 'selector': '[appConfigurableEnum]'},{'name': 'DisableEntityOperationDirective', 'selector': '[appDisabledEntityOperation]'},{'name': 'DynamicComponentDirective', 'selector': '[appDynamicComponent]'}];
+    var ACTUAL_COMPONENT = {'name': 'ActivityAttendanceSectionComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ActivityAttendanceSectionComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

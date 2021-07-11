@@ -1,0 +1,662 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >EntityFormService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/core/entity-components/entity-form/entity-form.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#createFormGroup" >createFormGroup</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#extendFormFieldConfig" >extendFormFieldConfig</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#saveChanges" >saveChanges</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, entityMapper: <a href="../injectables/EntityMapperService.html" target="_self">EntityMapperService</a>, entitySchemaService: <a href="../injectables/EntitySchemaService.html" target="_self">EntitySchemaService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/core/entity-components/entity-form/entity-form.service.ts:13</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>entityMapper</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EntityMapperService.html" target="_self" >EntityMapperService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>entitySchemaService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EntitySchemaService.html" target="_self" >EntitySchemaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createFormGroup"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>createFormGroup</b></span>
+                        <a href="#createFormGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createFormGroup(formFields: <a href="../interfaces/FormFieldConfig.html" target="_self">FormFieldConfig[]</a>, entity: <a href="../classes/Entity.html" target="_self">Entity</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/core/entity-components/entity-form/entity-form.service.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>formFields</td>
+                                    <td>
+                                                <code><a href="../interfaces/FormFieldConfig.html" target="_self" >FormFieldConfig[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>entity</td>
+                                    <td>
+                                                <code><a href="../classes/Entity.html" target="_self" >Entity</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="extendFormFieldConfig"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>extendFormFieldConfig</b></span>
+                        <a href="#extendFormFieldConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>extendFormFieldConfig(formFields: <a href="../interfaces/FormFieldConfig.html" target="_self">FormFieldConfig[]</a>, entity: <a href="../classes/Entity.html" target="_self">Entity</a>, forTable)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/core/entity-components/entity-form/entity-form.service.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>formFields</td>
+                                    <td>
+                                                <code><a href="../interfaces/FormFieldConfig.html" target="_self" >FormFieldConfig[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>entity</td>
+                                    <td>
+                                                <code><a href="../classes/Entity.html" target="_self" >Entity</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>forTable</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveChanges"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>saveChanges</b></span>
+                        <a href="#saveChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>saveChanges(form: <a href="https://angular.io/api/forms/FormGroup" target="_blank">FormGroup</a>, entity: T)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/core/entity-components/entity-form/entity-form.service.ts:83</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This function applies the changes of the formGroup to the entity.
+If the form is invalid or the entity does not pass validation after applying the changes, an error will be thrown.
+The input entity will not be modified but a copy of it will be returned in case of success.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>form</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The formGroup holding the changes</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>entity</td>
+                                    <td>
+                                            <code>T</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The entity on which the changes should be applied.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;T&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a copy of the input entity with the changes from the form group</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+import { FormBuilder, FormGroup, Validators } from &quot;@angular/forms&quot;;
+import { FormFieldConfig } from &quot;./entity-form/FormConfig&quot;;
+import { Entity } from &quot;../../entity/model/entity&quot;;
+import { EntityMapperService } from &quot;../../entity/entity-mapper.service&quot;;
+import { EntitySchemaService } from &quot;../../entity/schema/entity-schema.service&quot;;
+
+@Injectable()
+/**
+ * This service provides helper functions for creating tables or forms for an entity as well as saving
+ * new changes correctly to the entity.
+ */
+export class EntityFormService {
+  constructor(
+    private fb: FormBuilder,
+    private entityMapper: EntityMapperService,
+    private entitySchemaService: EntitySchemaService
+  ) {}
+
+  public extendFormFieldConfig(
+    formFields: FormFieldConfig[],
+    entity: Entity,
+    forTable &#x3D; false
+  ) {
+    formFields.forEach((formField) &#x3D;&gt; {
+      try {
+        this.addFormFields(formField, entity, forTable);
+      } catch (err) {
+        throw new Error(
+          &#x60;Could not create form config for ${formField.id}: ${err}&#x60;
+        );
+      }
+    });
+  }
+
+  private addFormFields(formField: FormFieldConfig, entity: Entity, forTable) {
+    const propertySchema &#x3D; entity.getSchema().get(formField.id);
+    formField.edit &#x3D;
+      formField.edit ||
+      this.entitySchemaService.getComponent(propertySchema, &quot;edit&quot;);
+    formField.view &#x3D;
+      formField.view ||
+      this.entitySchemaService.getComponent(propertySchema, &quot;view&quot;);
+    formField.tooltip &#x3D; formField.tooltip || propertySchema?.description;
+    if (forTable) {
+      formField.forTable &#x3D; true;
+      formField.label &#x3D;
+        formField.label || propertySchema.labelShort || propertySchema.label;
+    } else {
+      formField.forTable &#x3D; false;
+      formField.label &#x3D;
+        formField.label || propertySchema.label || propertySchema.labelShort;
+    }
+  }
+
+  public createFormGroup(
+    formFields: FormFieldConfig[],
+    entity: Entity
+  ): FormGroup {
+    const formConfig &#x3D; {};
+    const entitySchema &#x3D; entity.getSchema();
+    formFields.forEach((formField) &#x3D;&gt; {
+      const propertySchema &#x3D; entitySchema.get(formField.id);
+      // Only properties with a schema are editable
+      if (propertySchema) {
+        formConfig[formField.id] &#x3D; [entity[formField.id]];
+        if (formField.required || propertySchema?.required) {
+          formConfig[formField.id].push(Validators.required);
+        }
+      }
+    });
+    return this.fb.group(formConfig);
+  }
+
+  /**
+   * This function applies the changes of the formGroup to the entity.
+   * If the form is invalid or the entity does not pass validation after applying the changes, an error will be thrown.
+   * The input entity will not be modified but a copy of it will be returned in case of success.
+   * @param form The formGroup holding the changes
+   * @param entity The entity on which the changes should be applied.
+   * @returns a copy of the input entity with the changes from the form group
+   */
+  public saveChanges&lt;T extends Entity&gt;(form: FormGroup, entity: T): Promise&lt;T&gt; {
+    this.checkFormValidity(form);
+    const entityCopy &#x3D; entity.copy() as T;
+    this.assignFormValuesToEntity(form, entityCopy);
+    entityCopy.assertValid();
+
+    return this.entityMapper
+      .save(entityCopy)
+      .then(() &#x3D;&gt; Object.assign(entity, entityCopy))
+      .catch((err) &#x3D;&gt; {
+        throw new Error(&#x60;Could not save ${entity.getType()}: ${err}&#x60;);
+      });
+  }
+
+  private checkFormValidity(form: FormGroup) {
+    // errors regarding invalid fields wont be displayed unless marked as touched
+    form.markAllAsTouched();
+    if (form.invalid) {
+      const invalidFields &#x3D; this.getInvalidFields(form);
+      throw new Error(&#x60;Fields: &quot;${invalidFields}&quot; are invalid&#x60;);
+    }
+  }
+
+  private getInvalidFields(form: FormGroup): string {
+    const invalid: string[] &#x3D; [];
+    const controls &#x3D; form.controls;
+    for (const field in controls) {
+      if (controls[field].invalid) {
+        invalid.push(field);
+      }
+    }
+    return invalid.join(&quot;, &quot;);
+  }
+
+  private assignFormValuesToEntity(form: FormGroup, entity: Entity) {
+    Object.keys(form.controls).forEach((key) &#x3D;&gt; {
+      entity[key] &#x3D; form.get(key).value;
+    });
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'EntityFormService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

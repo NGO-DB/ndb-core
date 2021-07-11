@@ -1,0 +1,1561 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li >PouchDatabase</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/core/database/pouch-database.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Wrapper for a PouchDB instance to decouple the code from
+that external library.</p>
+<p>Additional convenience functions on top of the PouchDB API
+should be implemented in the abstract <a href="../classes/Database.html">Database</a>.</p>
+
+            </p>
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="../classes/Database.html" target="_self" >Database</a></code>
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allDocs" >allDocs</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#createWithData" >createWithData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#createWithIndexedDB" >createWithIndexedDB</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#createWithInMemoryDB" >createWithInMemoryDB</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#destroy" >destroy</a>
+                            </li>
+                            <li>
+                                <a href="#get" >get</a>
+                            </li>
+                            <li>
+                                <a href="#put" >put</a>
+                            </li>
+                            <li>
+                                <a href="#query" >query</a>
+                            </li>
+                            <li>
+                                <a href="#remove" >remove</a>
+                            </li>
+                            <li>
+                                <a href="#saveDatabaseIndex" >saveDatabaseIndex</a>
+                            </li>
+                            <li>
+                                <a href="#sync" >sync</a>
+                            </li>
+                            <li>
+                                <a href="#getAll" >getAll</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_pouchDB: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, loggingService: <a href="../injectables/LoggingService.html" target="_self">LoggingService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/core/database/pouch-database.ts:56</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Create a PouchDB database manager.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_pouchDB</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>An (initialized) PouchDB database instance from the PouchDB library.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>loggingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LoggingService.html" target="_self" >LoggingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>The LoggingService instance of the app to log and report problems.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="allDocs"></a>
+                    <span class="name">
+                        <span ><b>allDocs</b></span>
+                        <a href="#allDocs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>allDocs(options?: <a href="../undefineds/GetAllOptions.html" target="_self">GetAllOptions</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/Database.html" target="_self" >Database</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/Database.html#source" target="_self" >Database:100</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Load all documents (matching the given PouchDB options) from the database.
+(see <a href="../classes/Database.html">Database</a>)</p>
+<p>Normally you should rather use &quot;getAll()&quot; or another well typed method of this class
+instead of passing PouchDB specific options here
+because that will make your code tightly coupled with PouchDB rather than any other database provider.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#GetAllOptions" target="_self" >GetAllOptions</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>PouchDB options object as in the normal PouchDB library</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createWithData"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>createWithData</b></span>
+                        <a href="#createWithData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createWithData(data: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/core/database/pouch-database.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;PouchDatabase&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createWithIndexedDB"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>createWithIndexedDB</b></span>
+                        <a href="#createWithIndexedDB"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createWithIndexedDB(dbname: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, loggingService: <a href="../injectables/LoggingService.html" target="_self">LoggingService</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/core/database/pouch-database.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>dbname</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&quot;in-browser-database&quot;</code>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>loggingService</td>
+                                    <td>
+                                                <code><a href="../injectables/LoggingService.html" target="_self" >LoggingService</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>new LoggingService()</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/PouchDatabase.html" target="_self" >PouchDatabase</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createWithInMemoryDB"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>createWithInMemoryDB</b></span>
+                        <a href="#createWithInMemoryDB"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createWithInMemoryDB(dbname: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, loggingService: <a href="../injectables/LoggingService.html" target="_self">LoggingService</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/core/database/pouch-database.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>dbname</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&quot;in-memory-mock-database&quot;</code>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>loggingService</td>
+                                    <td>
+                                                <code><a href="../injectables/LoggingService.html" target="_self" >LoggingService</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>new LoggingService()</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/PouchDatabase.html" target="_self" >PouchDatabase</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="destroy"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>destroy</b></span>
+                        <a href="#destroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>destroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/Database.html" target="_self" >Database</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/Database.html#source" target="_self" >Database:155</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get"></a>
+                    <span class="name">
+                        <span ><b>get</b></span>
+                        <a href="#get"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>get(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, options: <a href="../undefineds/GetOptions.html" target="_self">GetOptions</a>, returnUndefined?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/Database.html" target="_self" >Database</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/Database.html#source" target="_self" >Database:74</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Load a single document by id from the database.
+(see <a href="../classes/Database.html">Database</a>)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>The primary key of the document to be loaded</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#GetOptions" target="_self" >GetOptions</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>{}</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Optional PouchDB options for the request</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>returnUndefined</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>(Optional) return undefined instead of throwing error if doc is not found in database</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="put"></a>
+                    <span class="name">
+                        <span ><b>put</b></span>
+                        <a href="#put"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>put(object: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, forceOverwrite?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/Database.html" target="_self" >Database</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/Database.html#source" target="_self" >Database:117</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Save a document to the database.
+(see <a href="../classes/Database.html">Database</a>)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>object</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The document to be saved</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>forceOverwrite</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>(Optional) Whether conflicts should be ignored and an existing conflicting document forcefully overwritten.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="query"></a>
+                    <span class="name">
+                        <span ><b>query</b></span>
+                        <a href="#query"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>query(fun: string | , options: <a href="../undefineds/QueryOptions.html" target="_self">QueryOptions</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/Database.html" target="_self" >Database</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/Database.html#source" target="_self" >Database:170</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Query data from the database based on a more complex, indexed request.
+(see <a href="../classes/Database.html">Database</a>)</p>
+<p>This is directly calling the PouchDB implementation of this function.
+Also see the documentation there: <a href="https://pouchdb.com/api.html#query_database">https://pouchdb.com/api.html#query_database</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fun</td>
+                                    <td>
+                                            <code>string | </code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The name of a previously saved database index</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>options</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#QueryOptions" target="_self" >QueryOptions</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Additional options for the query, like a <code>key</code>. See the PouchDB docs for details.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="remove"></a>
+                    <span class="name">
+                        <span ><b>remove</b></span>
+                        <a href="#remove"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>remove(object: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/Database.html" target="_self" >Database</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/Database.html#source" target="_self" >Database:138</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Delete a document from the database
+(see <a href="../classes/Database.html">Database</a>)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>object</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The document to be deleted (usually this object must at least contain the _id and _rev)</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveDatabaseIndex"></a>
+                    <span class="name">
+                        <span ><b>saveDatabaseIndex</b></span>
+                        <a href="#saveDatabaseIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveDatabaseIndex(designDoc: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/Database.html" target="_self" >Database</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/Database.html#source" target="_self" >Database:185</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create a database index to <code>query()</code> certain data more efficiently in the future.
+(see <a href="../classes/Database.html">Database</a>)</p>
+<p>Also see the PouchDB documentation regarding indices and queries: <a href="https://pouchdb.com/api.html#query_database">https://pouchdb.com/api.html#query_database</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>designDoc</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The PouchDB style design document for the map/reduce query</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sync"></a>
+                    <span class="name">
+                        <span ><b>sync</b></span>
+                        <a href="#sync"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sync(remoteDatabase)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">src/app/core/database/pouch-database.ts:149</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sync the local database with a remote database.
+See <a href="<a">href="https://pouchdb.com/guides/replication.html%7D">https://pouchdb.com/guides/replication.html</a></a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>remoteDatabase</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the PouchDB instance of the remote database</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAll"></a>
+                    <span class="name">
+                        <span ><b>getAll</b></span>
+                        <a href="#getAll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAll(prefix: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/Database.html" target="_self" >Database</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/Database.html#source" target="_self" >Database:81</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Load all documents (with the given prefix) from the database.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>prefix</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&quot;&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>The string prefix of document ids that should be retrieved</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;Array&lt;any&gt;&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Database, GetAllOptions, GetOptions, QueryOptions } from &quot;./database&quot;;
+import { LoggingService } from &quot;../logging/logging.service&quot;;
+import PouchDB from &quot;pouchdb-browser&quot;;
+import memory from &quot;pouchdb-adapter-memory&quot;;
+import { PerformanceAnalysisLogging } from &quot;../../utils/performance-analysis-logging&quot;;
+
+/**
+ * Wrapper for a PouchDB instance to decouple the code from
+ * that external library.
+ *
+ * Additional convenience functions on top of the PouchDB API
+ * should be implemented in the abstract {@link Database}.
+ */
+export class PouchDatabase extends Database {
+  static async createWithData(data: any[]): Promise&lt;PouchDatabase&gt; {
+    const instance &#x3D; PouchDatabase.createWithInMemoryDB();
+    await Promise.all(data.map((doc) &#x3D;&gt; instance.put(doc)));
+    return instance;
+  }
+
+  static createWithInMemoryDB(
+    dbname: string &#x3D; &quot;in-memory-mock-database&quot;,
+    loggingService: LoggingService &#x3D; new LoggingService()
+  ): PouchDatabase {
+    PouchDB.plugin(memory);
+    return new PouchDatabase(
+      new PouchDB(dbname, { adapter: &quot;memory&quot; }),
+      loggingService
+    );
+  }
+
+  static createWithIndexedDB(
+    dbname: string &#x3D; &quot;in-browser-database&quot;,
+    loggingService: LoggingService &#x3D; new LoggingService()
+  ): PouchDatabase {
+    return new PouchDatabase(new PouchDB(dbname), loggingService);
+  }
+
+  private indexPromises: Promise&lt;any&gt;[] &#x3D; [];
+
+  /**
+   * Create a PouchDB database manager.
+   * @param _pouchDB An (initialized) PouchDB database instance from the PouchDB library.
+   * @param loggingService The LoggingService instance of the app to log and report problems.
+   */
+  constructor(private _pouchDB: any, private loggingService: LoggingService) {
+    super();
+  }
+
+  /**
+   * Load a single document by id from the database.
+   * (see {@link Database})
+   * @param id The primary key of the document to be loaded
+   * @param options Optional PouchDB options for the request
+   * @param returnUndefined (Optional) return undefined instead of throwing error if doc is not found in database
+   */
+  get(
+    id: string,
+    options: GetOptions &#x3D; {},
+    returnUndefined?: boolean
+  ): Promise&lt;any&gt; {
+    return this._pouchDB.get(id, options).catch((err) &#x3D;&gt; {
+      if (err.status &#x3D;&#x3D;&#x3D; 404) {
+        this.loggingService.debug(&quot;Doc not found in database: &quot; + id);
+        if (returnUndefined) {
+          return undefined;
+        }
+      }
+      throw err;
+    });
+  }
+
+  /**
+   * Load all documents (matching the given PouchDB options) from the database.
+   * (see {@link Database})
+   *
+   * Normally you should rather use &quot;getAll()&quot; or another well typed method of this class
+   * instead of passing PouchDB specific options here
+   * because that will make your code tightly coupled with PouchDB rather than any other database provider.
+   *
+   * @param options PouchDB options object as in the normal PouchDB library
+   */
+  allDocs(options?: GetAllOptions) {
+    return this._pouchDB.allDocs(options).then((result) &#x3D;&gt; {
+      const resultArray &#x3D; [];
+      for (const row of result.rows) {
+        resultArray.push(row.doc);
+      }
+      return resultArray;
+    });
+  }
+
+  /**
+   * Save a document to the database.
+   * (see {@link Database})
+   *
+   * @param object The document to be saved
+   * @param forceOverwrite (Optional) Whether conflicts should be ignored and an existing conflicting document forcefully overwritten.
+   */
+  put(object: any, forceOverwrite?: boolean): Promise&lt;any&gt; {
+    const options: any &#x3D; {};
+    // if (forceOverwrite) {
+    //   options.force &#x3D; true;
+    // }
+
+    return this._pouchDB.put(object, options).catch((err) &#x3D;&gt; {
+      if (err.status &#x3D;&#x3D;&#x3D; 409) {
+        return this.resolveConflict(object, forceOverwrite, err);
+      } else {
+        throw err;
+      }
+    });
+  }
+
+  /**
+   * Delete a document from the database
+   * (see {@link Database})
+   *
+   * @param object The document to be deleted (usually this object must at least contain the _id and _rev)
+   */
+  remove(object: any) {
+    return this._pouchDB.remove(object).catch((err) &#x3D;&gt; {
+      throw err;
+    });
+  }
+
+  /**
+   * Sync the local database with a remote database.
+   * See {@Link https://pouchdb.com/guides/replication.html}
+   * @param remoteDatabase the PouchDB instance of the remote database
+   */
+  sync(remoteDatabase) {
+    return this._pouchDB.sync(remoteDatabase, {
+      batch_size: 500,
+    });
+  }
+
+  public async destroy(): Promise&lt;any&gt; {
+    await Promise.all(this.indexPromises);
+    return this._pouchDB.destroy();
+  }
+
+  /**
+   * Query data from the database based on a more complex, indexed request.
+   * (see {@link Database})
+   *
+   * This is directly calling the PouchDB implementation of this function.
+   * Also see the documentation there: {@link https://pouchdb.com/api.html#query_database}
+   *
+   * @param fun The name of a previously saved database index
+   * @param options Additional options for the query, like a &#x60;key&#x60;. See the PouchDB docs for details.
+   */
+  query(
+    fun: string | ((doc: any, emit: any) &#x3D;&gt; void),
+    options: QueryOptions
+  ): Promise&lt;any&gt; {
+    return this._pouchDB.query(fun, options);
+  }
+
+  /**
+   * Create a database index to &#x60;query()&#x60; certain data more efficiently in the future.
+   * (see {@link Database})
+   *
+   * Also see the PouchDB documentation regarding indices and queries: {@link https://pouchdb.com/api.html#query_database}
+   *
+   * @param designDoc The PouchDB style design document for the map/reduce query
+   */
+  saveDatabaseIndex(designDoc: any): Promise&lt;void&gt; {
+    const creationPromise &#x3D; this.createOrUpdateDesignDoc(designDoc);
+    this.indexPromises.push(creationPromise);
+    return creationPromise;
+  }
+
+  private async createOrUpdateDesignDoc(designDoc): Promise&lt;void&gt; {
+    const existingDesignDoc &#x3D; await this.get(designDoc._id, {}, true);
+    if (!existingDesignDoc) {
+      this.loggingService.debug(&quot;creating new database index&quot;);
+    } else if (
+      JSON.stringify(existingDesignDoc.views) !&#x3D;&#x3D;
+      JSON.stringify(designDoc.views)
+    ) {
+      this.loggingService.debug(&quot;replacing existing database index&quot;);
+      designDoc._rev &#x3D; existingDesignDoc._rev;
+    } else {
+      // already up to date, nothing more to do
+      return;
+    }
+
+    await this.put(designDoc);
+
+    await this.prebuildViewsOfDesignDoc(designDoc);
+  }
+
+  @PerformanceAnalysisLogging
+  private async prebuildViewsOfDesignDoc(designDoc: any): Promise&lt;void&gt; {
+    for (const viewName of Object.keys(designDoc.views)) {
+      const queryName &#x3D; designDoc._id.replace(/_design\//, &quot;&quot;) + &quot;/&quot; + viewName;
+      await this.query(queryName, { key: &quot;1&quot; });
+    }
+  }
+
+  /**
+   * Attempt to intelligently resolve conflicting document versions automatically.
+   * @param newObject
+   * @param overwriteChanges
+   * @param existingError
+   */
+  private async resolveConflict(
+    newObject: any,
+    overwriteChanges: boolean,
+    existingError: any
+  ): Promise&lt;any&gt; {
+    const existingObject &#x3D; await this.get(newObject._id);
+    const resolvedObject &#x3D; this.mergeObjects(existingObject, newObject);
+    if (resolvedObject) {
+      this.loggingService.debug(
+        &quot;resolved document conflict automatically (&quot; + resolvedObject._id + &quot;)&quot;
+      );
+      return this.put(resolvedObject);
+    } else if (overwriteChanges) {
+      this.loggingService.debug(
+        &quot;overwriting conflicting document version (&quot; + newObject._id + &quot;)&quot;
+      );
+      newObject._rev &#x3D; existingObject._rev;
+      return this.put(newObject);
+    } else {
+      existingError.message &#x3D; existingError.message + &quot; (unable to resolve)&quot;;
+      throw existingError;
+    }
+  }
+
+  private mergeObjects(existingObject: any, newObject: any) {
+    // TODO: implement automatic merging of conflicting entity versions
+    return undefined;
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'PouchDatabase.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

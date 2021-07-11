@@ -1,0 +1,796 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ChildrenBmiDashboardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/child-dev-project/children/children-bmi-dashboard/children-bmi-dashboard.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="../interfaces/OnInitDynamicComponent.html" target="_self" >OnInitDynamicComponent</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-children-bmi-dashboard</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./children-bmi-dashboard.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./children-bmi-dashboard.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#bmiRows" >bmiRows</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentHealthCheck" >currentHealthCheck</a>
+                            </li>
+                            <li>
+                                <a href="#recordTrackByFunction" >recordTrackByFunction</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#router" >router</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#filterBMI" >filterBMI</a>
+                            </li>
+                            <li>
+                                <a href="#goToChild" >goToChild</a>
+                            </li>
+                            <li>
+                                <a href="#onInitFromDynamicConfig" >onInitFromDynamicConfig</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(childrenService: <a href="../injectables/ChildrenService.html" target="_self">ChildrenService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/child-dev-project/children/children-bmi-dashboard/children-bmi-dashboard.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>childrenService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ChildrenService.html" target="_self" >ChildrenService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterBMI"></a>
+                    <span class="name">
+                        <span ><b>filterBMI</b></span>
+                        <a href="#filterBMI"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filterBMI(children: <a href="../classes/Child.html" target="_self">Child[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/child-dev-project/children/children-bmi-dashboard/children-bmi-dashboard.component.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>children</td>
+                                    <td>
+                                                <code><a href="../classes/Child.html" target="_self" >Child[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goToChild"></a>
+                    <span class="name">
+                        <span ><b>goToChild</b></span>
+                        <a href="#goToChild"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goToChild(childId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/app/child-dev-project/children/children-bmi-dashboard/children-bmi-dashboard.component.ts:68</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>childId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onInitFromDynamicConfig"></a>
+                    <span class="name">
+                        <span ><b>onInitFromDynamicConfig</b></span>
+                        <a href="#onInitFromDynamicConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onInitFromDynamicConfig(config: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/child-dev-project/children/children-bmi-dashboard/children-bmi-dashboard.component.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>config</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bmiRows"></a>
+                    <span class="name">
+                        <span ><b>bmiRows</b></span>
+                        <a href="#bmiRows"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/BmiRow.html" target="_self" >BmiRow[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/child-dev-project/children/children-bmi-dashboard/children-bmi-dashboard.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentHealthCheck"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>currentHealthCheck</b></span>
+                        <a href="#currentHealthCheck"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/HealthCheck.html" target="_self" >HealthCheck</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/child-dev-project/children/children-bmi-dashboard/children-bmi-dashboard.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="recordTrackByFunction"></a>
+                    <span class="name">
+                        <span ><b>recordTrackByFunction</b></span>
+                        <a href="#recordTrackByFunction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/child-dev-project/children/children-bmi-dashboard/children-bmi-dashboard.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="router"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>router</b></span>
+                        <a href="#router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/child-dev-project/children/children-bmi-dashboard/children-bmi-dashboard.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &quot;@angular/core&quot;;
+import { Router } from &quot;@angular/router&quot;;
+import { HealthCheck } from &quot;../../health-checkup/model/health-check&quot;;
+import { OnInitDynamicComponent } from &quot;../../../core/view/dynamic-components/on-init-dynamic-component.interface&quot;;
+import { take } from &quot;rxjs/operators&quot;;
+import { ChildrenService } from &quot;../children.service&quot;;
+import { Child } from &quot;../model/child&quot;;
+import { WarningLevel } from &quot;../../../core/entity/model/warning-level&quot;;
+
+interface BmiRow {
+  childId: string;
+  bmi: number;
+}
+
+@Component({
+  selector: &quot;app-children-bmi-dashboard&quot;,
+  templateUrl: &quot;./children-bmi-dashboard.component.html&quot;,
+  styleUrls: [&quot;./children-bmi-dashboard.component.scss&quot;],
+})
+export class ChildrenBmiDashboardComponent
+  implements OnInit, OnInitDynamicComponent {
+  public currentHealthCheck: HealthCheck;
+  bmiRows: BmiRow[] &#x3D; [];
+
+  constructor(
+    private childrenService: ChildrenService,
+    public router: Router
+  ) {}
+
+  ngOnInit(): void {
+    this.childrenService
+      .getChildren()
+      .pipe(take(1))
+      .subscribe((results) &#x3D;&gt; {
+        this.filterBMI(results);
+      });
+  }
+
+  onInitFromDynamicConfig(config: any) {}
+
+  recordTrackByFunction &#x3D; (index, item) &#x3D;&gt; item.childId;
+
+  filterBMI(children: Child[]) {
+    children.forEach((child) &#x3D;&gt; {
+      this.childrenService
+        .getHealthChecksOfChild(child.getId())
+        .pipe()
+        .subscribe((results) &#x3D;&gt; {
+          /** get latest HealthCheck */
+          if (results.length &gt; 0) {
+            this.currentHealthCheck &#x3D; results.reduce((prev, cur) &#x3D;&gt;
+              cur.date &gt; prev.date ? cur : prev
+            );
+            /**Check health status */
+            if (
+              this.currentHealthCheck.getWarningLevel() &#x3D;&#x3D;&#x3D; WarningLevel.URGENT
+            ) {
+              this.bmiRows.push({
+                childId: child.getId(),
+                bmi: this.currentHealthCheck.bmi,
+              });
+            }
+          }
+        });
+    });
+  }
+
+  goToChild(childId: string) {
+    const path &#x3D; &quot;/&quot; + Child.ENTITY_TYPE.toLowerCase();
+    this.router.navigate([path, childId]);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-card class&#x3D;&quot;dashboard-widget&quot;&gt;
+  &lt;mat-card-header class&#x3D;&quot;app-attendance&quot;&gt;
+    &lt;div mat-card-avatar&gt;
+      &lt;mat-icon fontIcon&#x3D;&quot;fa-exclamation-triangle&quot;&gt;&lt;/mat-icon&gt;
+    &lt;/div&gt;
+    &lt;mat-card-title&gt;{{ bmiRows?.length }}&lt;/mat-card-title&gt;
+    &lt;mat-card-subtitle&gt;Students with unhealthy BMI &lt;/mat-card-subtitle&gt;
+  &lt;/mat-card-header&gt;
+  &lt;mat-card-content&gt;
+    &lt;table class&#x3D;&quot;dashboard-table&quot;&gt;
+      &lt;tr
+        *ngFor&#x3D;&quot;
+          let row of bmiRows;
+          trackBy: recordTrackByFunction;
+          let i &#x3D; index
+        &quot;
+        class&#x3D;&quot;dashboard-table-row w-WARNING&quot;
+        (click)&#x3D;&quot;goToChild(row.childId)&quot;
+        style&#x3D;&quot;cursor: pointer&quot;
+        angulartics2On&#x3D;&quot;click&quot;
+        angularticsCategory&#x3D;&quot;Navigation&quot;
+        angularticsAction&#x3D;&quot;dashboard_bmi_warnings_list_link&quot;
+        [angularticsLabel]&#x3D;&quot;&#x27;list-entry-&#x27; + i&quot;
+      &gt;
+        &lt;td class&#x3D;&quot;dashboard-table-first-cell dashboard-table-cell&quot;&gt;
+          &lt;app-child-block [entityId]&#x3D;&quot;row.childId&quot;&gt;&lt;/app-child-block&gt;
+        &lt;/td&gt;
+        &lt;td class&#x3D;&quot;dashboard-table-last-cell dashboard-table-cell&quot;&gt;
+          {{ row.bmi.toFixed(2) }}
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/mat-card-content&gt;
+&lt;/mat-card&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./children-bmi-dashboard.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@use &#x27;src/app/core/dashboard/dashboard-widget-base&#x27;;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-card class="dashboard-widget">  <mat-card-header class="app-attendance">    <div mat-card-avatar>      <mat-icon fontIcon="fa-exclamation-triangle"></mat-icon>    </div>    <mat-card-title>{{ bmiRows?.length }}</mat-card-title>    <mat-card-subtitle>Students with unhealthy BMI </mat-card-subtitle>  </mat-card-header>  <mat-card-content>    <table class="dashboard-table">      <tr        *ngFor="          let row of bmiRows;          trackBy: recordTrackByFunction;          let i = index        "        class="dashboard-table-row w-WARNING"        (click)="goToChild(row.childId)"        style="cursor: pointer"        angulartics2On="click"        angularticsCategory="Navigation"        angularticsAction="dashboard_bmi_warnings_list_link"        [angularticsLabel]="\'list-entry-\' + i"      >        <td class="dashboard-table-first-cell dashboard-table-cell">          <app-child-block [entityId]="row.childId"></app-child-block>        </td>        <td class="dashboard-table-last-cell dashboard-table-cell">          {{ row.bmi.toFixed(2) }}        </td>      </tr>    </table>  </mat-card-content></mat-card></div>'
+    var COMPONENTS = [{'name': 'ActivityAttendanceSectionComponent', 'selector': 'app-activity-attendance-section'},{'name': 'ActivityCardComponent', 'selector': 'app-activity-card'},{'name': 'ActivityListComponent', 'selector': 'app-activity-list'},{'name': 'AddDayAttendanceComponent', 'selector': 'app-add-day-attendance'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AlertComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppVersionComponent', 'selector': 'app-version'},{'name': 'AserComponent', 'selector': 'app-aser'},{'name': 'AttendanceBlockComponent', 'selector': 'app-attendance-block'},{'name': 'AttendanceCalendarComponent', 'selector': 'app-attendance-calendar'},{'name': 'AttendanceDayBlockComponent', 'selector': 'app-attendance-day-block]'},{'name': 'AttendanceDetailsComponent', 'selector': 'app-attendance-details'},{'name': 'AttendanceManagerComponent', 'selector': 'app-attendance-manager'},{'name': 'AttendanceStatusSelectComponent', 'selector': 'app-attendance-status-select'},{'name': 'AttendanceWeekDashboardComponent', 'selector': 'app-attendance-week-dashboard'},{'name': 'BackgroundProcessingIndicatorComponent', 'selector': 'app-background-processing-indicator'},{'name': 'BmiBlockComponent', 'selector': 'app-bmi-block'},{'name': 'ButtonComponent', 'selector': 'storybook-button'},{'name': 'ChangelogComponent', 'selector': ''},{'name': 'ChildBlockComponent', 'selector': 'app-child-block'},{'name': 'ChildMeetingNoteAttendanceComponent', 'selector': 'app-child-meeting-note-attendance'},{'name': 'ChildrenBmiDashboardComponent', 'selector': 'app-children-bmi-dashboard'},{'name': 'ChildrenCountDashboardComponent', 'selector': 'app-children-count-dashboard'},{'name': 'ChildrenListComponent', 'selector': 'app-children-list'},{'name': 'ChildrenOverviewComponent', 'selector': 'app-children-overview'},{'name': 'CloudFileServiceUserSettingsComponent', 'selector': 'app-cloud-file-service-user-settings'},{'name': 'ComingSoonComponent', 'selector': 'app-coming-soon'},{'name': 'CompareRevComponent', 'selector': 'app-compare-rev'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'ConflictResolutionListComponent', 'selector': 'app-conflict-resolution-list'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardShortcutWidgetComponent', 'selector': 'app-dashboard-shortcut-widget'},{'name': 'DemoDataGeneratingProgressDialogComponent', 'selector': ''},{'name': 'DisabledWrapperComponent', 'selector': 'app-disabled-wrapper'},{'name': 'DisplayCheckmarkComponent', 'selector': 'app-display-tick'},{'name': 'DisplayConfigurableEnumComponent', 'selector': 'app-display-configurable-enum'},{'name': 'DisplayDateComponent', 'selector': 'app-display-date'},{'name': 'DisplayEntityArrayComponent', 'selector': 'app-display-entity-array'},{'name': 'DisplayEntityComponent', 'selector': 'app-display-entity'},{'name': 'DisplayPercentageComponent', 'selector': 'app-display-percentage'},{'name': 'DisplayTextComponent', 'selector': 'app-display-text'},{'name': 'DisplayUnitComponent', 'selector': 'app-display-unit'},{'name': 'EditAgeComponent', 'selector': 'app-edit-age'},{'name': 'EditBooleanComponent', 'selector': 'app-edit-boolean'},{'name': 'EditConfigurableEnumComponent', 'selector': 'app-edit-configurable-enum'},{'name': 'EditDateComponent', 'selector': 'app-edit-date'},{'name': 'EditEntityArrayComponent', 'selector': 'app-edit-entity-array'},{'name': 'EditLongTextComponent', 'selector': 'app-edit-long-text'},{'name': 'EditNumberComponent', 'selector': 'app-edit-number'},{'name': 'EditPercentageComponent', 'selector': 'app-edit-percentage'},{'name': 'EditPhotoComponent', 'selector': 'app-edit-photo'},{'name': 'EditSingleEntityComponent', 'selector': 'app-edit-single-entity'},{'name': 'EditTextComponent', 'selector': 'app-edit-text'},{'name': 'EducationalMaterialComponent', 'selector': 'app-educational-material'},{'name': 'EntityDetailsComponent', 'selector': 'app-entity-details'},{'name': 'EntityFormComponent', 'selector': 'app-entity-form'},{'name': 'EntityListComponent', 'selector': 'app-entity-list'},{'name': 'EntitySelectComponent', 'selector': 'app-entity-select'},{'name': 'EntitySubrecordComponent', 'selector': 'app-entity-subrecord'},{'name': 'ExportDataComponent', 'selector': 'app-export-data'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormDialogWrapperComponent', 'selector': 'app-form-dialog-wrapper'},{'name': 'GroupedChildAttendanceComponent', 'selector': 'app-grouped-child-attendance'},{'name': 'HeaderComponent', 'selector': 'storybook-header'},{'name': 'HealthCheckupComponent', 'selector': 'app-health-checkup'},{'name': 'HistoricalDataComponent', 'selector': 'app-historical-data'},{'name': 'HowToComponent', 'selector': 'app-help'},{'name': 'InitialSyncDialogComponent', 'selector': ''},{'name': 'ListFilterComponent', 'selector': 'app-list-filter'},{'name': 'ListPaginatorComponent', 'selector': 'app-list-paginator'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'NoRecentNotesDashboardComponent', 'selector': 'app-no-recent-notes-dashboard'},{'name': 'NoteDetailsComponent', 'selector': 'app-note-details'},{'name': 'NotesManagerComponent', 'selector': 'app-notes-manager'},{'name': 'NotesOfChildComponent', 'selector': 'app-notes-of-child'},{'name': 'PageComponent', 'selector': 'storybook-page'},{'name': 'PreviousSchoolsComponent', 'selector': 'app-previous-schools'},{'name': 'PrimaryActionComponent', 'selector': 'app-primary-action'},{'name': 'ProgressDashboardComponent', 'selector': 'app-progress-dashboard'},{'name': 'ReadonlyFunctionComponent', 'selector': 'app-readonly-function'},{'name': 'RecentAttendanceBlocksComponent', 'selector': 'app-recent-attendance-blocks'},{'name': 'RecentNotesDashboardComponent', 'selector': 'app-recent-notes-dashboard'},{'name': 'ReportingComponent', 'selector': 'app-reporting'},{'name': 'ReportRowComponent', 'selector': 'app-report-row'},{'name': 'RollCallComponent', 'selector': 'app-roll-call'},{'name': 'RollCallSetupComponent', 'selector': 'app-roll-call-setup'},{'name': 'SchoolBlockComponent', 'selector': 'app-school-block'},{'name': 'SchoolsListComponent', 'selector': 'app-schools-list'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SyncStatusComponent', 'selector': 'app-sync-status'},{'name': 'UiComponent', 'selector': 'app-ui'},{'name': 'UserAccountComponent', 'selector': 'app-user-account'},{'name': 'UserListComponent', 'selector': 'app-user-list'}];
+    var DIRECTIVES = [{'name': 'ConfigurableEnumDirective', 'selector': '[appConfigurableEnum]'},{'name': 'DisableEntityOperationDirective', 'selector': '[appDisabledEntityOperation]'},{'name': 'DynamicComponentDirective', 'selector': '[appDynamicComponent]'}];
+    var ACTUAL_COMPONENT = {'name': 'ChildrenBmiDashboardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ChildrenBmiDashboardComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

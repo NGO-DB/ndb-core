@@ -1,0 +1,985 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  UserAccountComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/core/user/user-account/user-account.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>User account form to allow the user to view and edit information.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-user-account</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./user-account.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./user-account.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#disabledForDemoMode" >disabledForDemoMode</a>
+                            </li>
+                            <li>
+                                <a href="#disabledForOfflineMode" >disabledForOfflineMode</a>
+                            </li>
+                            <li>
+                                <a href="#passwordChangeResult" >passwordChangeResult</a>
+                            </li>
+                            <li>
+                                <a href="#passwordForm" >passwordForm</a>
+                            </li>
+                            <li>
+                                <a href="#user" >user</a>
+                            </li>
+                            <li>
+                                <a href="#webdavEnabled" >webdavEnabled</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changePassword" >changePassword</a>
+                            </li>
+                            <li>
+                                <a href="#checkIfPasswordChangeAllowed" >checkIfPasswordChangeAllowed</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(entityMapperService: <a href="../injectables/EntityMapperService.html" target="_self">EntityMapperService</a>, sessionService: <a href="../classes/SessionService.html" target="_self">SessionService</a>, userAccountService: <a href="../injectables/UserAccountService.html" target="_self">UserAccountService</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, loggingService: <a href="../injectables/LoggingService.html" target="_self">LoggingService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/core/user/user-account/user-account.component.ts:67</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>entityMapperService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EntityMapperService.html" target="_self" >EntityMapperService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sessionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userAccountService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserAccountService.html" target="_self" >UserAccountService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>loggingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LoggingService.html" target="_self" >LoggingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changePassword"></a>
+                    <span class="name">
+                        <span ><b>changePassword</b></span>
+                        <a href="#changePassword"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changePassword()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/core/user/user-account/user-account.component.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkIfPasswordChangeAllowed"></a>
+                    <span class="name">
+                        <span ><b>checkIfPasswordChangeAllowed</b></span>
+                        <a href="#checkIfPasswordChangeAllowed"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkIfPasswordChangeAllowed()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/core/user/user-account/user-account.component.ts:82</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="disabledForDemoMode"></a>
+                    <span class="name">
+                        <span ><b>disabledForDemoMode</b></span>
+                        <a href="#disabledForDemoMode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/core/user/user-account/user-account.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>whether password change is disallowed because of demo mode</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="disabledForOfflineMode"></a>
+                    <span class="name">
+                        <span ><b>disabledForOfflineMode</b></span>
+                        <a href="#disabledForOfflineMode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/core/user/user-account/user-account.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="passwordChangeResult"></a>
+                    <span class="name">
+                        <span ><b>passwordChangeResult</b></span>
+                        <a href="#passwordChangeResult"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/core/user/user-account/user-account.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="passwordForm"></a>
+                    <span class="name">
+                        <span ><b>passwordForm</b></span>
+                        <a href="#passwordForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.fb.group(
+    {
+      currentPassword: [&quot;&quot;, Validators.required],
+      newPassword: [
+        &quot;&quot;,
+        [
+          Validators.required,
+          Validators.minLength(8),
+          Validators.pattern(/[A-Z]/),
+          Validators.pattern(/[a-z]/),
+          Validators.pattern(/[0-9]/),
+          Validators.pattern(/[^A-Za-z0-9]/),
+        ],
+      ],
+      confirmPassword: [&quot;&quot;, [Validators.required]],
+    },
+    { validators: () &#x3D;&gt; this.passwordMatchValidator() }
+  )</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/core/user/user-account/user-account.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="user"></a>
+                    <span class="name">
+                        <span ><b>user</b></span>
+                        <a href="#user"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/User.html" target="_self" >User</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/core/user/user-account/user-account.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>user to be edited</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="webdavEnabled"></a>
+                    <span class="name">
+                        <span ><b>webdavEnabled</b></span>
+                        <a href="#webdavEnabled"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>WebdavModule.isEnabled</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/core/user/user-account/user-account.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>whether webdav integration is configured and the cloud settings section should be displayed</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &quot;@angular/core&quot;;
+import { User } from &quot;../user&quot;;
+import { SessionService } from &quot;../../session/session-service/session.service&quot;;
+import { EntityMapperService } from &quot;../../entity/entity-mapper.service&quot;;
+import { WebdavModule } from &quot;../../webdav/webdav.module&quot;;
+import { UserAccountService } from &quot;./user-account.service&quot;;
+import { FormBuilder, ValidationErrors, Validators } from &quot;@angular/forms&quot;;
+import { AppConfig } from &quot;../../app-config/app-config&quot;;
+import { LoggingService } from &quot;../../logging/logging.service&quot;;
+import { SessionType } from &quot;../../session/session-type&quot;;
+
+/**
+ * User account form to allow the user to view and edit information.
+ */
+@Component({
+  selector: &quot;app-user-account&quot;,
+  templateUrl: &quot;./user-account.component.html&quot;,
+  styleUrls: [&quot;./user-account.component.scss&quot;],
+})
+export class UserAccountComponent implements OnInit {
+  /** user to be edited */
+  user: User;
+
+  /** whether webdav integration is configured and the cloud settings section should be displayed */
+  webdavEnabled &#x3D; WebdavModule.isEnabled;
+
+  /** whether password change is disallowed because of demo mode */
+  disabledForDemoMode: boolean;
+  disabledForOfflineMode: boolean;
+
+  passwordChangeResult: { success: boolean; error?: any };
+
+  passwordForm &#x3D; this.fb.group(
+    {
+      currentPassword: [&quot;&quot;, Validators.required],
+      newPassword: [
+        &quot;&quot;,
+        [
+          Validators.required,
+          Validators.minLength(8),
+          Validators.pattern(/[A-Z]/),
+          Validators.pattern(/[a-z]/),
+          Validators.pattern(/[0-9]/),
+          Validators.pattern(/[^A-Za-z0-9]/),
+        ],
+      ],
+      confirmPassword: [&quot;&quot;, [Validators.required]],
+    },
+    { validators: () &#x3D;&gt; this.passwordMatchValidator() }
+  );
+
+  constructor(
+    private entityMapperService: EntityMapperService,
+    private sessionService: SessionService,
+    private userAccountService: UserAccountService,
+    private fb: FormBuilder,
+    private loggingService: LoggingService
+  ) {}
+
+  ngOnInit() {
+    this.checkIfPasswordChangeAllowed();
+    this.user &#x3D; this.sessionService.getCurrentUser();
+  }
+
+  checkIfPasswordChangeAllowed() {
+    this.disabledForDemoMode &#x3D; false;
+    this.disabledForOfflineMode &#x3D; false;
+    this.passwordForm.enable();
+
+    if (AppConfig.settings.session_type !&#x3D;&#x3D; SessionType.synced) {
+      this.disabledForDemoMode &#x3D; true;
+      this.passwordForm.disable();
+    } else if (!navigator.onLine) {
+      this.disabledForOfflineMode &#x3D; true;
+      this.passwordForm.disable();
+    }
+  }
+
+  changePassword() {
+    this.passwordChangeResult &#x3D; undefined;
+
+    const currentPassword &#x3D; this.passwordForm.get(&quot;currentPassword&quot;).value;
+    if (!this.user.checkPassword(currentPassword)) {
+      this.passwordForm
+        .get(&quot;currentPassword&quot;)
+        .setErrors({ incorrectPassword: true });
+      return;
+    }
+
+    const newPassword &#x3D; this.passwordForm.get(&quot;newPassword&quot;).value;
+    this.userAccountService
+      .changePassword(this.user, currentPassword, newPassword)
+      .then(() &#x3D;&gt; this.sessionService.login(this.user.name, newPassword))
+      .then(() &#x3D;&gt; {
+        this.passwordChangeResult &#x3D; { success: true };
+      })
+      .catch((err: Error) &#x3D;&gt; {
+        this.passwordChangeResult &#x3D; { success: false, error: err.message };
+        this.loggingService.error({
+          error: &quot;password change failed&quot;,
+          details: err.message,
+        });
+        // rethrow to properly report to sentry.io; this exception is not expected, only caught to display in UI
+        throw err;
+      });
+  }
+
+  private passwordMatchValidator(): ValidationErrors | null {
+    const newPassword: string &#x3D; this?.passwordForm?.get(&quot;newPassword&quot;)?.value;
+    const confirmPassword: string &#x3D; this?.passwordForm?.get(&quot;confirmPassword&quot;)
+      ?.value;
+    if (newPassword !&#x3D;&#x3D; confirmPassword) {
+      this.passwordForm
+        .get(&quot;confirmPassword&quot;)
+        .setErrors({ passwordConfirmationMismatch: true });
+      return { passwordConfirmationMismatch: true };
+    }
+    return null;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!--
+  ~     This file is part of ndb-core.
+  ~
+  ~     ndb-core is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     ndb-core is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with ndb-core.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+  --&gt;
+
+&lt;mat-tab-group&gt;
+  &lt;mat-tab label&#x3D;&quot;User Account&quot;&gt;
+    &lt;ng-template matTabContent&gt;
+      &lt;div class&#x3D;&quot;user-profile-tab&quot;&gt;
+        &lt;p&gt;
+          &lt;mat-form-field&gt;
+            &lt;input
+              placeholder&#x3D;&quot;Username&quot;
+              matInput&#x3D;&quot;text&quot;
+              id&#x3D;&quot;username&quot;
+              type&#x3D;&quot;text&quot;
+              [value]&#x3D;&quot;user.name&quot;
+              disabled
+            /&gt;
+          &lt;/mat-form-field&gt;
+        &lt;/p&gt;
+
+        &lt;form [formGroup]&#x3D;&quot;passwordForm&quot; class&#x3D;&quot;form-container&quot;&gt;
+          &lt;p *ngIf&#x3D;&quot;disabledForDemoMode&quot; class&#x3D;&quot;info&quot;&gt;
+            &lt;mat-icon fontIcon&#x3D;&quot;fa-exclamation-circle&quot;&gt;&lt;/mat-icon&gt;
+            Password change is not allowed in demo mode.
+          &lt;/p&gt;
+          &lt;p *ngIf&#x3D;&quot;disabledForOfflineMode&quot; class&#x3D;&quot;info&quot;&gt;
+            &lt;mat-icon fontIcon&#x3D;&quot;fa-exclamation-circle&quot;&gt;&lt;/mat-icon&gt;
+            Password change is not possible while being offline.
+            &lt;button mat-stroked-button (click)&#x3D;&quot;checkIfPasswordChangeAllowed()&quot;&gt;
+              retry
+            &lt;/button&gt;
+          &lt;/p&gt;
+
+          &lt;mat-form-field class&#x3D;&quot;user-form-field&quot;&gt;
+            &lt;label&gt;
+              Current Password
+              &lt;input
+                matInput
+                type&#x3D;&quot;password&quot;
+                formControlName&#x3D;&quot;currentPassword&quot;
+              /&gt;
+            &lt;/label&gt;
+            &lt;mat-error *ngIf&#x3D;&quot;passwordForm.get(&#x27;currentPassword&#x27;).invalid&quot;&gt;
+              Please provide your correct current password for confirmation.
+            &lt;/mat-error&gt;
+          &lt;/mat-form-field&gt;
+          &lt;br /&gt;
+
+          &lt;mat-form-field class&#x3D;&quot;user-form-field&quot; style&#x3D;&quot;height: 80px&quot;&gt;
+            &lt;label&gt;
+              New password
+              &lt;input matInput type&#x3D;&quot;password&quot; formControlName&#x3D;&quot;newPassword&quot; /&gt;
+            &lt;/label&gt;
+            &lt;mat-error *ngIf&#x3D;&quot;passwordForm.get(&#x27;newPassword&#x27;).invalid&quot;&gt;
+              &lt;div *ngIf&#x3D;&quot;passwordForm.get(&#x27;newPassword&#x27;).errors.minlength&quot;&gt;
+                Must be at least 8 characters long.
+              &lt;/div&gt;
+              &lt;div *ngIf&#x3D;&quot;passwordForm.get(&#x27;newPassword&#x27;).errors.pattern&quot;&gt;
+                Must contain lower case letters, upper case letters, symbols and
+                numbers to be secure.
+              &lt;/div&gt;
+            &lt;/mat-error&gt;
+          &lt;/mat-form-field&gt;
+          &lt;br /&gt;
+
+          &lt;mat-form-field class&#x3D;&quot;user-form-field&quot;&gt;
+            &lt;label&gt;
+              Confirm new password
+              &lt;input
+                matInput
+                type&#x3D;&quot;password&quot;
+                formControlName&#x3D;&quot;confirmPassword&quot;
+              /&gt;
+            &lt;/label&gt;
+            &lt;mat-error
+              *ngIf&#x3D;&quot;
+                passwordForm.get(&#x27;confirmPassword&#x27;).invalid &amp;&amp;
+                passwordForm.get(&#x27;confirmPassword&#x27;).touched
+              &quot;
+            &gt;
+              Confirmation does not match your new password.
+            &lt;/mat-error&gt;
+          &lt;/mat-form-field&gt;
+          &lt;br /&gt;
+
+          &lt;div *ngIf&#x3D;&quot;passwordChangeResult&quot;&gt;
+            &lt;div *ngIf&#x3D;&quot;passwordChangeResult.success&quot; class&#x3D;&quot;info success&quot;&gt;
+              Password changed successfully.
+            &lt;/div&gt;
+            &lt;div *ngIf&#x3D;&quot;!passwordChangeResult.success&quot; class&#x3D;&quot;info error&quot;&gt;
+              Failed to change password.&lt;br /&gt;
+              Please try again. If the problem persists contact Aam Digital
+              support.
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;button
+            mat-raised-button
+            type&#x3D;&quot;submit&quot;
+            [disabled]&#x3D;&quot;passwordForm.invalid || passwordForm.disabled&quot;
+            (click)&#x3D;&quot;changePassword()&quot;
+            (submit)&#x3D;&quot;changePassword()&quot;
+          &gt;
+            Change Password
+          &lt;/button&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/mat-tab&gt;
+
+  &lt;mat-tab label&#x3D;&quot;Image Service&quot; *ngIf&#x3D;&quot;webdavEnabled&quot;&gt;
+    &lt;ng-template matTabContent&gt;
+      &lt;div class&#x3D;&quot;user-profile-tab&quot;&gt;
+        &lt;app-cloud-file-service-user-settings
+          [user]&#x3D;&quot;user&quot;
+        &gt;&lt;/app-cloud-file-service-user-settings&gt;
+      &lt;/div&gt;
+    &lt;/ng-template&gt;
+  &lt;/mat-tab&gt;
+&lt;/mat-tab-group&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./user-account.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">/*
+ *     This file is part of ndb-core.
+ *
+ *     ndb-core is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ *
+ *     ndb-core is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License
+ *     along with ndb-core.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
+@import &quot;~@angular/material/theming&quot;;
+
+.form-container {
+  padding: 8px;
+}
+
+.user-profile-tab {
+  margin-top: 20px;
+}
+
+.user-form-field {
+  width: 300px;
+  max-width: 100%;
+}
+
+.passwordChange {
+  font-size: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.info {
+  @include mat-elevation(1);
+  font-style: italic;
+  padding: 8px;
+  margin: 8px;
+}
+
+.success {
+  background-color: #c8e6c9;
+}
+.error {
+  background-color: #ff8a65;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!--  ~     This file is part of ndb-core.  ~  ~     ndb-core is free software: you can redistribute it and/or modify  ~     it under the terms of the GNU General Public License as published by  ~     the Free Software Foundation, either version 3 of the License, or  ~     (at your option) any later version.  ~  ~     ndb-core is distributed in the hope that it will be useful,  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the  ~     GNU General Public License for more details.  ~  ~     You should have received a copy of the GNU General Public License  ~     along with ndb-core.  If not, see <http://www.gnu.org/licenses/>.  --><mat-tab-group>  <mat-tab label="User Account">    <ng-template matTabContent>      <div class="user-profile-tab">        <p>          <mat-form-field>            <input              placeholder="Username"              matInput="text"              id="username"              type="text"              [value]="user.name"              disabled            />          </mat-form-field>        </p>        <form [formGroup]="passwordForm" class="form-container">          <p *ngIf="disabledForDemoMode" class="info">            <mat-icon fontIcon="fa-exclamation-circle"></mat-icon>            Password change is not allowed in demo mode.          </p>          <p *ngIf="disabledForOfflineMode" class="info">            <mat-icon fontIcon="fa-exclamation-circle"></mat-icon>            Password change is not possible while being offline.            <button mat-stroked-button (click)="checkIfPasswordChangeAllowed()">              retry            </button>          </p>          <mat-form-field class="user-form-field">            <label>              Current Password              <input                matInput                type="password"                formControlName="currentPassword"              />            </label>            <mat-error *ngIf="passwordForm.get(\'currentPassword\').invalid">              Please provide your correct current password for confirmation.            </mat-error>          </mat-form-field>          <br />          <mat-form-field class="user-form-field" style="height: 80px">            <label>              New password              <input matInput type="password" formControlName="newPassword" />            </label>            <mat-error *ngIf="passwordForm.get(\'newPassword\').invalid">              <div *ngIf="passwordForm.get(\'newPassword\').errors.minlength">                Must be at least 8 characters long.              </div>              <div *ngIf="passwordForm.get(\'newPassword\').errors.pattern">                Must contain lower case letters, upper case letters, symbols and                numbers to be secure.              </div>            </mat-error>          </mat-form-field>          <br />          <mat-form-field class="user-form-field">            <label>              Confirm new password              <input                matInput                type="password"                formControlName="confirmPassword"              />            </label>            <mat-error              *ngIf="                passwordForm.get(\'confirmPassword\').invalid &&                passwordForm.get(\'confirmPassword\').touched              "            >              Confirmation does not match your new password.            </mat-error>          </mat-form-field>          <br />          <div *ngIf="passwordChangeResult">            <div *ngIf="passwordChangeResult.success" class="info success">              Password changed successfully.            </div>            <div *ngIf="!passwordChangeResult.success" class="info error">              Failed to change password.<br />              Please try again. If the problem persists contact Aam Digital              support.            </div>          </div>          <button            mat-raised-button            type="submit"            [disabled]="passwordForm.invalid || passwordForm.disabled"            (click)="changePassword()"            (submit)="changePassword()"          >            Change Password          </button>        </form>      </div>    </ng-template>  </mat-tab>  <mat-tab label="Image Service" *ngIf="webdavEnabled">    <ng-template matTabContent>      <div class="user-profile-tab">        <app-cloud-file-service-user-settings          [user]="user"        ></app-cloud-file-service-user-settings>      </div>    </ng-template>  </mat-tab></mat-tab-group></div>'
+    var COMPONENTS = [{'name': 'ActivityAttendanceSectionComponent', 'selector': 'app-activity-attendance-section'},{'name': 'ActivityCardComponent', 'selector': 'app-activity-card'},{'name': 'ActivityListComponent', 'selector': 'app-activity-list'},{'name': 'AddDayAttendanceComponent', 'selector': 'app-add-day-attendance'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AlertComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppVersionComponent', 'selector': 'app-version'},{'name': 'AserComponent', 'selector': 'app-aser'},{'name': 'AttendanceBlockComponent', 'selector': 'app-attendance-block'},{'name': 'AttendanceCalendarComponent', 'selector': 'app-attendance-calendar'},{'name': 'AttendanceDayBlockComponent', 'selector': 'app-attendance-day-block]'},{'name': 'AttendanceDetailsComponent', 'selector': 'app-attendance-details'},{'name': 'AttendanceManagerComponent', 'selector': 'app-attendance-manager'},{'name': 'AttendanceStatusSelectComponent', 'selector': 'app-attendance-status-select'},{'name': 'AttendanceWeekDashboardComponent', 'selector': 'app-attendance-week-dashboard'},{'name': 'BackgroundProcessingIndicatorComponent', 'selector': 'app-background-processing-indicator'},{'name': 'BmiBlockComponent', 'selector': 'app-bmi-block'},{'name': 'ButtonComponent', 'selector': 'storybook-button'},{'name': 'ChangelogComponent', 'selector': ''},{'name': 'ChildBlockComponent', 'selector': 'app-child-block'},{'name': 'ChildMeetingNoteAttendanceComponent', 'selector': 'app-child-meeting-note-attendance'},{'name': 'ChildrenBmiDashboardComponent', 'selector': 'app-children-bmi-dashboard'},{'name': 'ChildrenCountDashboardComponent', 'selector': 'app-children-count-dashboard'},{'name': 'ChildrenListComponent', 'selector': 'app-children-list'},{'name': 'ChildrenOverviewComponent', 'selector': 'app-children-overview'},{'name': 'CloudFileServiceUserSettingsComponent', 'selector': 'app-cloud-file-service-user-settings'},{'name': 'ComingSoonComponent', 'selector': 'app-coming-soon'},{'name': 'CompareRevComponent', 'selector': 'app-compare-rev'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'ConflictResolutionListComponent', 'selector': 'app-conflict-resolution-list'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardShortcutWidgetComponent', 'selector': 'app-dashboard-shortcut-widget'},{'name': 'DemoDataGeneratingProgressDialogComponent', 'selector': ''},{'name': 'DisabledWrapperComponent', 'selector': 'app-disabled-wrapper'},{'name': 'DisplayCheckmarkComponent', 'selector': 'app-display-tick'},{'name': 'DisplayConfigurableEnumComponent', 'selector': 'app-display-configurable-enum'},{'name': 'DisplayDateComponent', 'selector': 'app-display-date'},{'name': 'DisplayEntityArrayComponent', 'selector': 'app-display-entity-array'},{'name': 'DisplayEntityComponent', 'selector': 'app-display-entity'},{'name': 'DisplayPercentageComponent', 'selector': 'app-display-percentage'},{'name': 'DisplayTextComponent', 'selector': 'app-display-text'},{'name': 'DisplayUnitComponent', 'selector': 'app-display-unit'},{'name': 'EditAgeComponent', 'selector': 'app-edit-age'},{'name': 'EditBooleanComponent', 'selector': 'app-edit-boolean'},{'name': 'EditConfigurableEnumComponent', 'selector': 'app-edit-configurable-enum'},{'name': 'EditDateComponent', 'selector': 'app-edit-date'},{'name': 'EditEntityArrayComponent', 'selector': 'app-edit-entity-array'},{'name': 'EditLongTextComponent', 'selector': 'app-edit-long-text'},{'name': 'EditNumberComponent', 'selector': 'app-edit-number'},{'name': 'EditPercentageComponent', 'selector': 'app-edit-percentage'},{'name': 'EditPhotoComponent', 'selector': 'app-edit-photo'},{'name': 'EditSingleEntityComponent', 'selector': 'app-edit-single-entity'},{'name': 'EditTextComponent', 'selector': 'app-edit-text'},{'name': 'EducationalMaterialComponent', 'selector': 'app-educational-material'},{'name': 'EntityDetailsComponent', 'selector': 'app-entity-details'},{'name': 'EntityFormComponent', 'selector': 'app-entity-form'},{'name': 'EntityListComponent', 'selector': 'app-entity-list'},{'name': 'EntitySelectComponent', 'selector': 'app-entity-select'},{'name': 'EntitySubrecordComponent', 'selector': 'app-entity-subrecord'},{'name': 'ExportDataComponent', 'selector': 'app-export-data'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormDialogWrapperComponent', 'selector': 'app-form-dialog-wrapper'},{'name': 'GroupedChildAttendanceComponent', 'selector': 'app-grouped-child-attendance'},{'name': 'HeaderComponent', 'selector': 'storybook-header'},{'name': 'HealthCheckupComponent', 'selector': 'app-health-checkup'},{'name': 'HistoricalDataComponent', 'selector': 'app-historical-data'},{'name': 'HowToComponent', 'selector': 'app-help'},{'name': 'InitialSyncDialogComponent', 'selector': ''},{'name': 'ListFilterComponent', 'selector': 'app-list-filter'},{'name': 'ListPaginatorComponent', 'selector': 'app-list-paginator'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'NoRecentNotesDashboardComponent', 'selector': 'app-no-recent-notes-dashboard'},{'name': 'NoteDetailsComponent', 'selector': 'app-note-details'},{'name': 'NotesManagerComponent', 'selector': 'app-notes-manager'},{'name': 'NotesOfChildComponent', 'selector': 'app-notes-of-child'},{'name': 'PageComponent', 'selector': 'storybook-page'},{'name': 'PreviousSchoolsComponent', 'selector': 'app-previous-schools'},{'name': 'PrimaryActionComponent', 'selector': 'app-primary-action'},{'name': 'ProgressDashboardComponent', 'selector': 'app-progress-dashboard'},{'name': 'ReadonlyFunctionComponent', 'selector': 'app-readonly-function'},{'name': 'RecentAttendanceBlocksComponent', 'selector': 'app-recent-attendance-blocks'},{'name': 'RecentNotesDashboardComponent', 'selector': 'app-recent-notes-dashboard'},{'name': 'ReportingComponent', 'selector': 'app-reporting'},{'name': 'ReportRowComponent', 'selector': 'app-report-row'},{'name': 'RollCallComponent', 'selector': 'app-roll-call'},{'name': 'RollCallSetupComponent', 'selector': 'app-roll-call-setup'},{'name': 'SchoolBlockComponent', 'selector': 'app-school-block'},{'name': 'SchoolsListComponent', 'selector': 'app-schools-list'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SyncStatusComponent', 'selector': 'app-sync-status'},{'name': 'UiComponent', 'selector': 'app-ui'},{'name': 'UserAccountComponent', 'selector': 'app-user-account'},{'name': 'UserListComponent', 'selector': 'app-user-list'}];
+    var DIRECTIVES = [{'name': 'ConfigurableEnumDirective', 'selector': '[appConfigurableEnum]'},{'name': 'DisableEntityOperationDirective', 'selector': '[appDisabledEntityOperation]'},{'name': 'DynamicComponentDirective', 'selector': '[appDynamicComponent]'}];
+    var ACTUAL_COMPONENT = {'name': 'UserAccountComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserAccountComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+	   <link rel="stylesheet" href="../../styles/style.css">
+        <link rel="stylesheet" href="../../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content additional-page">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+<h1 id="how-to-display-dialogs-notifications-and-log-errors">How to display dialogs, notifications and log errors</h1>
+<p>To give users a consistent look &amp; feel and make things easier to implement
+we have generic services to help with these tasks.
+You should always inject and use these rather than implement your own variant of such functionalities.</p>
+<h2 id="display-a-confirmation-dialog">Display a confirmation dialog</h2>
+<p>Before executing an action with far-reaching consequences (e.g. deleting an entity)
+you should request explicit confirmation from the user through a confirmation dialog box.
+To reduce boiler-plate code for this, you can use the <a href="../../injectables/ConfirmationDialogService.html">ConfirmationDialogService</a>:</p>
+<div><pre class="line-numbers"><code class="language-none">constructor(private confirmationDialog: ConfirmationDialogService) {}</code></pre></div><p>The service is a wrapper for <a href="https://material.angular.io/components/dialog/overview">MatDialog</a>.
+Use it to open a dialog box with your text:</p>
+<div><pre class="line-numbers"><code class="language-none">const dialogRef = this.confirmationDialog
+  .openDialog(&#39;Delete?&#39;, &#39;Are you sure you want to delete this Child?&#39;);</code></pre></div><p>You can then react to the user action (whether &quot;Yes&quot; or &quot;No&quot; was clicked):</p>
+<div><pre class="line-numbers"><code class="language-none">dialogRef.afterClosed().subscribe(confirmed =&gt; {
+  if (confirmed) {
+    // do something
+  }
+});</code></pre></div><p>You can also display dialogs with only one &quot;OK&quot; button rather than the yes/no option
+by setting the optional third parameter (<code>yesNoButtons</code>) to false:</p>
+<div><pre class="line-numbers"><code class="language-none">this.confirmationDialog
+  .openDialog(&#39;Info&#39;, &#39;No options here, just some text.&#39;, false);</code></pre></div><p>In this case also consider whether you really want to use a &quot;blocking&quot; dialog box
+or if a simple &quot;alert&quot; notification may be the better choice.</p>
+<h2 id="display-a-notification">Display a notification</h2>
+<p>You can display a short notification text to the user in an non-disrupting way using the <a href="../../injectables/AlertService.html">AlertService</a>.
+This will show a small hovering notification box towards the bottom of the screen
+(through <a href="https://material.angular.io/components/snack-bar/api">MatSnackBar</a>):</p>
+<div><pre class="line-numbers"><code class="language-none">constructor(private alertService: AlertService) {
+  this.alertService.addInfo(&#39;info message&#39;);
+  this.alertService.addWarning(&#39;warning message&#39;);
+  this.alertService.addDanger(&#39;important message&#39;);
+}</code></pre></div><p>The different alert levels result in different styling of the notification.
+More serious alert levels (warning and above) also require the user to actively dismiss the notification
+while other notifications disappear automatically after some time.  </p>
+<blockquote>
+<p>If you want to log errors or other events for developers analysis and monitoring, also read the <a href="log-errors.html">Log Errors</a> Guide.</p>
+</blockquote>
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 2;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'additional-page';
+            var COMPODOC_CURRENT_PAGE_URL = 'display-dialogs-and-notifications.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../../js/libs/custom-elements.min.js"></script>
+       <script src="../../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../../js/menu-wc.js" defer></script>
+       <script nomodule src="../../js/menu-wc_es5.js" defer></script>
+
+       <script src="../../js/libs/bootstrap-native.js"></script>
+
+       <script src="../../js/libs/es6-shim.min.js"></script>
+       <script src="../../js/libs/EventDispatcher.js"></script>
+       <script src="../../js/libs/promise.min.js"></script>
+       <script src="../../js/libs/zepto.min.js"></script>
+
+       <script src="../../js/compodoc.js"></script>
+
+       <script src="../../js/tabs.js"></script>
+       <script src="../../js/menu.js"></script>
+       <script src="../../js/libs/clipboard.min.js"></script>
+       <script src="../../js/libs/prism.js"></script>
+       <script src="../../js/sourceCode.js"></script>
+          <script src="../../js/search/search.js"></script>
+          <script src="../../js/search/lunr.min.js"></script>
+          <script src="../../js/search/search-lunr.js"></script>
+          <script src="../../js/search/search_index.js"></script>
+       <script src="../../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

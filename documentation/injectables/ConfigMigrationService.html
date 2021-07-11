@@ -1,0 +1,801 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >ConfigMigrationService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/core/config/config-migration.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#migrateConfig" >migrateConfig</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(configService: <a href="../injectables/ConfigService.html" target="_self">ConfigService</a>, entityMapper: <a href="../injectables/EntityMapperService.html" target="_self">EntityMapperService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/core/config/config-migration.service.ts:41</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>configService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConfigService.html" target="_self" >ConfigService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>entityMapper</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EntityMapperService.html" target="_self" >EntityMapperService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="migrateConfig"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>migrateConfig</b></span>
+                        <a href="#migrateConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>migrateConfig()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/core/config/config-migration.service.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Config.html" target="_self" >Promise&lt;Config&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+import { ConfigService } from &quot;./config.service&quot;;
+import { EntityMapperService } from &quot;../entity/entity-mapper.service&quot;;
+import { Config } from &quot;./config&quot;;
+import { ViewConfig } from &quot;../view/dynamic-routing/view-config.interface&quot;;
+import {
+  ConfigurableEnumFilterConfig,
+  EntityListConfig,
+  FilterConfig,
+} from &quot;../entity-components/entity-list/EntityListConfig&quot;;
+import { FormFieldConfig } from &quot;../entity-components/entity-form/entity-form/FormConfig&quot;;
+import { ENTITY_MAP } from &quot;../entity-components/entity-details/entity-details.component&quot;;
+import { Entity, EntityConstructor } from &quot;../entity/model/entity&quot;;
+import {
+  EntityConfig,
+  EntityConfigService,
+} from &quot;../entity/entity-config.service&quot;;
+import {
+  EntityDetailsConfig,
+  PanelComponent,
+} from &quot;../entity-components/entity-details/EntityDetailsConfig&quot;;
+import { ChildSchoolRelation } from &quot;../../child-dev-project/children/model/childSchoolRelation&quot;;
+import { HistoricalEntityData } from &quot;../../features/historical-data/historical-entity-data&quot;;
+import { RecurringActivity } from &quot;../../child-dev-project/attendance/model/recurring-activity&quot;;
+import { HealthCheck } from &quot;../../child-dev-project/health-checkup/model/health-check&quot;;
+import { readingLevels } from &quot;../../child-dev-project/aser/model/readingLevels&quot;;
+import { mathLevels } from &quot;../../child-dev-project/aser/model/mathLevels&quot;;
+import { genders } from &quot;../../child-dev-project/children/model/genders&quot;;
+import { materials } from &quot;../../child-dev-project/educational-material/model/materials&quot;;
+import {
+  CONFIGURABLE_ENUM_CONFIG_PREFIX,
+  ConfigurableEnumValue,
+} from &quot;../configurable-enum/configurable-enum.interface&quot;;
+import { warningLevels } from &quot;../../child-dev-project/warning-levels&quot;;
+import { User } from &quot;../user/user&quot;;
+
+@Injectable({
+  providedIn: &quot;root&quot;,
+})
+export class ConfigMigrationService {
+  private config: Config;
+  constructor(
+    private configService: ConfigService,
+    private entityMapper: EntityMapperService
+  ) {}
+
+  async migrateConfig(): Promise&lt;Config&gt; {
+    this.config &#x3D; await this.configService.loadConfig(this.entityMapper);
+    this.addNewConfigurableEnums();
+    this.migrateViewConfigs();
+    console.log(&quot;config&quot;, this.config);
+    return this.configService.saveConfig(this.entityMapper, this.config.data);
+  }
+
+  private addNewConfigurableEnums() {
+    this.config.data[
+      CONFIGURABLE_ENUM_CONFIG_PREFIX + &quot;reading-levels&quot;
+    ] &#x3D; readingLevels;
+    this.config.data[
+      CONFIGURABLE_ENUM_CONFIG_PREFIX + &quot;math-levels&quot;
+    ] &#x3D; mathLevels;
+    this.config.data[CONFIGURABLE_ENUM_CONFIG_PREFIX + &quot;genders&quot;] &#x3D; genders;
+    this.config.data[CONFIGURABLE_ENUM_CONFIG_PREFIX + &quot;materials&quot;] &#x3D; materials;
+    this.config.data[
+      CONFIGURABLE_ENUM_CONFIG_PREFIX + &quot;warning-levels&quot;
+    ] &#x3D; warningLevels;
+  }
+
+  private migrateViewConfigs() {
+    const entityListComponents &#x3D; [
+      &quot;ChildrenList&quot;,
+      &quot;SchoolsList&quot;,
+      &quot;ActivityList&quot;,
+      &quot;NotesManager&quot;,
+    ];
+    const viewConfigs &#x3D; this.configService.getAllConfigs&lt;ViewConfig&gt;(&quot;view:&quot;);
+    viewConfigs.forEach((viewConfig) &#x3D;&gt; {
+      const entity &#x3D; this.getEntity(viewConfig._id);
+      if (entityListComponents.includes(viewConfig.component)) {
+        this.migrateEntityListConfig(viewConfig.config, entity);
+      }
+      if (viewConfig.component &#x3D;&#x3D;&#x3D; &quot;EntityDetails&quot;) {
+        this.migrateEntityDetailsConfig(viewConfig.config, entity);
+      }
+    });
+  }
+
+  private getEntity(viewId: string): EntityConstructor&lt;Entity&gt; {
+    const entityType &#x3D; viewId
+      .split(&quot;:&quot;)[1]
+      .replace(&quot;/&quot;, &quot;&quot;)
+      .split(&quot;-&quot;)
+      .map((s) &#x3D;&gt; s.charAt(0).toUpperCase() + s.slice(1))
+      .join(&quot;&quot;);
+    return ENTITY_MAP.get(entityType);
+  }
+
+  private migrateEntityListConfig(
+    config: EntityListConfig,
+    entity: EntityConstructor&lt;Entity&gt;
+  ) {
+    if (config.hasOwnProperty(&quot;columnGroup&quot;)) {
+      config.columnGroups &#x3D; config[&quot;columnGroup&quot;];
+      delete config[&quot;columnGroup&quot;];
+    }
+    this.migrateColumnConfigs(config.columns as FormFieldConfig[], entity);
+    if (config.hasOwnProperty(&quot;filters&quot;)) {
+      this.migrateFilters(config.filters);
+    }
+  }
+
+  private migrateColumnConfigs(
+    columns: FormFieldConfig[],
+    entity: EntityConstructor&lt;Entity&gt;
+  ) {
+    columns.forEach((column: FormFieldConfig) &#x3D;&gt; {
+      try {
+        column.view &#x3D; column[&quot;component&quot;];
+        delete column[&quot;component&quot;];
+        column.label &#x3D; column[&quot;title&quot;];
+        delete column[&quot;title&quot;];
+        if (column.hasOwnProperty(&quot;config&quot;)) {
+          column.additional &#x3D; column[&quot;config&quot;];
+          delete column[&quot;config&quot;];
+        }
+        if (column.view &#x3D;&#x3D;&#x3D; &quot;SchoolBlockWrapper&quot;) {
+          column.view &#x3D; &quot;DisplayEntity&quot;;
+          column.additional &#x3D; &quot;School&quot;;
+          column.noSorting &#x3D; true;
+        }
+        if (column.view &#x3D;&#x3D;&#x3D; &quot;DisplayUsers&quot;) {
+          column.view &#x3D; &quot;DisplayEntityArray&quot;;
+          column.additional &#x3D; &quot;User&quot;;
+          column.noSorting &#x3D; true;
+        }
+        if (column.view &#x3D;&#x3D;&#x3D; &quot;ChildBlockList&quot;) {
+          column.view &#x3D; &quot;DisplayEntityArray&quot;;
+          column.additional &#x3D; &quot;Child&quot;;
+          column.noSorting &#x3D; true;
+        }
+        this.addLabelToEntity(column.label, column.id, entity, &quot;short&quot;, column);
+      } catch (e) {
+        console.warn(&#x60;Failed to migrate column ${column.id}: ${e}&#x60;);
+      }
+    });
+  }
+
+  private addLabelToEntity(
+    label: string,
+    attribute: string,
+    entity: EntityConstructor&lt;Entity&gt;,
+    type: &quot;short&quot; | &quot;long&quot;,
+    formField?: FormFieldConfig
+  ) {
+    try {
+      const schema &#x3D; entity.schema.get(attribute);
+      if (type &#x3D;&#x3D;&#x3D; &quot;short&quot;) {
+        schema.labelShort &#x3D; label;
+      } else {
+        schema.label &#x3D; label;
+      }
+      const schemaKey &#x3D;
+        EntityConfigService.PREFIX_ENTITY_CONFIG + entity.ENTITY_TYPE;
+      let configSchema &#x3D; this.configService.getConfig&lt;EntityConfig&gt;(schemaKey);
+      if (!configSchema) {
+        this.config.data[schemaKey] &#x3D; {};
+        configSchema &#x3D; this.configService.getConfig&lt;EntityConfig&gt;(schemaKey);
+      }
+      if (!configSchema.attributes) {
+        configSchema.attributes &#x3D; [];
+      }
+      let existing &#x3D; configSchema.attributes.find(
+        (attr) &#x3D;&gt; attr.name &#x3D;&#x3D;&#x3D; attribute
+      );
+      if (!existing) {
+        existing &#x3D; { name: attribute, schema: {} };
+        configSchema.attributes.push(existing);
+      }
+      existing.schema &#x3D; schema;
+      if (formField) {
+        delete formField.label;
+        if (formField.view &#x3D;&#x3D;&#x3D; &quot;DisplayText&quot;) {
+          delete formField.view;
+        }
+      }
+    } catch (e) {
+      console.warn(
+        &#x60;Failed to set label ${label} to attribute ${attribute} of entity ${entity.ENTITY_TYPE}: ${e}&#x60;
+      );
+    }
+  }
+
+  private migrateFilters(filters: FilterConfig[]) {
+    filters.forEach((filter) &#x3D;&gt; {
+      try {
+        if (filter.type &#x3D;&#x3D;&#x3D; &quot;configurable-enum&quot;) {
+          const enumFilter &#x3D; filter as ConfigurableEnumFilterConfig&lt;Entity&gt;;
+          delete enumFilter.enumId;
+          delete enumFilter.type;
+        } else if (filter.id &#x3D;&#x3D;&#x3D; &quot;school&quot;) {
+          filter.type &#x3D; &quot;School&quot;;
+          filter.id &#x3D; &quot;schoolId&quot;;
+        } else if (filter.id &#x3D;&#x3D;&#x3D; &quot;assignedTo&quot;) {
+          filter.type &#x3D; &quot;User&quot;;
+          filter.label &#x3D; &quot;Assigned user(s)&quot;;
+          filter.display &#x3D; &quot;dropdown&quot;;
+        }
+        if (filter.default &#x3D;&#x3D;&#x3D; &quot;&quot;) {
+          delete filter.default;
+        }
+      } catch (e) {
+        console.warn(&#x60;Failed to migrate filter ${filter.id}: ${e}&#x60;);
+      }
+    });
+  }
+
+  private migrateEntityDetailsConfig(
+    config: EntityDetailsConfig,
+    entity: EntityConstructor&lt;Entity&gt;
+  ) {
+    config.panels.forEach((panel) &#x3D;&gt; {
+      panel.components.forEach((panelComp) &#x3D;&gt; {
+        switch (panelComp.component) {
+          case &quot;Form&quot;: {
+            this.migrateFormComponent(panelComp.config[&quot;cols&quot;], entity);
+            break;
+          }
+          case &quot;PreviousSchools&quot;: {
+            if (panelComp.hasOwnProperty(&quot;config&quot;)) {
+              this.migratePreviousSchoolsComponent(panelComp.config[&quot;columns&quot;]);
+            }
+            break;
+          }
+          case &quot;PreviousTeams&quot;: {
+            this.migratePreviousTeams(panelComp);
+            break;
+          }
+          case &quot;HistoricalDataComponent&quot;: {
+            this.migrateHistoricalDataComponent(panelComp.config as any);
+            break;
+          }
+          case &quot;ActivityParticipantsSection&quot;: {
+            this.migrateActivityParticipantsSection(panelComp);
+            break;
+          }
+          case &quot;Aser&quot;:
+          case &quot;EducationalMaterial&quot;:
+          case &quot;HealthCheckup&quot;:
+          case &quot;NotesOfChild&quot;:
+          case &quot;ChildrenOverview&quot;: {
+            if (panelComp.hasOwnProperty(&quot;config&quot;)) {
+              this.migrateTable(panelComp.config);
+            }
+            break;
+          }
+        }
+      });
+    });
+  }
+
+  private migrateFormComponent(
+    columns: FormFieldConfig[][],
+    entity: EntityConstructor&lt;Entity&gt;
+  ) {
+    const editMap &#x3D; new Map&lt;string, string&gt;([
+      [&quot;text&quot;, &quot;EditText&quot;],
+      [&quot;checkbox&quot;, &quot;EditBoolean&quot;],
+      [&quot;textarea&quot;, &quot;EditLongText&quot;],
+      [&quot;photo&quot;, &quot;EditPhoto&quot;],
+      [&quot;configurable-enum-select&quot;, &quot;EditConfigurableEnum&quot;],
+      [&quot;age&quot;, &quot;EditAge&quot;],
+      [&quot;datepicker&quot;, &quot;EditDate&quot;],
+      [&quot;entity-select&quot;, &quot;EditEntityArray&quot;],
+    ]);
+    columns.forEach((row) &#x3D;&gt;
+      row.forEach((formField) &#x3D;&gt; {
+        try {
+          formField.label &#x3D; formField.label || formField[&quot;placeholder&quot;];
+          delete formField[&quot;placeholder&quot;];
+          formField.additional &#x3D;
+            formField[&quot;options&quot;] ||
+            formField[&quot;enumId&quot;] ||
+            formField[&quot;entityType&quot;];
+          if (formField.additional &#x3D;&#x3D;&#x3D; undefined) {
+            delete formField.additional;
+          }
+          delete formField[&quot;options&quot;];
+          delete formField[&quot;enumId&quot;];
+          delete formField[&quot;entityType&quot;];
+          if (formField.id &#x3D;&#x3D;&#x3D; &quot;photoFile&quot;) {
+            formField.id &#x3D; &quot;photo&quot;;
+          }
+          if (formField[&quot;input&quot;] &#x3D;&#x3D;&#x3D; &quot;select&quot;) {
+            this.migrateSelectFormField(formField, entity);
+          } else if (formField.id &#x3D;&#x3D;&#x3D; &quot;assignedTo&quot;) {
+            const schema &#x3D; entity.schema.get(&quot;assignedTo&quot;);
+            formField.label &#x3D; &quot;Assigned user(s)&quot;;
+            schema.dataType &#x3D; &quot;array&quot;;
+            schema.innerDataType &#x3D; &quot;string&quot;;
+            schema.viewComponent &#x3D; &quot;DisplayEntityArray&quot;;
+            schema.editComponent &#x3D; &quot;EditEntityArray&quot;;
+            schema.additional &#x3D; User.ENTITY_TYPE;
+          } else {
+            formField.edit &#x3D; editMap.get(formField[&quot;input&quot;]);
+          }
+          delete formField[&quot;input&quot;];
+          this.addLabelToEntity(
+            formField.label,
+            formField.id,
+            entity,
+            &quot;long&quot;,
+            formField
+          );
+        } catch (e) {
+          console.warn(&#x60;Failed to migrate form field ${formField.id}: ${e}&#x60;);
+        }
+      })
+    );
+  }
+
+  private migrateSelectFormField(
+    formField: FormFieldConfig,
+    entity: EntityConstructor&lt;Entity&gt;
+  ) {
+    const selectableMap &#x3D; new Map&lt;string, string&gt;([
+      [&quot;warningLevel&quot;, &quot;warning-levels&quot;],
+      [&quot;materialType&quot;, &quot;materials&quot;],
+      [&quot;gender&quot;, &quot;genders&quot;],
+      [&quot;hindi&quot;, &quot;reading-levels&quot;],
+      [&quot;bengali&quot;, &quot;reading-levels&quot;],
+      [&quot;english&quot;, &quot;reading-levels&quot;],
+      [&quot;math&quot;, &quot;math-levels&quot;],
+    ]);
+    if (!selectableMap.has(formField.id)) {
+      const newEnum: ConfigurableEnumValue[] &#x3D; [{ id: &quot;&quot;, label: &quot;&quot; }].concat(
+        ...formField[&quot;additional&quot;].map((option: string) &#x3D;&gt; {
+          return {
+            label: option,
+            id: option,
+          };
+        })
+      );
+      this.config.data[
+        CONFIGURABLE_ENUM_CONFIG_PREFIX + formField.id
+      ] &#x3D; newEnum;
+      console.warn(
+        &#x60;Automatically created enum &quot;${formField.id}&quot; with values:&#x60;,
+        newEnum
+      );
+      selectableMap.set(formField.id, formField.id);
+    }
+    const propertySchema &#x3D; entity.schema.get(formField.id);
+    propertySchema.dataType &#x3D; &quot;configurable-enum&quot;;
+    propertySchema.innerDataType &#x3D; selectableMap.get(formField.id);
+    delete formField[&quot;additional&quot;];
+  }
+
+  private migratePreviousSchoolsComponent(columns: FormFieldConfig[]) {
+    if (columns) {
+      columns.forEach((formField) &#x3D;&gt; {
+        try {
+          this.migrateEntitySubrecordInput(formField, &quot;input&quot;);
+          this.addLabelToEntity(
+            formField.label,
+            formField.id,
+            ChildSchoolRelation,
+            &quot;short&quot;,
+            formField
+          );
+        } catch (e) {
+          console.warn(
+            &#x60;Filed to migrate previousSchoolsConfig for ${formField.id}: ${e}&#x60;
+          );
+        }
+      });
+    }
+  }
+
+  private migratePreviousTeams(config: PanelComponent) {
+    config.component &#x3D; &quot;PreviousSchools&quot;;
+    config.config &#x3D; {
+      single: false,
+      columns: [
+        {
+          id: &quot;schoolId&quot;,
+          label: &quot;Team&quot;,
+          view: &quot;DisplayEntity&quot;,
+          edit: &quot;EditSingleEntity&quot;,
+          additional: &quot;Team&quot;,
+        },
+        {
+          id: &quot;start&quot;,
+          label: &quot;From&quot;,
+          view: &quot;DisplayDate&quot;,
+          edit: &quot;EditDate&quot;,
+        },
+        {
+          id: &quot;end&quot;,
+          label: &quot;To&quot;,
+          view: &quot;DisplayDate&quot;,
+          edit: &quot;EditDate&quot;,
+        },
+      ],
+    } as any;
+    this.addLabelToEntity(&quot;Team&quot;, &quot;schoolId&quot;, ChildSchoolRelation, &quot;short&quot;);
+    this.addLabelToEntity(&quot;From&quot;, &quot;start&quot;, ChildSchoolRelation, &quot;short&quot;);
+    this.addLabelToEntity(&quot;To&quot;, &quot;end&quot;, ChildSchoolRelation, &quot;short&quot;);
+  }
+
+  private migrateEntitySubrecordInput(
+    formField: FormFieldConfig,
+    inputKey: string
+  ) {
+    switch (formField[inputKey]) {
+      case &quot;school&quot;: {
+        formField.view &#x3D; &quot;DisplayEntity&quot;;
+        formField.edit &#x3D; &quot;EditSingleEntity&quot;;
+        formField.additional &#x3D; &quot;School&quot;;
+        break;
+      }
+      case &quot;text&quot;: {
+        formField.view &#x3D; &quot;DisplayText&quot;;
+        formField.edit &#x3D; &quot;EditText&quot;;
+        break;
+      }
+      case &quot;date&quot;: {
+        formField.view &#x3D; &quot;DisplayDate&quot;;
+        formField.edit &#x3D; &quot;EditDate&quot;;
+        break;
+      }
+      case &quot;percentageResult&quot;: {
+        formField.view &#x3D; &quot;DisplayPercentage&quot;;
+        formField.edit &#x3D; &quot;EditPercentage&quot;;
+        break;
+      }
+      case &quot;configurable_enum&quot;: {
+        formField.view &#x3D; &quot;DisplayConfigurableEnum&quot;;
+        formField.edit &#x3D; &quot;EditConfigurableEnum&quot;;
+        break;
+      }
+      default: {
+        console.warn(
+          &#x60;No migration defined for inputType ${formField[inputKey]} at property ${formField.id}&#x60;
+        );
+      }
+    }
+    delete formField[inputKey];
+  }
+
+  private migrateHistoricalDataComponent(columns: FormFieldConfig[]) {
+    columns.forEach((formField) &#x3D;&gt; {
+      try {
+        formField.id &#x3D; formField[&quot;name&quot;];
+        delete formField[&quot;name&quot;];
+        if (formField.hasOwnProperty(&quot;enumId&quot;)) {
+          formField.additional &#x3D; formField[&quot;enumId&quot;];
+          delete formField[&quot;enumId&quot;];
+        }
+        this.migrateEntitySubrecordInput(formField, &quot;inputType&quot;);
+        this.addLabelToEntity(
+          formField.label,
+          formField.id,
+          HistoricalEntityData,
+          &quot;short&quot;,
+          formField
+        );
+      } catch (e) {
+        console.warn(
+          &#x60;Failed to migrate HistoricalDataComponent ${formField.id}: ${e}&#x60;
+        );
+      }
+    });
+  }
+
+  private migrateActivityParticipantsSection(config: PanelComponent) {
+    config.component &#x3D; &quot;Form&quot;;
+    config.config &#x3D; {
+      cols: [
+        [
+          {
+            id: &quot;linkedGroups&quot;,
+            label: &quot;Groups&quot;,
+            edit: &quot;EditEntityArray&quot;,
+            additional: &quot;School&quot;,
+          },
+          {
+            id: &quot;participants&quot;,
+            label: &quot;Participants&quot;,
+            edit: &quot;EditEntityArray&quot;,
+            additional: &quot;Child&quot;,
+          },
+        ],
+      ],
+    } as any;
+    this.addLabelToEntity(&quot;Groups&quot;, &quot;linkedGroups&quot;, RecurringActivity, &quot;short&quot;);
+    this.addLabelToEntity(
+      &quot;Participants&quot;,
+      &quot;participants&quot;,
+      RecurringActivity,
+      &quot;short&quot;
+    );
+  }
+
+  private migrateTable(config: any) {
+    const columnConfigs &#x3D; [
+      { id: &quot;date&quot;, visibleFrom: &quot;xs&quot; },
+      { id: &quot;materialType&quot;, visibleFrom: &quot;xs&quot; },
+      { id: &quot;materialAmount&quot;, visibleFrom: &quot;md&quot; },
+      { id: &quot;description&quot;, visibleFrom: &quot;md&quot; },
+      { id: &quot;math&quot;, visibleFrom: &quot;xs&quot; },
+      { id: &quot;english&quot;, visibleFrom: &quot;xs&quot; },
+      { id: &quot;hindi&quot;, visibleFrom: &quot;md&quot; },
+      { id: &quot;bengali&quot;, visibleFrom: &quot;md&quot; },
+      { id: &quot;remarks&quot;, visibleFrom: &quot;md&quot; },
+      { id: &quot;schoolClass&quot;, label: &quot;Class&quot;, view: &quot;DisplayText&quot; },
+      { id: &quot;age&quot;, label: &quot;Age&quot;, view: &quot;DisplayText&quot; },
+      {
+        id: &quot;bmi&quot;,
+        label: &quot;BMI&quot;,
+        view: &quot;ReadonlyFunction&quot;,
+        additional: (entity: HealthCheck) &#x3D;&gt; entity.bmi.toFixed(2),
+      },
+    ];
+    config.columns &#x3D; config.displayedColumns.map((col: string) &#x3D;&gt; {
+      return columnConfigs.find((cc) &#x3D;&gt; cc.id &#x3D;&#x3D;&#x3D; col) || col;
+    });
+    delete config.displayedColumns;
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ConfigMigrationService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

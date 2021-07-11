@@ -1,0 +1,829 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >ChildPhotoService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/child-dev-project/children/child-photo-service/child-photo.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#canSetImage" >canSetImage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#generatePhotoPath" >generatePhotoPath</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#getDefaultImage" >getDefaultImage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getImage" >getImage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getImageAsyncObservable" >getImageAsyncObservable</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#getImageFromAssets" >getImageFromAssets</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#setImage" >setImage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(cloudFileService: <a href="../injectables/CloudFileService.html" target="_self">CloudFileService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/child-dev-project/children/child-photo-service/child-photo.service.ts:30</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>cloudFileService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CloudFileService.html" target="_self" >CloudFileService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canSetImage"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>canSetImage</b></span>
+                        <a href="#canSetImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>canSetImage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/child-dev-project/children/child-photo-service/child-photo.service.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check if saving/uploading images is supported in the current state.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generatePhotoPath"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>generatePhotoPath</b></span>
+                        <a href="#generatePhotoPath"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generatePhotoPath(filename: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/child-dev-project/children/child-photo-service/child-photo.service.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns the full relative filePath to a child photo given a filename, adding the relevant folders to it.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filename</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The given filename with file extension.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDefaultImage"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>getDefaultImage</b></span>
+                        <a href="#getDefaultImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDefaultImage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/child-dev-project/children/child-photo-service/child-photo.service.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://angular.io/api/platform-browser/SafeUrl" target="_blank" >SafeUrl</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getImage"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>getImage</b></span>
+                        <a href="#getImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getImage(child: <a href="../classes/Child.html" target="_self">Child</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/child-dev-project/children/child-photo-service/child-photo.service.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates an ArrayBuffer of the photo for that Child or the default image url.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>child</td>
+                                    <td>
+                                                <code><a href="../classes/Child.html" target="_self" >Child</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;SafeUrl&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getImageAsyncObservable"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getImageAsyncObservable</b></span>
+                        <a href="#getImageAsyncObservable"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getImageAsyncObservable(child: <a href="../classes/Child.html" target="_self">Child</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/app/child-dev-project/children/child-photo-service/child-photo.service.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Load the image for the given child asynchronously, immediately returning an Observable
+that initially emits the static image and later resolves to the image from the cloud service if one exists.
+This allows to immediately display a proper label while the loading may take some time.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>child</td>
+                                    <td>
+                                                <code><a href="../classes/Child.html" target="_self" >Child</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The Child instance for which the photo should be loaded.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>BehaviorSubject&lt;SafeUrl&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getImageFromAssets"></a>
+                    <span class="name">
+                        <span class="modifier">Static</span>
+                        <span ><b>getImageFromAssets</b></span>
+                        <a href="#getImageFromAssets"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getImageFromAssets(photoFile: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/app/child-dev-project/children/child-photo-service/child-photo.service.ts:11</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>photoFile</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://angular.io/api/platform-browser/SafeUrl" target="_blank" >SafeUrl</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setImage"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>setImage</b></span>
+                        <a href="#setImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setImage(imageFile: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, childId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">src/app/child-dev-project/children/child-photo-service/child-photo.service.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Uploads a given image through the CloudFileService if connected.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>imageFile</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Image to be stored</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>childId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id of child for which one wants to store the image</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, Optional } from &quot;@angular/core&quot;;
+import { SafeUrl } from &quot;@angular/platform-browser&quot;;
+import { CloudFileService } from &quot;../../../core/webdav/cloud-file-service.service&quot;;
+import { Child } from &quot;../model/child&quot;;
+import { BehaviorSubject } from &quot;rxjs&quot;;
+
+@Injectable({
+  providedIn: &quot;root&quot;,
+})
+export class ChildPhotoService {
+  public static getImageFromAssets(photoFile: string): SafeUrl {
+    if (typeof photoFile !&#x3D;&#x3D; &quot;string&quot; || photoFile.trim() &#x3D;&#x3D;&#x3D; &quot;&quot;) {
+      return ChildPhotoService.getDefaultImage();
+    }
+    return ChildPhotoService.generatePhotoPath(photoFile);
+  }
+
+  /**
+   * Returns the full relative filePath to a child photo given a filename, adding the relevant folders to it.
+   * @param filename The given filename with file extension.
+   */
+  public static generatePhotoPath(filename: string): string {
+    return &quot;assets/child-photos/&quot; + filename;
+  }
+
+  public static getDefaultImage(): SafeUrl {
+    return &quot;assets/child.png&quot;;
+  }
+
+  private basePath &#x3D; &quot;photos/&quot;;
+
+  constructor(@Optional() private cloudFileService: CloudFileService) {}
+
+  /**
+   * Creates an ArrayBuffer of the photo for that Child or the default image url.
+   * @param child
+   */
+  public async getImage(child: Child): Promise&lt;SafeUrl&gt; {
+    let image &#x3D; await this.getImageFromCloudService(child.entityId);
+    if (!image) {
+      image &#x3D; ChildPhotoService.getImageFromAssets(child.photo?.path);
+    }
+    return image;
+  }
+
+  private async getImageFromCloudService(entityId: string): Promise&lt;SafeUrl&gt; {
+    let image;
+    if (this.cloudFileService?.isConnected()) {
+      const imageType &#x3D; [&quot;.png&quot;, &quot;.jpg&quot;, &quot;.jpeg&quot;, &quot;&quot;];
+      for (const ext of imageType) {
+        const filepath &#x3D; this.basePath + entityId + ext;
+        try {
+          image &#x3D; await this.cloudFileService.getFile(filepath);
+          break;
+        } catch (err) {
+          if (err &#x3D;&#x3D;&#x3D; &quot;File not found&quot;) {
+            // ignore and try next file extension
+          } else {
+            console.warn(&quot;Error loading image: &quot;, err);
+          }
+        }
+      }
+    }
+    return image;
+  }
+
+  /**
+   * Load the image for the given child asynchronously, immediately returning an Observable
+   * that initially emits the static image and later resolves to the image from the cloud service if one exists.
+   * This allows to immediately display a proper label while the loading may take some time.
+   * @param child The Child instance for which the photo should be loaded.
+   */
+  public getImageAsyncObservable(child: Child): BehaviorSubject&lt;SafeUrl&gt; {
+    const resultSubject &#x3D; new BehaviorSubject(
+      ChildPhotoService.getImageFromAssets(child.photo?.path)
+    );
+    this.getImageFromCloudService(child.entityId).then((photo) &#x3D;&gt; {
+      if (photo &amp;&amp; photo !&#x3D;&#x3D; resultSubject.value) {
+        resultSubject.next(photo);
+      }
+      resultSubject.complete();
+    });
+    return resultSubject;
+  }
+
+  /**
+   * Check if saving/uploading images is supported in the current state.
+   */
+  public canSetImage(): boolean {
+    return this.cloudFileService?.isConnected();
+  }
+
+  /**
+   * Uploads a given image through the CloudFileService if connected.
+   * @param imageFile Image to be stored
+   * @param childId Id of child for which one wants to store the image
+   */
+  public async setImage(imageFile: any, childId: string): Promise&lt;boolean&gt; {
+    if (!this.canSetImage()) {
+      return Promise.reject(&quot;CloudFileService not connected.&quot;);
+    }
+
+    const fileExt &#x3D; imageFile.name.substr(imageFile.name.lastIndexOf(&quot;.&quot;));
+    return this.cloudFileService.uploadFile(
+      imageFile,
+      this.basePath + childId + fileExt
+    );
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'ChildPhotoService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

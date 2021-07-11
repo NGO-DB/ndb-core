@@ -1,0 +1,1166 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >NewLocalSessionService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/core/session/session-service/new-local-session.service.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                        <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+            </p>
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#connectionState" >connectionState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentUser" >currentUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#liveSyncHandle" >liveSyncHandle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loginState" >loginState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#syncState" >syncState</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getConnectionState" >getConnectionState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getCurrentUser" >getCurrentUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getDatabase" >getDatabase</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getLoginState" >getLoginState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getSyncState" >getSyncState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isLoggedIn" >isLoggedIn</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#login" >login</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#logout" >logout</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#sync" >sync</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(loggingService: <a href="../injectables/LoggingService.html" target="_self">LoggingService</a>, entitySchemaService: <a href="../injectables/EntitySchemaService.html" target="_self">EntitySchemaService</a>, database: <a href="../classes/PouchDatabase.html" target="_self">PouchDatabase</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/core/session/session-service/new-local-session.service.ts:49</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>loggingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LoggingService.html" target="_self" >LoggingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>entitySchemaService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EntitySchemaService.html" target="_self" >EntitySchemaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>database</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/PouchDatabase.html" target="_self" >PouchDatabase</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getConnectionState"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getConnectionState</b></span>
+                        <a href="#getConnectionState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getConnectionState()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/SessionService.html#source" target="_self" >SessionService:135</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>see <a href="../classes/SessionService.html">SessionService</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCurrentUser"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getCurrentUser</b></span>
+                        <a href="#getCurrentUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCurrentUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/SessionService.html#source" target="_self" >SessionService:126</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>see <a href="../classes/SessionService.html">SessionService</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >User</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDatabase"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getDatabase</b></span>
+                        <a href="#getDatabase"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDatabase()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/SessionService.html#source" target="_self" >SessionService:160</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the local database instance that should be used for regular data access.
+als see <a href="../classes/SessionService.html">SessionService</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Database.html" target="_self" >Database</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLoginState"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getLoginState</b></span>
+                        <a href="#getLoginState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getLoginState()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/SessionService.html#source" target="_self" >SessionService:131</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>see <a href="../classes/SessionService.html">SessionService</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSyncState"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getSyncState</b></span>
+                        <a href="#getSyncState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSyncState()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/SessionService.html#source" target="_self" >SessionService:139</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>see <a href="../classes/SessionService.html">SessionService</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isLoggedIn"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>isLoggedIn</b></span>
+                        <a href="#isLoggedIn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isLoggedIn()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/SessionService.html#source" target="_self" >SessionService:60</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>see <a href="../classes/SessionService.html">SessionService</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="login"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>login</b></span>
+                        <a href="#login"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>login(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/SessionService.html#source" target="_self" >SessionService:71</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get a login at the local session by fetching the user from the local database and validating the password.
+Returns a Promise resolving with the loginState.
+Attention: This method waits for the first synchronisation of the database (or a fail of said initial sync).</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Username</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>password</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Password</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/enumerations.html#LoginState" target="_self" >Promise&lt;LoginState&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logout"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>logout</b></span>
+                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>logout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/SessionService.html#source" target="_self" >SessionService:168</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Logout and stop any existing sync.
+also see <a href="../classes/SessionService.html">SessionService</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sync"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>sync</b></span>
+                        <a href="#sync"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sync(remoteDatabase?)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/SessionService.html#source" target="_self" >SessionService:144</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>see <a href="../classes/SessionService.html">SessionService</a></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>remoteDatabase</td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="connectionState"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>connectionState</b></span>
+                        <a href="#connectionState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/StateHandler.html" target="_self" >StateHandler&lt;ConnectionState&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new StateHandler&lt;ConnectionState&gt;(
+    ConnectionState.DISCONNECTED
+  )</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/core/session/session-service/new-local-session.service.ts:44</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>StateHandler for connection state changes (not relevant for LocalSession)</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentUser"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>currentUser</b></span>
+                        <a href="#currentUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/User.html" target="_self" >User</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/core/session/session-service/new-local-session.service.ts:49</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The currently authenticated user entity</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="liveSyncHandle"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>liveSyncHandle</b></span>
+                        <a href="#liveSyncHandle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/core/session/session-service/new-local-session.service.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loginState"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loginState</b></span>
+                        <a href="#loginState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/StateHandler.html" target="_self" >StateHandler&lt;LoginState&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new StateHandler&lt;LoginState&gt;(
+    LoginState.LOGGED_OUT
+  )</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/core/session/session-service/new-local-session.service.ts:36</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>StateHandler for login state changes</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="syncState"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>syncState</b></span>
+                        <a href="#syncState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/StateHandler.html" target="_self" >StateHandler&lt;SyncState&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new StateHandler&lt;SyncState&gt;(
+    SyncState.UNSYNCED
+  )</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/core/session/session-service/new-local-session.service.ts:40</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>StateHandler for sync state changes</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+
+import { SessionService } from &quot;./session.service&quot;;
+import { LoginState } from &quot;../session-states/login-state.enum&quot;;
+import { Database } from &quot;../../database/database&quot;;
+import { PouchDatabase } from &quot;../../database/pouch-database&quot;;
+import { ConnectionState } from &quot;../session-states/connection-state.enum&quot;;
+import { SyncState } from &quot;../session-states/sync-state.enum&quot;;
+import { User } from &quot;../../user/user&quot;;
+import { EntitySchemaService } from &quot;../../entity/schema/entity-schema.service&quot;;
+import { LoggingService } from &quot;../../logging/logging.service&quot;;
+import { StateHandler } from &quot;../session-states/state-handler&quot;;
+
+@Injectable()
+export class NewLocalSessionService extends SessionService {
+  public liveSyncHandle: any;
+
+  /** StateHandler for login state changes */
+  public loginState: StateHandler&lt;LoginState&gt; &#x3D; new StateHandler&lt;LoginState&gt;(
+    LoginState.LOGGED_OUT
+  );
+  /** StateHandler for sync state changes */
+  public syncState: StateHandler&lt;SyncState&gt; &#x3D; new StateHandler&lt;SyncState&gt;(
+    SyncState.UNSYNCED
+  );
+  /** StateHandler for connection state changes (not relevant for LocalSession) */
+  public connectionState: StateHandler&lt;ConnectionState&gt; &#x3D; new StateHandler&lt;ConnectionState&gt;(
+    ConnectionState.DISCONNECTED
+  );
+
+  /** The currently authenticated user entity */
+  public currentUser: User;
+
+  constructor(
+    private loggingService: LoggingService,
+    private entitySchemaService: EntitySchemaService,
+    private database: PouchDatabase
+  ) {
+    super();
+  }
+
+  /** see {@link SessionService} */
+  public isLoggedIn(): boolean {
+    return this.loginState.getState() &#x3D;&#x3D;&#x3D; LoginState.LOGGED_IN;
+  }
+
+  /**
+   * Get a login at the local session by fetching the user from the local database and validating the password.
+   * Returns a Promise resolving with the loginState.
+   * Attention: This method waits for the first synchronisation of the database (or a fail of said initial sync).
+   * @param username Username
+   * @param password Password
+   */
+  public async login(username: string, password: string): Promise&lt;LoginState&gt; {
+    let userEntity: User;
+
+    try {
+      userEntity &#x3D; await this.loadUser(username);
+    } catch (error) {
+      if (error?.status &#x3D;&#x3D;&#x3D; 404) {
+        return this.failLogin();
+      } else {
+        throw error;
+      }
+    }
+
+    if (!userEntity.checkPassword(password)) {
+      return this.failLogin();
+    }
+
+    return this.succeedLogin(userEntity, password);
+  }
+
+  /**
+   * Update all states when login failed
+   * @private
+   */
+  private failLogin(): LoginState {
+    this.loginState.setState(LoginState.LOGIN_FAILED);
+    return LoginState.LOGIN_FAILED;
+  }
+
+  /**
+   * Update all states when login succeeded
+   * @param loggedInUser
+   * @param password
+   * @private
+   */
+  private succeedLogin(loggedInUser: User, password: string): LoginState {
+    this.currentUser &#x3D; loggedInUser;
+    this.currentUser.decryptCloudPassword(password);
+    this.loginState.setState(LoginState.LOGGED_IN);
+    this.connectionState.setState(ConnectionState.OFFLINE);
+    return LoginState.LOGGED_IN;
+  }
+
+  /**
+   * Helper to get a User Entity from the Database without needing the EntityMapperService
+   * @param userId Id of the User to be loaded
+   */
+  private async loadUser(userId: string): Promise&lt;User&gt; {
+    const user &#x3D; new User(&quot;&quot;);
+    const userData &#x3D; await this.database.get(&quot;User:&quot; + userId);
+    this.entitySchemaService.loadDataIntoEntity(user, userData);
+    return user;
+  }
+
+  /** see {@link SessionService} */
+  public getCurrentUser(): User {
+    return this.currentUser;
+  }
+
+  /** see {@link SessionService} */
+  public getLoginState() {
+    return this.loginState;
+  }
+  /** see {@link SessionService} */
+  public getConnectionState() {
+    return this.connectionState;
+  }
+  /** see {@link SessionService} */
+  public getSyncState() {
+    return this.syncState;
+  }
+
+  /** see {@link SessionService} */
+  public async sync(remoteDatabase?): Promise&lt;any&gt; {
+    this.syncState.setState(SyncState.STARTED);
+    try {
+      const result &#x3D; await this.database.sync(remoteDatabase);
+      this.syncState.setState(SyncState.COMPLETED);
+      return result;
+    } catch (error) {
+      this.syncState.setState(SyncState.FAILED);
+      throw error;
+    }
+  }
+
+  /**
+   * Get the local database instance that should be used for regular data access.
+   * als see {@link SessionService}
+   */
+  public getDatabase(): Database {
+    return this.database;
+  }
+
+  /**
+   * Logout and stop any existing sync.
+   * also see {@link SessionService}
+   */
+  public logout() {
+    this.currentUser &#x3D; undefined;
+    this.loginState.setState(LoginState.LOGGED_OUT);
+    this.connectionState.setState(ConnectionState.DISCONNECTED);
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'NewLocalSessionService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

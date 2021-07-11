@@ -1,0 +1,946 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >EntitySchemaService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/core/entity/schema/entity-schema.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Transform between entity instances and database objects
+based on the dataType set for properties in Entity classes using the <a href="../miscellaneous/functions.html#DatabaseField">DatabaseField</a> annotation.</p>
+<p>You can inject the EntitySchemaService in your code to register your custom <a href="../interfaces/EntitySchemaDatatype.html">EntitySchemaDatatype</a> implementations.</p>
+<p>This service is used by the <a href="../injectables/EntityMapperService.html">EntityMapperService</a> to internally transform objects.
+You should normally use the EntityMapperService instead of transforming objects yourself with the EntitySchemaService.</p>
+<p>also see the How-To Guides:</p>
+<ul>
+<li><a href="/additional-documentation/how-to-guides/create-a-new-entity-type.html">Create A New Entity Type</a></li>
+</ul>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getComponent" >getComponent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getDatatypeOrDefault" >getDatatypeOrDefault</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loadDataIntoEntity" >loadDataIntoEntity</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#registerSchemaDatatype" >registerSchemaDatatype</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#transformDatabaseToEntityFormat" >transformDatabaseToEntityFormat</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#transformEntityToDatabaseFormat" >transformEntityToDatabaseFormat</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/core/entity/schema/entity-schema.service.ts:52</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getComponent"></a>
+                    <span class="name">
+                        <span ><b>getComponent</b></span>
+                        <a href="#getComponent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getComponent(propertySchema: <a href="../interfaces/EntitySchemaField.html" target="_self">EntitySchemaField</a>, mode: "view" | "edit")</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="191"
+                            class="link-to-prism">src/app/core/entity/schema/entity-schema.service.ts:191</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the name of the component that should display this property.
+The names will be one of the DYNAMIC_COMPONENT_MAP.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>propertySchema</td>
+                                    <td>
+                                                <code><a href="../interfaces/EntitySchemaField.html" target="_self" >EntitySchemaField</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>The schema definition of the attribute for which a component should be get</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>mode</td>
+                                    <td>
+                                            <code>&quot;view&quot; | &quot;edit&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&quot;view&quot;</code>
+                                    </td>
+
+                                    <td>
+                                        <p>(Optional) The mode for which a component is required. Default is &quot;view&quot;.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>string The name of the component which should display this property</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDatatypeOrDefault"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getDatatypeOrDefault</b></span>
+                        <a href="#getDatatypeOrDefault"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDatatypeOrDefault(datatypeName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/core/entity/schema/entity-schema.service.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the datatype for the giving name (or the default datatype if no other registered type fits)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>datatypeName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The key/name of the datatype</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadDataIntoEntity"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>loadDataIntoEntity</b></span>
+                        <a href="#loadDataIntoEntity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadDataIntoEntity(entity: <a href="../classes/Entity.html" target="_self">Entity</a>, data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="131"
+                            class="link-to-prism">src/app/core/entity/schema/entity-schema.service.ts:131</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Helper function to assign the giving data to the given entity instance after transforming it according to the schema.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>entity</td>
+                                    <td>
+                                                <code><a href="../classes/Entity.html" target="_self" >Entity</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>An entity instance whose properties will be overwritten with the transformed data</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The database object that will be transformed and assigned to the entity</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerSchemaDatatype"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>registerSchemaDatatype</b></span>
+                        <a href="#registerSchemaDatatype"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>registerSchemaDatatype(type: <a href="../interfaces/EntitySchemaDatatype.html" target="_self">EntitySchemaDatatype</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/app/core/entity/schema/entity-schema.service.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add a datatype definition to the registry to provide a conversion between what is written into the database
+and what is available in Entity objects.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="../interfaces/EntitySchemaDatatype.html" target="_self" >EntitySchemaDatatype</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The EntitySchemaDatatype object definition providing data transformation functions.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="transformDatabaseToEntityFormat"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>transformDatabaseToEntityFormat</b></span>
+                        <a href="#transformDatabaseToEntityFormat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>transformDatabaseToEntityFormat(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, schema: <a href="../classes/Entity.html" target="_self">EntitySchema</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">src/app/core/entity/schema/entity-schema.service.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Transform a database object to entity format according to the schema.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The database object that will be transformed to the given entity format</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>schema</td>
+                                    <td>
+                                                <code><a href="../classes/Entity.html" target="_self" >EntitySchema</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>A schema defining the transformation</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="transformEntityToDatabaseFormat"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>transformEntityToDatabaseFormat</b></span>
+                        <a href="#transformEntityToDatabaseFormat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>transformEntityToDatabaseFormat(entity: <a href="../classes/Entity.html" target="_self">Entity</a>, schema?: <a href="../classes/Entity.html" target="_self">EntitySchema</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="144"
+                            class="link-to-prism">src/app/core/entity/schema/entity-schema.service.ts:144</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Transform an entity instance to a database object according to the schema.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>entity</td>
+                                    <td>
+                                                <code><a href="../classes/Entity.html" target="_self" >Entity</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The object (an instance of an entity type)</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>schema</td>
+                                    <td>
+                                                <code><a href="../classes/Entity.html" target="_self" >EntitySchema</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>The schema of the entity (if not explicitly defined the schema of the given entity is used)</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Entity } from &quot;../model/entity&quot;;
+import { EntitySchemaDatatype } from &quot;./entity-schema-datatype&quot;;
+import { Injectable } from &quot;@angular/core&quot;;
+import { defaultEntitySchemaDatatype } from &quot;../schema-datatypes/datatype-default&quot;;
+import { EntitySchema } from &quot;./entity-schema&quot;;
+import { EntitySchemaField } from &quot;./entity-schema-field&quot;;
+import { stringEntitySchemaDatatype } from &quot;../schema-datatypes/datatype-string&quot;;
+import { numberEntitySchemaDatatype } from &quot;../schema-datatypes/datatype-number&quot;;
+import { dateEntitySchemaDatatype } from &quot;../schema-datatypes/datatype-date&quot;;
+import { monthEntitySchemaDatatype } from &quot;../schema-datatypes/datatype-month&quot;;
+import { arrayEntitySchemaDatatype } from &quot;../schema-datatypes/datatype-array&quot;;
+import { schemaEmbedEntitySchemaDatatype } from &quot;../schema-datatypes/datatype-schema-embed&quot;;
+import { dateOnlyEntitySchemaDatatype } from &quot;../schema-datatypes/datatype-date-only&quot;;
+import { mapEntitySchemaDatatype } from &quot;../schema-datatypes/datatype-map&quot;;
+import { booleanEntitySchemaDatatype } from &quot;../schema-datatypes/datatype-boolean&quot;;
+
+/**
+ * Transform between entity instances and database objects
+ * based on the dataType set for properties in Entity classes using the {@link DatabaseField} annotation.
+ *
+ * You can inject the EntitySchemaService in your code to register your custom {@link EntitySchemaDatatype} implementations.
+ *
+ * This service is used by the {@link EntityMapperService} to internally transform objects.
+ * You should normally use the EntityMapperService instead of transforming objects yourself with the EntitySchemaService.
+ *
+ * also see the How-To Guides:
+ * - [Create A New Entity Type]{@link /additional-documentation/how-to-guides/create-a-new-entity-type.html}
+ */
+@Injectable()
+export class EntitySchemaService {
+  /**
+   * Internal registry of data type definitions.
+   * You can extend the Schema system with your data type conversions by using EntitySchema.registerSchemaDatatype()
+   */
+  private schemaTypes &#x3D; new Map&lt;string, EntitySchemaDatatype&gt;();
+
+  constructor() {
+    this.registerBasicDatatypes();
+  }
+
+  private registerBasicDatatypes() {
+    this.registerSchemaDatatype(stringEntitySchemaDatatype);
+    this.registerSchemaDatatype(numberEntitySchemaDatatype);
+    this.registerSchemaDatatype(dateEntitySchemaDatatype);
+    this.registerSchemaDatatype(dateOnlyEntitySchemaDatatype);
+    this.registerSchemaDatatype(monthEntitySchemaDatatype);
+    this.registerSchemaDatatype(arrayEntitySchemaDatatype);
+    this.registerSchemaDatatype(schemaEmbedEntitySchemaDatatype);
+    this.registerSchemaDatatype(mapEntitySchemaDatatype);
+    this.registerSchemaDatatype(booleanEntitySchemaDatatype);
+  }
+
+  /**
+   * Add a datatype definition to the registry to provide a conversion between what is written into the database
+   * and what is available in Entity objects.
+   * @param type The EntitySchemaDatatype object definition providing data transformation functions.
+   */
+  public registerSchemaDatatype(type: EntitySchemaDatatype) {
+    this.schemaTypes.set(type.name, type);
+  }
+
+  /**
+   * Get the datatype for the giving name (or the default datatype if no other registered type fits)
+   * @param datatypeName The key/name of the datatype
+   */
+  public getDatatypeOrDefault(datatypeName: string) {
+    datatypeName &#x3D; datatypeName ? datatypeName.toLowerCase() : undefined;
+
+    if (this.schemaTypes.has(datatypeName)) {
+      return this.schemaTypes.get(datatypeName);
+    } else {
+      return defaultEntitySchemaDatatype;
+    }
+  }
+
+  /**
+   * Transform a database object to entity format according to the schema.
+   * @param data The database object that will be transformed to the given entity format
+   * @param schema A schema defining the transformation
+   */
+  public transformDatabaseToEntityFormat(data: any, schema: EntitySchema) {
+    for (const key of schema.keys()) {
+      const schemaField: EntitySchemaField &#x3D; schema.get(key);
+
+      if (data[key] &#x3D;&#x3D;&#x3D; undefined || data[key] &#x3D;&#x3D;&#x3D; null) {
+        if (schemaField.defaultValue !&#x3D;&#x3D; undefined) {
+          data[key] &#x3D; schemaField.defaultValue;
+        } else {
+          // skip and keep undefined
+          continue;
+        }
+      }
+
+      const newValue &#x3D; this.getDatatypeOrDefault(
+        schemaField.dataType
+      ).transformToObjectFormat(data[key], schemaField, this, data);
+      if (newValue !&#x3D;&#x3D; undefined) {
+        data[key] &#x3D; newValue;
+      }
+
+      if (schemaField.generateIndex) {
+        throw new Error(&#x27;schema option &quot;isIndexed&quot; not implemented yet&#x27;);
+      }
+    }
+
+    return data;
+  }
+
+  /**
+   * Helper function to assign the giving data to the given entity instance after transforming it according to the schema.
+   * @param entity An entity instance whose properties will be overwritten with the transformed data
+   * @param data The database object that will be transformed and assigned to the entity
+   */
+  public loadDataIntoEntity(entity: Entity, data: any) {
+    data &#x3D; this.transformDatabaseToEntityFormat(
+      data,
+      (&lt;typeof Entity&gt;entity.constructor).schema
+    );
+    Object.assign(entity, data);
+  }
+
+  /**
+   * Transform an entity instance to a database object according to the schema.
+   * @param entity The object (an instance of an entity type)
+   * @param schema The schema of the entity (if not explicitly defined the schema of the given entity is used)
+   */
+  public transformEntityToDatabaseFormat(
+    entity: Entity,
+    schema?: EntitySchema
+  ): any {
+    if (!schema) {
+      schema &#x3D; entity.getConstructor().schema;
+    }
+
+    const data &#x3D; {};
+
+    for (const key of schema.keys()) {
+      let value &#x3D; entity[key];
+      const schemaField: EntitySchemaField &#x3D; schema.get(key);
+
+      if (value &#x3D;&#x3D;&#x3D; undefined || value &#x3D;&#x3D;&#x3D; null) {
+        if (schemaField.defaultValue !&#x3D;&#x3D; undefined) {
+          value &#x3D; schemaField.defaultValue;
+        } else {
+          // skip and keep undefined
+          continue;
+        }
+      }
+
+      try {
+        data[key] &#x3D; this.getDatatypeOrDefault(
+          schemaField.dataType
+        ).transformToDatabaseFormat(value, schemaField, this, entity);
+      } catch (err) {
+        throw new Error(&#x60;Transformation for ${key} failed: ${err}&#x60;);
+      }
+
+      if (data[key] &#x3D;&#x3D;&#x3D; undefined) {
+        delete data[key];
+      }
+    }
+
+    return data;
+  }
+
+  /**
+   * Get the name of the component that should display this property.
+   * The names will be one of the DYNAMIC_COMPONENT_MAP.
+   *
+   * @param propertySchema The schema definition of the attribute for which a component should be get
+   * @param mode (Optional) The mode for which a component is required. Default is &quot;view&quot;.
+   * @returns string The name of the component which should display this property
+   */
+  getComponent(
+    propertySchema: EntitySchemaField,
+    mode: &quot;view&quot; | &quot;edit&quot; &#x3D; &quot;view&quot;
+  ): string {
+    if (!propertySchema) {
+      return undefined;
+    }
+    const componentAttribute &#x3D;
+      mode &#x3D;&#x3D;&#x3D; &quot;view&quot; ? &quot;viewComponent&quot; : &quot;editComponent&quot;;
+    return (
+      propertySchema[componentAttribute] ||
+      this.getDatatypeOrDefault(propertySchema.dataType)[componentAttribute]
+    );
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'EntitySchemaService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

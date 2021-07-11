@@ -1,0 +1,1126 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >CloudFileService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/core/webdav/cloud-file-service.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Connect and access a remote cloud file system like Nextcloud
+to upload and download files.</p>
+<p>Connection requires setup of the server in the AppConfig
+as well as valid user credentials for that server in the currently logged in user entity.</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#checkConnection" >checkConnection</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#connect" >connect</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#createDir" >createDir</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#doesFileExist" >doesFileExist</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getDir" >getDir</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFile" >getFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isConnected" >isConnected</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#uploadFile" >uploadFile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#WEBDAV_ENABLED" >WEBDAV_ENABLED</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(domSanitizer: <a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank">DomSanitizer</a>, sessionService: <a href="../classes/SessionService.html" target="_self">SessionService</a>, webdav: <a href="../injectables/WebdavWrapperService.html" target="_self">WebdavWrapperService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/core/webdav/cloud-file-service.service.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Construct the service and immediately attempt to connect to the server with the current user.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>domSanitizer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank" >DomSanitizer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sessionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/SessionService.html" target="_self" >SessionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>webdav</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WebdavWrapperService.html" target="_self" >WebdavWrapperService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkConnection"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>checkConnection</b></span>
+                        <a href="#checkConnection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>checkConnection()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/app/core/webdav/cloud-file-service.service.ts:93</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>checkConnection</p>
+<p>tries to upload and redownload a file.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="connect"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>connect</b></span>
+                        <a href="#connect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>connect(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/core/webdav/cloud-file-service.service.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>(Re)-initialize the client connecting to the webdav server.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Optional webdav username, otherwise the one set in the current user entity is used.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>password</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Optional webdav password, otherwise the one set in the current user entity is used.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createDir"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>createDir</b></span>
+                        <a href="#createDir"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createDir(path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">src/app/core/webdav/cloud-file-service.service.ts:150</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>creates new directory</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>path</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>path to directory to be created, without leading slash; e.g. &#39;new-folder&#39;</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="doesFileExist"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>doesFileExist</b></span>
+                        <a href="#doesFileExist"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>doesFileExist(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="123"
+                            class="link-to-prism">src/app/core/webdav/cloud-file-service.service.ts:123</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Checks if the file exists in the root directory.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>file name to check</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDir"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>getDir</b></span>
+                        <a href="#getDir"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDir(path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/app/core/webdav/cloud-file-service.service.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns the content path.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>path</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>File path relative to the base path, without leading slash; example &#39;folder1&#39;</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFile"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>getFile</b></span>
+                        <a href="#getFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFile(filePath: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="171"
+                            class="link-to-prism">src/app/core/webdav/cloud-file-service.service.ts:171</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns a Promise which resolves as an ArrayBuffer of the file located at the given path</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filePath</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the filename and path relative to the base path without leading slash; e.g. &#39;photos/105.png&#39;</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;SafeUrl&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isConnected"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>isConnected</b></span>
+                        <a href="#isConnected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isConnected()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="199"
+                            class="link-to-prism">src/app/core/webdav/cloud-file-service.service.ts:199</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check whether the client is connected and therefore this service is able to execute its remote actions.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadFile"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>uploadFile</b></span>
+                        <a href="#uploadFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>uploadFile(file: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, filePath: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="159"
+                            class="link-to-prism">src/app/core/webdav/cloud-file-service.service.ts:159</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Uploads a given file to the nextcloud server.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>file</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The file to be stored</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>filePath</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the filename and path to which the file will be uploaded, no leading slash</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="WEBDAV_ENABLED"></a>
+                        <span class="name"><b>WEBDAV_ENABLED</b><a href="#WEBDAV_ENABLED"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>WEBDAV_ENABLED()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/core/webdav/cloud-file-service.service.ts:23</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+import { AppConfig } from &quot;../app-config/app-config&quot;;
+import { DomSanitizer, SafeUrl } from &quot;@angular/platform-browser&quot;;
+import { SessionService } from &quot;../session/session-service/session.service&quot;;
+import { WebdavWrapperService } from &quot;./webdav-wrapper.service&quot;;
+import { WebDAVClient } from &quot;webdav&quot;;
+
+/**
+ * Connect and access a remote cloud file system like Nextcloud
+ * to upload and download files.
+ *
+ * Connection requires setup of the server in the AppConfig
+ * as well as valid user credentials for that server in the currently logged in user entity.
+ */
+@Injectable()
+export class CloudFileService {
+  // TODO Check connection/login success?
+  private client: WebDAVClient;
+  private basePath: string;
+  private fileList: string;
+  private currentlyGettingList: Promise&lt;boolean&gt;;
+
+  static get WEBDAV_ENABLED(): boolean {
+    return !!AppConfig.settings?.webdav?.remote_url;
+  }
+
+  /**
+   * Construct the service and immediately attempt to connect to the server with the current user.
+   */
+  constructor(
+    private domSanitizer: DomSanitizer,
+    private sessionService: SessionService,
+    private webdav: WebdavWrapperService
+  ) {
+    this.connect();
+  }
+
+  /**
+   * (Re)-initialize the client connecting to the webdav server.
+   * @param username Optional webdav username, otherwise the one set in the current user entity is used.
+   * @param password Optional webdav password, otherwise the one set in the current user entity is used.
+   */
+  public async connect(
+    username: string &#x3D; null,
+    password: string &#x3D; null
+  ): Promise&lt;void&gt; {
+    if (
+      !CloudFileService.WEBDAV_ENABLED ||
+      !this.sessionService.getCurrentUser()
+    ) {
+      return;
+    }
+
+    this.reset();
+
+    const currentUser &#x3D; this.sessionService.getCurrentUser();
+    this.basePath &#x3D; currentUser.cloudBaseFolder;
+
+    if (username &#x3D;&#x3D;&#x3D; null &amp;&amp; password &#x3D;&#x3D; null) {
+      username &#x3D; currentUser.cloudUserName;
+      password &#x3D; currentUser.cloudPasswordDec;
+    }
+
+    if (!username || !password) {
+      // abort if account is not configured
+      this.client &#x3D; null;
+      return;
+    }
+
+    this.client &#x3D; await this.webdav.createClient(
+      AppConfig.settings.webdav.remote_url,
+      {
+        username: username,
+        password: password,
+      }
+    );
+  }
+
+  /**
+   * Reset the current state and requests.
+   * e.g. clear promise that retrieves the root dir
+   */
+  private reset() {
+    this.currentlyGettingList &#x3D; null;
+    this.fileList &#x3D; null;
+  }
+
+  /**
+   * checkConnection
+   *
+   * tries to upload and redownload a file.
+   */
+  public async checkConnection(): Promise&lt;boolean&gt; {
+    // delete &#x27;tmp.txt&#x27; if it exists
+    const fileName: string &#x3D; this.basePath + &quot;/test.txt&quot;;
+    if (await this.doesFileExist(fileName)) {
+      await this.client.deleteFile(fileName);
+    }
+
+    await this.client.putFileContents(fileName, &quot;TestString&quot;);
+    const buffer &#x3D; &lt;ArrayBuffer&gt;await this.client.getFileContents(fileName);
+    const tmpContent &#x3D; String.fromCharCode.apply(null, new Uint8Array(buffer));
+    await this.client.deleteFile(fileName);
+
+    return tmpContent &#x3D;&#x3D;&#x3D; &quot;TestString&quot;;
+  }
+
+  /**
+   * Returns the content path.
+   * @param path File path relative to the base path, without leading slash; example &#x27;folder1&#x27;
+   */
+  public async getDir(path: string): Promise&lt;string&gt; {
+    const contents &#x3D; await this.client.getDirectoryContents(
+      this.basePath + path
+    );
+    return JSON.stringify(contents, undefined, 4);
+  }
+
+  /**
+   * Checks if the file exists in the root directory.
+   * @param name file name to check
+   */
+  public async doesFileExist(name: string): Promise&lt;boolean&gt; {
+    // TODO: doesFileExist seems to have problems at least with nested files?
+
+    if (!this.fileList &amp;&amp; !this.currentlyGettingList) {
+      // create promise that resolves when the file list is loaded
+      // if this function gets called mulitple times this ensures that the list will only be loaded once
+      this.currentlyGettingList &#x3D; new Promise((resolve) &#x3D;&gt; {
+        this.getDir(&quot;&quot;).then((list) &#x3D;&gt; {
+          this.fileList &#x3D; list;
+          resolve(true);
+        });
+      });
+    }
+    if (!this.fileList) {
+      await this.currentlyGettingList;
+    }
+    // hacky way of checking if file exists, subject to change
+    // TODO fix this
+    return this.fileList.includes(
+      &#x27;&quot;basename&quot;: &quot;&#x27; + name.split(&quot;/&quot;).pop() + &#x27;&quot;&#x27;
+    );
+  }
+
+  /**
+   * creates new directory
+   * @param path path to directory to be created, without leading slash; e.g. &#x27;new-folder&#x27;
+   */
+  public async createDir(path: string) {
+    this.client.createDirectory(this.basePath + path);
+  }
+
+  /**
+   * Uploads a given file to the nextcloud server.
+   * @param file The file to be stored
+   * @param filePath the filename and path to which the file will be uploaded, no leading slash
+   */
+  public async uploadFile(file: any, filePath: string): Promise&lt;boolean&gt; {
+    return this.client.putFileContents(
+      this.basePath + filePath,
+      file
+      // { onUploadProgress: progress &#x3D;&gt; {  console.log(&#x60;Uploaded ${progress.loaded} / ${progress.total} bytes&#x60;); } },
+    );
+  }
+
+  /**
+   * Returns a Promise which resolves as an ArrayBuffer of the file located at the given path
+   * @param filePath the filename and path relative to the base path without leading slash; e.g. &#x27;photos/105.png&#x27;
+   */
+  public async getFile(filePath: string): Promise&lt;SafeUrl&gt; {
+    let file;
+    try {
+      file &#x3D; await this.client.getFileContents(this.basePath + filePath);
+      return this.bufferArrayToBase64(file);
+    } catch (err) {
+      return Promise.reject(&quot;Could not load file.&quot;);
+    }
+  }
+
+  /**
+   * converts an ArrayBuffer to a SafeUrl and returns it
+   * @param arrayBuffer ArrayBuffer to be converted
+   */
+  private bufferArrayToBase64(arrayBuffer: ArrayBuffer): SafeUrl {
+    const base64String &#x3D; btoa(
+      new Uint8Array(arrayBuffer).reduce((data, byte) &#x3D;&gt; {
+        return data + String.fromCharCode(byte);
+      }, &quot;&quot;)
+    );
+    return this.domSanitizer.bypassSecurityTrustUrl(
+      &quot;data:image/jpg;base64,&quot; + base64String
+    );
+  }
+
+  /**
+   * Check whether the client is connected and therefore this service is able to execute its remote actions.
+   */
+  public isConnected() {
+    return !!this.client;
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CloudFileService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,996 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  AttendanceWeekDashboardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/child-dev-project/attendance/dashboard-widgets/attendance-week-dashboard/attendance-week-dashboard.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="../interfaces/OnInitDynamicComponent.html" target="_self" >OnInitDynamicComponent</a></code>
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-attendance-week-dashboard</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./attendance-week-dashboard.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./attendance-week-dashboard.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#absentWarningThreshold" >absentWarningThreshold</a>
+                            </li>
+                            <li>
+                                <a href="#dashboardRowGroups" >dashboardRowGroups</a>
+                            </li>
+                            <li>
+                                <a href="#daysOffset" >daysOffset</a>
+                            </li>
+                            <li>
+                                <a href="#periodLabel" >periodLabel</a>
+                            </li>
+                            <li>
+                                <a href="#recordTrackByFunction" >recordTrackByFunction</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#goToChild" >goToChild</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#loadAttendanceOfAbsentees" >loadAttendanceOfAbsentees</a>
+                            </li>
+                            <li>
+                                <a href="#onInitFromDynamicConfig" >onInitFromDynamicConfig</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(attendanceService: <a href="../injectables/AttendanceService.html" target="_self">AttendanceService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/child-dev-project/attendance/dashboard-widgets/attendance-week-dashboard/attendance-week-dashboard.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>attendanceService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AttendanceService.html" target="_self" >AttendanceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goToChild"></a>
+                    <span class="name">
+                        <span ><b>goToChild</b></span>
+                        <a href="#goToChild"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goToChild(childId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="157"
+                            class="link-to-prism">src/app/child-dev-project/attendance/dashboard-widgets/attendance-week-dashboard/attendance-week-dashboard.component.ts:157</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>childId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadAttendanceOfAbsentees"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>loadAttendanceOfAbsentees</b></span>
+                        <a href="#loadAttendanceOfAbsentees"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadAttendanceOfAbsentees(daysOffset: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/app/child-dev-project/attendance/dashboard-widgets/attendance-week-dashboard/attendance-week-dashboard.component.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>daysOffset</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onInitFromDynamicConfig"></a>
+                    <span class="name">
+                        <span ><b>onInitFromDynamicConfig</b></span>
+                        <a href="#onInitFromDynamicConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onInitFromDynamicConfig(config: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/child-dev-project/attendance/dashboard-widgets/attendance-week-dashboard/attendance-week-dashboard.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>config</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="absentWarningThreshold"></a>
+                    <span class="name">
+                        <span ><b>absentWarningThreshold</b></span>
+                        <a href="#absentWarningThreshold"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>1</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Input()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/child-dev-project/attendance/dashboard-widgets/attendance-week-dashboard/attendance-week-dashboard.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Only participants who were absent more then this threshold are counted and shown in the dashboard.</p>
+<p>The default is 1.
+That means if someone was absent two or more days within a specific activity in the given week
+the person will be counted and displayed as a critical case in this dashboard widget.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dashboardRowGroups"></a>
+                    <span class="name">
+                        <span ><b>dashboardRowGroups</b></span>
+                        <a href="#dashboardRowGroups"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/AttendanceWeekRow.html" target="_self" >AttendanceWeekRow[][]</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/child-dev-project/attendance/dashboard-widgets/attendance-week-dashboard/attendance-week-dashboard.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="daysOffset"></a>
+                    <span class="name">
+                        <span ><b>daysOffset</b></span>
+                        <a href="#daysOffset"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Input()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/child-dev-project/attendance/dashboard-widgets/attendance-week-dashboard/attendance-week-dashboard.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The offset from the default time period, which is the last complete week.</p>
+<p>For example:
+If you set the offset of 0, the widget displays attendance for the last completed week (i.e. ending last Saturday).
+If you set the offset to 7 and today is Thursday, the widget displays attendance from the Monday 3 days ago
+(i.e. the current running week).</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="periodLabel"></a>
+                    <span class="name">
+                        <span ><b>periodLabel</b></span>
+                        <a href="#periodLabel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @Input()<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/child-dev-project/attendance/dashboard-widgets/attendance-week-dashboard/attendance-week-dashboard.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>description displayed to users for the time period this widget is analysing
+e.g. &quot;this week&quot; or &quot;previous week&quot;</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="recordTrackByFunction"></a>
+                    <span class="name">
+                        <span ><b>recordTrackByFunction</b></span>
+                        <a href="#recordTrackByFunction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/child-dev-project/attendance/dashboard-widgets/attendance-week-dashboard/attendance-week-dashboard.component.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &quot;@angular/core&quot;;
+import { Router } from &quot;@angular/router&quot;;
+import { UntilDestroy } from &quot;@ngneat/until-destroy&quot;;
+import { OnInitDynamicComponent } from &quot;../../../../core/view/dynamic-components/on-init-dynamic-component.interface&quot;;
+import { Child } from &quot;../../../children/model/child&quot;;
+import { AttendanceLogicalStatus } from &quot;../../model/attendance-status&quot;;
+import { AttendanceService } from &quot;../../attendance.service&quot;;
+import { EventAttendance } from &quot;../../model/event-attendance&quot;;
+import { ActivityAttendance } from &quot;../../model/activity-attendance&quot;;
+import { RecurringActivity } from &quot;../../model/recurring-activity&quot;;
+import moment, { Moment } from &quot;moment&quot;;
+import { groupBy } from &quot;../../../../utils/utils&quot;;
+
+interface AttendanceWeekRow {
+  childId: string;
+  activity: RecurringActivity;
+  attendanceDays: (EventAttendance | undefined)[];
+}
+
+@UntilDestroy()
+@Component({
+  selector: &quot;app-attendance-week-dashboard&quot;,
+  templateUrl: &quot;./attendance-week-dashboard.component.html&quot;,
+  styleUrls: [&quot;./attendance-week-dashboard.component.scss&quot;],
+})
+export class AttendanceWeekDashboardComponent
+  implements OnInitDynamicComponent, OnInit {
+  /**
+   * The offset from the default time period, which is the last complete week.
+   *
+   * For example:
+   * If you set the offset of 0, the widget displays attendance for the last completed week (i.e. ending last Saturday).
+   * If you set the offset to 7 and today is Thursday, the widget displays attendance from the Monday 3 days ago
+   * (i.e. the current running week).
+   */
+  @Input() daysOffset: number;
+
+  /**
+   * description displayed to users for the time period this widget is analysing
+   * e.g. &quot;this week&quot; or &quot;previous week&quot;
+   */
+  @Input() periodLabel: string;
+
+  /**
+   * Only participants who were absent more then this threshold are counted and shown in the dashboard.
+   *
+   * The default is 1.
+   * That means if someone was absent two or more days within a specific activity in the given week
+   * the person will be counted and displayed as a critical case in this dashboard widget.
+   */
+  @Input() absentWarningThreshold: number &#x3D; 1;
+
+  dashboardRowGroups: AttendanceWeekRow[][];
+
+  constructor(
+    private attendanceService: AttendanceService,
+    private router: Router
+  ) {}
+
+  onInitFromDynamicConfig(config: any) {
+    if (config?.daysOffset) {
+      this.daysOffset &#x3D; config.daysOffset;
+    }
+    if (config?.periodLabel) {
+      this.periodLabel &#x3D; config.periodLabel;
+    }
+  }
+
+  async ngOnInit() {
+    await this.loadAttendanceOfAbsentees(this.daysOffset);
+  }
+
+  recordTrackByFunction &#x3D; (index, item) &#x3D;&gt; item.childId;
+
+  async loadAttendanceOfAbsentees(daysOffset &#x3D; 0) {
+    const today &#x3D; new Date();
+    const previousMonday &#x3D; new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate() - today.getDay() - 6 + daysOffset
+    );
+    const previousSaturday &#x3D; new Date(
+      previousMonday.getFullYear(),
+      previousMonday.getMonth(),
+      previousMonday.getDate() + 5
+    );
+
+    const activityAttendances &#x3D; await this.attendanceService.getAllActivityAttendancesForPeriod(
+      previousMonday,
+      previousSaturday
+    );
+
+    const lowAttendanceCases &#x3D; new Set&lt;string&gt;();
+    const records: AttendanceWeekRow[] &#x3D; [];
+    for (const att of activityAttendances) {
+      const rows &#x3D; this.generateRowsFromActivityAttendance(
+        att,
+        moment(previousMonday),
+        moment(previousSaturday)
+      );
+      records.push(...rows);
+
+      rows
+        .filter((r) &#x3D;&gt; this.filterLowAttendance(r))
+        .forEach((r) &#x3D;&gt; lowAttendanceCases.add(r.childId));
+    }
+
+    const groupedRecords &#x3D; groupBy(records, &quot;childId&quot;);
+    this.dashboardRowGroups &#x3D; Array.from(
+      lowAttendanceCases.values()
+    ).map((childId) &#x3D;&gt; groupedRecords.get(childId));
+  }
+
+  private generateRowsFromActivityAttendance(
+    att: ActivityAttendance,
+    from: Moment,
+    to: Moment
+  ): AttendanceWeekRow[] {
+    if (!att.activity) {
+      return [];
+    }
+
+    const results: AttendanceWeekRow[] &#x3D; [];
+    for (const participant of att.activity.participants) {
+      const eventAttendances &#x3D; [];
+
+      let day &#x3D; moment(from);
+      while (day.isSameOrBefore(to, &quot;day&quot;)) {
+        const event &#x3D; att.events.find((e) &#x3D;&gt; day.isSame(e.date, &quot;day&quot;));
+        if (event) {
+          eventAttendances.push(event.getAttendance(participant));
+        } else {
+          // put a &quot;placeholder&quot; into the array for the current day
+          eventAttendances.push(undefined);
+        }
+        day &#x3D; day.add(1, &quot;day&quot;);
+      }
+
+      results.push({
+        childId: participant,
+        activity: att.activity,
+        attendanceDays: eventAttendances,
+      });
+    }
+
+    return results;
+  }
+
+  private filterLowAttendance(row: AttendanceWeekRow): boolean {
+    const countAbsences &#x3D; row.attendanceDays.filter(
+      (e) &#x3D;&gt; e?.status?.countAs &#x3D;&#x3D;&#x3D; AttendanceLogicalStatus.ABSENT
+    ).length;
+
+    return countAbsences &gt; this.absentWarningThreshold;
+  }
+
+  goToChild(childId: string) {
+    const path &#x3D; &quot;/&quot; + Child.ENTITY_TYPE.toLowerCase();
+    this.router.navigate([path, childId]);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-card class&#x3D;&quot;dashboard-widget&quot;&gt;
+  &lt;mat-card-header class&#x3D;&quot;app-attendance&quot;&gt;
+    &lt;div mat-card-avatar&gt;
+      &lt;mat-icon fontIcon&#x3D;&quot;fa-exclamation-triangle&quot;&gt;&lt;/mat-icon&gt;
+    &lt;/div&gt;
+    &lt;mat-card-title&gt;{{ dashboardRowGroups?.length }}&lt;/mat-card-title&gt;
+    &lt;mat-card-subtitle
+      &gt;Students more than one day absent
+      &lt;em&gt;{{ periodLabel }}&lt;/em&gt;&lt;/mat-card-subtitle
+    &gt;
+  &lt;/mat-card-header&gt;
+  &lt;mat-card-content&gt;
+    &lt;table class&#x3D;&quot;dashboard-table&quot;&gt;
+      &lt;tr
+        *ngFor&#x3D;&quot;
+          let rowGroup of dashboardRowGroups;
+          trackBy: recordTrackByFunction;
+          let i &#x3D; index
+        &quot;
+        class&#x3D;&quot;dashboard-table-row w-WARNING&quot;
+        (click)&#x3D;&quot;goToChild(rowGroup[0].childId)&quot;
+        style&#x3D;&quot;cursor: pointer&quot;
+        angulartics2On&#x3D;&quot;click&quot;
+        angularticsCategory&#x3D;&quot;Navigation&quot;
+        angularticsAction&#x3D;&quot;dashboard_attendance_warnings_list_link&quot;
+        [angularticsLabel]&#x3D;&quot;&#x27;list-entry-&#x27; + i&quot;
+      &gt;
+        &lt;td class&#x3D;&quot;dashboard-table-first-cell dashboard-table-cell&quot;&gt;
+          &lt;app-child-block [entityId]&#x3D;&quot;rowGroup[0].childId&quot;&gt;&lt;/app-child-block&gt;
+        &lt;/td&gt;
+        &lt;td class&#x3D;&quot;dashboard-table-last-cell dashboard-table-cell&quot;&gt;
+          &lt;table class&#x3D;&quot;attendance-week-table&quot;&gt;
+            &lt;tr *ngFor&#x3D;&quot;let activityRecord of rowGroup&quot;&gt;
+              &lt;td *ngFor&#x3D;&quot;let day of activityRecord.attendanceDays&quot;&gt;
+                &lt;app-attendance-day-block [attendance]&#x3D;&quot;day&quot;&gt;
+                &lt;/app-attendance-day-block&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/mat-card-content&gt;
+&lt;/mat-card&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./attendance-week-dashboard.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@use &#x27;src/app/core/dashboard/dashboard-widget-base&#x27;;
+
+.attendance-day {
+  width: 10px;
+}
+
+.day-box {
+  display: table;
+  width: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: smaller;
+}
+
+.attendance-week-table {
+  border-spacing: 0;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-card class="dashboard-widget">  <mat-card-header class="app-attendance">    <div mat-card-avatar>      <mat-icon fontIcon="fa-exclamation-triangle"></mat-icon>    </div>    <mat-card-title>{{ dashboardRowGroups?.length }}</mat-card-title>    <mat-card-subtitle      >Students more than one day absent      <em>{{ periodLabel }}</em></mat-card-subtitle    >  </mat-card-header>  <mat-card-content>    <table class="dashboard-table">      <tr        *ngFor="          let rowGroup of dashboardRowGroups;          trackBy: recordTrackByFunction;          let i = index        "        class="dashboard-table-row w-WARNING"        (click)="goToChild(rowGroup[0].childId)"        style="cursor: pointer"        angulartics2On="click"        angularticsCategory="Navigation"        angularticsAction="dashboard_attendance_warnings_list_link"        [angularticsLabel]="\'list-entry-\' + i"      >        <td class="dashboard-table-first-cell dashboard-table-cell">          <app-child-block [entityId]="rowGroup[0].childId"></app-child-block>        </td>        <td class="dashboard-table-last-cell dashboard-table-cell">          <table class="attendance-week-table">            <tr *ngFor="let activityRecord of rowGroup">              <td *ngFor="let day of activityRecord.attendanceDays">                <app-attendance-day-block [attendance]="day">                </app-attendance-day-block>              </td>            </tr>          </table>        </td>      </tr>    </table>  </mat-card-content></mat-card></div>'
+    var COMPONENTS = [{'name': 'ActivityAttendanceSectionComponent', 'selector': 'app-activity-attendance-section'},{'name': 'ActivityCardComponent', 'selector': 'app-activity-card'},{'name': 'ActivityListComponent', 'selector': 'app-activity-list'},{'name': 'AddDayAttendanceComponent', 'selector': 'app-add-day-attendance'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AlertComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppVersionComponent', 'selector': 'app-version'},{'name': 'AserComponent', 'selector': 'app-aser'},{'name': 'AttendanceBlockComponent', 'selector': 'app-attendance-block'},{'name': 'AttendanceCalendarComponent', 'selector': 'app-attendance-calendar'},{'name': 'AttendanceDayBlockComponent', 'selector': 'app-attendance-day-block]'},{'name': 'AttendanceDetailsComponent', 'selector': 'app-attendance-details'},{'name': 'AttendanceManagerComponent', 'selector': 'app-attendance-manager'},{'name': 'AttendanceStatusSelectComponent', 'selector': 'app-attendance-status-select'},{'name': 'AttendanceWeekDashboardComponent', 'selector': 'app-attendance-week-dashboard'},{'name': 'BackgroundProcessingIndicatorComponent', 'selector': 'app-background-processing-indicator'},{'name': 'BmiBlockComponent', 'selector': 'app-bmi-block'},{'name': 'ButtonComponent', 'selector': 'storybook-button'},{'name': 'ChangelogComponent', 'selector': ''},{'name': 'ChildBlockComponent', 'selector': 'app-child-block'},{'name': 'ChildMeetingNoteAttendanceComponent', 'selector': 'app-child-meeting-note-attendance'},{'name': 'ChildrenBmiDashboardComponent', 'selector': 'app-children-bmi-dashboard'},{'name': 'ChildrenCountDashboardComponent', 'selector': 'app-children-count-dashboard'},{'name': 'ChildrenListComponent', 'selector': 'app-children-list'},{'name': 'ChildrenOverviewComponent', 'selector': 'app-children-overview'},{'name': 'CloudFileServiceUserSettingsComponent', 'selector': 'app-cloud-file-service-user-settings'},{'name': 'ComingSoonComponent', 'selector': 'app-coming-soon'},{'name': 'CompareRevComponent', 'selector': 'app-compare-rev'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'ConflictResolutionListComponent', 'selector': 'app-conflict-resolution-list'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardShortcutWidgetComponent', 'selector': 'app-dashboard-shortcut-widget'},{'name': 'DemoDataGeneratingProgressDialogComponent', 'selector': ''},{'name': 'DisabledWrapperComponent', 'selector': 'app-disabled-wrapper'},{'name': 'DisplayCheckmarkComponent', 'selector': 'app-display-tick'},{'name': 'DisplayConfigurableEnumComponent', 'selector': 'app-display-configurable-enum'},{'name': 'DisplayDateComponent', 'selector': 'app-display-date'},{'name': 'DisplayEntityArrayComponent', 'selector': 'app-display-entity-array'},{'name': 'DisplayEntityComponent', 'selector': 'app-display-entity'},{'name': 'DisplayPercentageComponent', 'selector': 'app-display-percentage'},{'name': 'DisplayTextComponent', 'selector': 'app-display-text'},{'name': 'DisplayUnitComponent', 'selector': 'app-display-unit'},{'name': 'EditAgeComponent', 'selector': 'app-edit-age'},{'name': 'EditBooleanComponent', 'selector': 'app-edit-boolean'},{'name': 'EditConfigurableEnumComponent', 'selector': 'app-edit-configurable-enum'},{'name': 'EditDateComponent', 'selector': 'app-edit-date'},{'name': 'EditEntityArrayComponent', 'selector': 'app-edit-entity-array'},{'name': 'EditLongTextComponent', 'selector': 'app-edit-long-text'},{'name': 'EditNumberComponent', 'selector': 'app-edit-number'},{'name': 'EditPercentageComponent', 'selector': 'app-edit-percentage'},{'name': 'EditPhotoComponent', 'selector': 'app-edit-photo'},{'name': 'EditSingleEntityComponent', 'selector': 'app-edit-single-entity'},{'name': 'EditTextComponent', 'selector': 'app-edit-text'},{'name': 'EducationalMaterialComponent', 'selector': 'app-educational-material'},{'name': 'EntityDetailsComponent', 'selector': 'app-entity-details'},{'name': 'EntityFormComponent', 'selector': 'app-entity-form'},{'name': 'EntityListComponent', 'selector': 'app-entity-list'},{'name': 'EntitySelectComponent', 'selector': 'app-entity-select'},{'name': 'EntitySubrecordComponent', 'selector': 'app-entity-subrecord'},{'name': 'ExportDataComponent', 'selector': 'app-export-data'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'FormDialogWrapperComponent', 'selector': 'app-form-dialog-wrapper'},{'name': 'GroupedChildAttendanceComponent', 'selector': 'app-grouped-child-attendance'},{'name': 'HeaderComponent', 'selector': 'storybook-header'},{'name': 'HealthCheckupComponent', 'selector': 'app-health-checkup'},{'name': 'HistoricalDataComponent', 'selector': 'app-historical-data'},{'name': 'HowToComponent', 'selector': 'app-help'},{'name': 'InitialSyncDialogComponent', 'selector': ''},{'name': 'ListFilterComponent', 'selector': 'app-list-filter'},{'name': 'ListPaginatorComponent', 'selector': 'app-list-paginator'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavigationComponent', 'selector': 'app-navigation'},{'name': 'NoRecentNotesDashboardComponent', 'selector': 'app-no-recent-notes-dashboard'},{'name': 'NoteDetailsComponent', 'selector': 'app-note-details'},{'name': 'NotesManagerComponent', 'selector': 'app-notes-manager'},{'name': 'NotesOfChildComponent', 'selector': 'app-notes-of-child'},{'name': 'PageComponent', 'selector': 'storybook-page'},{'name': 'PreviousSchoolsComponent', 'selector': 'app-previous-schools'},{'name': 'PrimaryActionComponent', 'selector': 'app-primary-action'},{'name': 'ProgressDashboardComponent', 'selector': 'app-progress-dashboard'},{'name': 'ReadonlyFunctionComponent', 'selector': 'app-readonly-function'},{'name': 'RecentAttendanceBlocksComponent', 'selector': 'app-recent-attendance-blocks'},{'name': 'RecentNotesDashboardComponent', 'selector': 'app-recent-notes-dashboard'},{'name': 'ReportingComponent', 'selector': 'app-reporting'},{'name': 'ReportRowComponent', 'selector': 'app-report-row'},{'name': 'RollCallComponent', 'selector': 'app-roll-call'},{'name': 'RollCallSetupComponent', 'selector': 'app-roll-call-setup'},{'name': 'SchoolBlockComponent', 'selector': 'app-school-block'},{'name': 'SchoolsListComponent', 'selector': 'app-schools-list'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SyncStatusComponent', 'selector': 'app-sync-status'},{'name': 'UiComponent', 'selector': 'app-ui'},{'name': 'UserAccountComponent', 'selector': 'app-user-account'},{'name': 'UserListComponent', 'selector': 'app-user-list'}];
+    var DIRECTIVES = [{'name': 'ConfigurableEnumDirective', 'selector': '[appConfigurableEnum]'},{'name': 'DisableEntityOperationDirective', 'selector': '[appDisabledEntityOperation]'},{'name': 'DynamicComponentDirective', 'selector': '[appDynamicComponent]'}];
+    var ACTUAL_COMPONENT = {'name': 'AttendanceWeekDashboardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AttendanceWeekDashboardComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

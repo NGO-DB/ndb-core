@@ -1,0 +1,1607 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >QueryService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/features/reporting/query.service.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>A query service which uses the json-query library (<a href="https://github.com/auditassistant/json-query">https://github.com/auditassistant/json-query</a>).</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addEntities" >addEntities</a>
+                            </li>
+                            <li>
+                                <a href="#addPrefix" >addPrefix</a>
+                            </li>
+                            <li>
+                                <a href="#count" >count</a>
+                            </li>
+                            <li>
+                                <a href="#filterByObjectAttribute" >filterByObjectAttribute</a>
+                            </li>
+                            <li>
+                                <a href="#getIds" >getIds</a>
+                            </li>
+                            <li>
+                                <a href="#getParticipantsWithAttendance" >getParticipantsWithAttendance</a>
+                            </li>
+                            <li>
+                                <a href="#getRelated" >getRelated</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#queryData" >queryData</a>
+                            </li>
+                            <li>
+                                <a href="#toArray" >toArray</a>
+                            </li>
+                            <li>
+                                <a href="#toEntities" >toEntities</a>
+                            </li>
+                            <li>
+                                <a href="#unique" >unique</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(entityMapper: <a href="../injectables/EntityMapperService.html" target="_self">EntityMapperService</a>, childrenService: <a href="../injectables/ChildrenService.html" target="_self">ChildrenService</a>, attendanceService: <a href="../injectables/AttendanceService.html" target="_self">AttendanceService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/features/reporting/query.service.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>entityMapper</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EntityMapperService.html" target="_self" >EntityMapperService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>childrenService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ChildrenService.html" target="_self" >ChildrenService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>attendanceService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AttendanceService.html" target="_self" >AttendanceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addEntities"></a>
+                    <span class="name">
+                        <span ><b>addEntities</b></span>
+                        <a href="#addEntities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addEntities(entities: <a href="../classes/Entity.html" target="_self">Entity[]</a>, entityType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="268"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:268</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds all entities of the given type to the input array</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>entities</td>
+                                    <td>
+                                                <code><a href="../classes/Entity.html" target="_self" >Entity[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the array before</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>entityType</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the type of entities which should be added</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Entity.html" target="_self" >Entity[]</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the input array concatenated with all entities of the entityType</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addPrefix"></a>
+                    <span class="name">
+                        <span ><b>addPrefix</b></span>
+                        <a href="#addPrefix"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addPrefix(ids: string[], prefix: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:119</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds the prefix and a colon (&quot;:&quot;) to each string in a array. Does nothing if the string already starts with the prefix.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ids</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>a string of ids</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>prefix</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the prefix which should be added to the string</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a list where every string has the prefix</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="count"></a>
+                    <span class="name">
+                        <span ><b>count</b></span>
+                        <a href="#count"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>count(data: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:149</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the size of an array</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the data for which the length should be returned</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the length of the input array or 0 if no array is provided</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterByObjectAttribute"></a>
+                    <span class="name">
+                        <span ><b>filterByObjectAttribute</b></span>
+                        <a href="#filterByObjectAttribute"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filterByObjectAttribute(objs: any[], attr: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="208"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:208</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Filters the data when the filter value is a object (e.g. configurable enum) rather than a simple value
+             The value can be a simple value or list of values separated by <code>|</code> (e.g. SCHOOL_CLASS|LIFE_SKILLS).
+             If it is a list of values, then the object is returned if its value matches any of the given values.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>objs</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the objects to be filtered</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>attr</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the attribute of the objects which is a object itself</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the key of the attribute-object which should be compared</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the value which will be compared with <code>obj[attr][key]</code> for each obj in objs.
+The value can be a simple value or list of values separated by <code>|</code> (e.g. SCHOOL_CLASS|LIFE_SKILLS).
+If it is a list of values, then the object is returned if its value matches any of the given values.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the filtered objects</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getIds"></a>
+                    <span class="name">
+                        <span ><b>getIds</b></span>
+                        <a href="#getIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getIds(objs: any[], key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="230"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:230</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns a list of IDs held by each object (e.g. the children-IDs held by an array of notes)
+           This list may contain duplicate IDs. If this is not desired, use <code>:unique</code> afterwards.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>objs</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the objects which each holds a list of IDs</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the key on which each object holds a list of IDs</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a one dimensional string array holding all IDs which are held by the objects.
+This list may contain duplicate IDs. If this is not desired, use <code>:unique</code> afterwards.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getParticipantsWithAttendance"></a>
+                    <span class="name">
+                        <span ><b>getParticipantsWithAttendance</b></span>
+                        <a href="#getParticipantsWithAttendance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getParticipantsWithAttendance(events: EventNote[], attendanceStatus: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="247"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:247</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Return the ids of all the participants of the passed events with the defined attendance status using the <code>countAs</code>
+attribute. The list may contain duplicates and the id does not necessarily have the entity prefix.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>events</td>
+                                    <td>
+                                            <code>EventNote[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the array of events</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>attendanceStatus</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the status for which should be looked for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the ids of children which have the specified attendance in an event</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRelated"></a>
+                    <span class="name">
+                        <span ><b>getRelated</b></span>
+                        <a href="#getRelated"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRelated(srcEntities: <a href="../classes/Entity.html" target="_self">Entity[]</a>, entityType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, relationKey: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:173</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns all entities which reference a entity from the passed list of entities (by their id)
+                   The attribute can be a string or a list of strings</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>srcEntities</td>
+                                    <td>
+                                                <code><a href="../classes/Entity.html" target="_self" >Entity[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the entities for which relations should be found</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>entityType</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the type of entities where relations should be looked for</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>relationKey</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the name of the attribute that holds the reference.
+The attribute can be a string or a list of strings</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Entity.html" target="_self" >Entity[]</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a list of the related unique entities</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="queryData"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>queryData</b></span>
+                        <a href="#queryData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>queryData(query: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, from: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>, to: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>, data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Runs the query on the passed data object
+            This will also affect the amount of data being loaded.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>query</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>a string or array according to the json-query language (<a href="https://github.com/auditassistant/json-query">https://github.com/auditassistant/json-query</a>)</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>from</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <p>a date which can be accessed in the query using a ?.
+This will also affect the amount of data being loaded.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>to</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <p>a date which can be accessed in the query using another ?</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>this.entities</code>
+                                    </td>
+
+                                    <td>
+                                        <p>the data on which the query should run, default is all entities</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the results of the query on the data</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toArray"></a>
+                    <span class="name">
+                        <span ><b>toArray</b></span>
+                        <a href="#toArray"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toArray(obj)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="131"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:131</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates an array containing the value of each key of the object.
+e.g. <code>{a: 1, b: 2} =&gt; [1,2]</code>
+This should be used when iterating over all documents of a given entity type because they are stored as
+<code>&quot;{entity._id}&quot;: {entity}</code></p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>obj</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the object which should be transformed to an array</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the values of the input object as a list</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toEntities"></a>
+                    <span class="name">
+                        <span ><b>toEntities</b></span>
+                        <a href="#toEntities"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toEntities(ids: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="158"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:158</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Turns a list of ids (with the entity prefix) into a list of entities</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ids</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the array of ids with entity prefix</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Entity.html" target="_self" >Entity[]</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a list of entity objects</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="unique"></a>
+                    <span class="name">
+                        <span ><b>unique</b></span>
+                        <a href="#unique"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>unique(data: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="140"
+                            class="link-to-prism">src/app/features/reporting/query.service.ts:140</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns a copy of the input array without duplicates</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>the array where duplicates should be removed</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a list without duplicates</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+import { Entity, EntityConstructor } from &quot;../../core/entity/model/entity&quot;;
+import { Child } from &quot;../../child-dev-project/children/model/child&quot;;
+import { School } from &quot;../../child-dev-project/schools/model/school&quot;;
+import { RecurringActivity } from &quot;../../child-dev-project/attendance/model/recurring-activity&quot;;
+import { Note } from &quot;../../child-dev-project/notes/model/note&quot;;
+import { EventNote } from &quot;../../child-dev-project/attendance/model/event-note&quot;;
+import { EntityMapperService } from &quot;../../core/entity/entity-mapper.service&quot;;
+import { ChildSchoolRelation } from &quot;../../child-dev-project/children/model/childSchoolRelation&quot;;
+import { ChildrenService } from &quot;../../child-dev-project/children/children.service&quot;;
+import { AttendanceService } from &quot;../../child-dev-project/attendance/attendance.service&quot;;
+const jsonQuery &#x3D; require(&quot;json-query&quot;);
+
+/**
+ * A query service which uses the json-query library (https://github.com/auditassistant/json-query).
+ */
+@Injectable({
+  providedIn: &quot;root&quot;,
+})
+export class QueryService {
+  private entities: { [type: string]: { [id: string]: Entity } };
+  private dataAvailableFrom: Date;
+
+  constructor(
+    private entityMapper: EntityMapperService,
+    private childrenService: ChildrenService,
+    private attendanceService: AttendanceService
+  ) {}
+
+  /**
+   * Runs the query on the passed data object
+   * @param query a string or array according to the json-query language (https://github.com/auditassistant/json-query)
+   * @param from a date which can be accessed in the query using a ?.
+   *             This will also affect the amount of data being loaded.
+   * @param to a date which can be accessed in the query using another ?
+   * @param data the data on which the query should run, default is all entities
+   * @returns the results of the query on the data
+   */
+  public async queryData(
+    query: string,
+    from: Date &#x3D; null,
+    to: Date &#x3D; null,
+    data: any &#x3D; this.entities
+  ): Promise&lt;any&gt; {
+    if (!data || (data &#x3D;&#x3D;&#x3D; this.entities &amp;&amp; from &lt; this.dataAvailableFrom)) {
+      await this.loadData(from);
+      this.dataAvailableFrom &#x3D; from;
+      data &#x3D; this.entities;
+    }
+    return jsonQuery([query, from, to], {
+      data: data,
+      locals: {
+        toArray: this.toArray,
+        unique: this.unique,
+        count: this.count,
+        addPrefix: this.addPrefix,
+        toEntities: this.toEntities.bind(this),
+        getRelated: this.getRelated.bind(this),
+        filterByObjectAttribute: this.filterByObjectAttribute,
+        getIds: this.getIds,
+        getParticipantsWithAttendance: this.getParticipantsWithAttendance,
+        addEntities: this.addEntities.bind(this),
+      },
+    }).value;
+  }
+
+  private async loadData(from?: Date): Promise&lt;void&gt; {
+    const entityClasses: [EntityConstructor&lt;any&gt;, () &#x3D;&gt; Promise&lt;Entity[]&gt;][] &#x3D; [
+      [Child, () &#x3D;&gt; this.entityMapper.loadType(Child)],
+      [School, () &#x3D;&gt; this.entityMapper.loadType(School)],
+      [RecurringActivity, () &#x3D;&gt; this.entityMapper.loadType(RecurringActivity)],
+      [
+        ChildSchoolRelation,
+        () &#x3D;&gt; this.entityMapper.loadType(ChildSchoolRelation),
+      ],
+      [
+        Note,
+        () &#x3D;&gt; this.childrenService.getNotesInTimespan(from ?? new Date(0)),
+      ],
+      [
+        EventNote,
+        () &#x3D;&gt;
+          this.attendanceService.getEventsOnDate(
+            from ?? new Date(0),
+            new Date()
+          ),
+      ],
+    ];
+
+    this.entities &#x3D; {};
+
+    const dataPromises &#x3D; [];
+    for (const entityLoader of entityClasses) {
+      const promise &#x3D; entityLoader[1]().then((loadedEntities) &#x3D;&gt;
+        this.setEntities(entityLoader[0], loadedEntities)
+      );
+      dataPromises.push(promise);
+    }
+
+    await Promise.all(dataPromises);
+  }
+
+  private setEntities&lt;T extends Entity&gt;(
+    entityClass: EntityConstructor&lt;T&gt;,
+    entities: T[]
+  ) {
+    this.entities[entityClass.ENTITY_TYPE] &#x3D; {};
+    entities.forEach(
+      (entity) &#x3D;&gt; (this.entities[entityClass.ENTITY_TYPE][entity._id] &#x3D; entity)
+    );
+  }
+
+  /**
+   * Adds the prefix and a colon (&quot;:&quot;) to each string in a array. Does nothing if the string already starts with the prefix.
+   * @param ids a string of ids
+   * @param prefix the prefix which should be added to the string
+   * @returns a list where every string has the prefix
+   */
+  addPrefix(ids: string[], prefix: string): string[] {
+    return ids.map((id) &#x3D;&gt; (id.startsWith(prefix) ? id : prefix + &quot;:&quot; + id));
+  }
+
+  /**
+   * Creates an array containing the value of each key of the object.
+   * e.g. &#x60;{a: 1, b: 2} &#x3D;&gt; [1,2]&#x60;
+   * This should be used when iterating over all documents of a given entity type because they are stored as
+   * &#x60;&quot;{entity._id}&quot;: {entity}&#x60;
+   * @param obj the object which should be transformed to an array
+   * @returns the values of the input object as a list
+   */
+  toArray(obj): any[] {
+    return Object.values(obj);
+  }
+
+  /**
+   * Returns a copy of the input array without duplicates
+   * @param data the array where duplicates should be removed
+   * @returns a list without duplicates
+   */
+  unique(data: any[]): any[] {
+    return new Array(...new Set(data));
+  }
+
+  /**
+   * Get the size of an array
+   * @param data the data for which the length should be returned
+   * @returns the length of the input array or 0 if no array is provided
+   */
+  count(data: any[]): number {
+    return data ? data.length : 0;
+  }
+
+  /**
+   * Turns a list of ids (with the entity prefix) into a list of entities
+   * @param ids the array of ids with entity prefix
+   * @returns a list of entity objects
+   */
+  toEntities(ids: string[]): Entity[] {
+    return ids.map((id) &#x3D;&gt; {
+      const prefix &#x3D; id.split(&quot;:&quot;)[0];
+      return this.entities[prefix][id];
+    });
+  }
+
+  /**
+   * Returns all entities which reference a entity from the passed list of entities (by their id)
+   * @param srcEntities the entities for which relations should be found
+   * @param entityType the type of entities where relations should be looked for
+   * @param relationKey the name of the attribute that holds the reference.
+   *                    The attribute can be a string or a list of strings
+   * @returns a list of the related unique entities
+   */
+  getRelated(
+    srcEntities: Entity[],
+    entityType: string,
+    relationKey: string
+  ): Entity[] {
+    const targetEntities &#x3D; this.toArray(this.entities[entityType]);
+    const srcIds &#x3D; srcEntities.map((entity) &#x3D;&gt; entity.getId());
+    if (
+      targetEntities.length &gt; 0 &amp;&amp;
+      Array.isArray(targetEntities[0][relationKey])
+    ) {
+      return targetEntities.filter((entity) &#x3D;&gt;
+        (entity[relationKey] as Array&lt;string&gt;).some((id) &#x3D;&gt;
+          srcIds.includes(id.split(&quot;:&quot;).pop())
+        )
+      );
+    } else {
+      return targetEntities.filter((entity) &#x3D;&gt;
+        entity[relationKey]
+          ? srcIds.includes(entity[relationKey].split(&quot;:&quot;).pop())
+          : false
+      );
+    }
+  }
+
+  /**
+   * Filters the data when the filter value is a object (e.g. configurable enum) rather than a simple value
+   * @param objs the objects to be filtered
+   * @param attr the attribute of the objects which is a object itself
+   * @param key the key of the attribute-object which should be compared
+   * @param value the value which will be compared with &#x60;obj[attr][key]&#x60; for each obj in objs.
+   *              The value can be a simple value or list of values separated by &#x60;|&#x60; (e.g. SCHOOL_CLASS|LIFE_SKILLS).
+   *              If it is a list of values, then the object is returned if its value matches any of the given values.
+   * @returns the filtered objects
+   */
+  filterByObjectAttribute(
+    objs: any[],
+    attr: string,
+    key: string,
+    value: string
+  ): any[] {
+    const values &#x3D; value.replace(new RegExp(&quot; &quot;, &quot;g&quot;), &quot;&quot;).split(&quot;|&quot;);
+    return objs.filter((obj) &#x3D;&gt; {
+      if (obj?.hasOwnProperty(attr)) {
+        return values.includes(obj[attr][key]?.toString());
+      }
+      return false;
+    });
+  }
+
+  /**
+   * Returns a list of IDs held by each object (e.g. the children-IDs held by an array of notes)
+   * @param objs the objects which each holds a list of IDs
+   * @param key the key on which each object holds a list of IDs
+   * @returns a one dimensional string array holding all IDs which are held by the objects.
+   *            This list may contain duplicate IDs. If this is not desired, use &#x60;:unique&#x60; afterwards.
+   */
+  getIds(objs: any[], key: string): string[] {
+    const ids: string[] &#x3D; [];
+    objs.forEach((obj) &#x3D;&gt; {
+      if (obj.hasOwnProperty(key)) {
+        ids.push(...obj[key]);
+      }
+    });
+    return ids;
+  }
+
+  /**
+   * Return the ids of all the participants of the passed events with the defined attendance status using the &#x60;countAs&#x60;
+   * attribute. The list may contain duplicates and the id does not necessarily have the entity prefix.
+   * @param events the array of events
+   * @param attendanceStatus the status for which should be looked for
+   * @returns the ids of children which have the specified attendance in an event
+   */
+  getParticipantsWithAttendance(
+    events: EventNote[],
+    attendanceStatus: string
+  ): string[] {
+    const attendedChildren: string[] &#x3D; [];
+    events.forEach((e) &#x3D;&gt;
+      e.children.forEach((childId) &#x3D;&gt; {
+        if (e.getAttendance(childId).status.countAs &#x3D;&#x3D;&#x3D; attendanceStatus) {
+          attendedChildren.push(childId);
+        }
+      })
+    );
+    return attendedChildren;
+  }
+
+  /**
+   * Adds all entities of the given type to the input array
+   * @param entities the array before
+   * @param entityType the type of entities which should be added
+   * @returns the input array concatenated with all entities of the entityType
+   */
+  addEntities(entities: Entity[], entityType: string): Entity[] {
+    return entities.concat(...this.toArray(this.entities[entityType]));
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'QueryService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

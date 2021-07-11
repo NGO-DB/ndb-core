@@ -1,0 +1,887 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ndb-core documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ndb-core documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >LocalSession</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/core/session/session-service/local-session.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Responsibilities:</p>
+<ul>
+<li>Hold the local DB</li>
+<li>Hold local user</li>
+<li>Check credentials against DB</li>
+<li>Provide the state of the synchronisation of the local db<ul>
+<li>we want to block before the first full sync</li>
+</ul>
+</li>
+<li>Provide an interface to access the data</li>
+</ul>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentUser" >currentUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#database" >database</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#liveSyncHandle" >liveSyncHandle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loginState" >loginState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#syncState" >syncState</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isInitial" >isInitial</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#loadUser" >loadUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#login" >login</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#logout" >logout</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#waitForFirstSync" >waitForFirstSync</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_entitySchemaService: <a href="../injectables/EntitySchemaService.html" target="_self">EntitySchemaService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/core/session/session-service/local-session.ts:51</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Create a LocalSession and set up the local PouchDB instance based on AppConfig settings.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_entitySchemaService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EntitySchemaService.html" target="_self" >EntitySchemaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isInitial"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>isInitial</b></span>
+                        <a href="#isInitial"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isInitial()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">src/app/core/session/session-service/local-session.ts:126</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check whether the local database is in an initial state.
+This check can only be performed async, so this method returns a Promise</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;Boolean&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadUser"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>loadUser</b></span>
+                        <a href="#loadUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadUser(userId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="143"
+                            class="link-to-prism">src/app/core/session/session-service/local-session.ts:143</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Helper to get a User Entity from the Database without needing the EntityMapperService</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>userId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Id of the User to be loaded</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >Promise&lt;User&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="login"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>login</b></span>
+                        <a href="#login"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>login(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/core/session/session-service/local-session.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get a login at the local session by fetching the user from the local database and validating the password.
+Returns a Promise resolving with the loginState.
+Attention: This method waits for the first synchronisation of the database (or a fail of said initial sync).</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Username</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>password</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Password</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/enumerations.html#LoginState" target="_self" >Promise&lt;LoginState&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logout"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>logout</b></span>
+                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>logout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="134"
+                            class="link-to-prism">src/app/core/session/session-service/local-session.ts:134</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Logout</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="waitForFirstSync"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>waitForFirstSync</b></span>
+                        <a href="#waitForFirstSync"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>waitForFirstSync()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/app/core/session/session-service/local-session.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Wait for the first sync of the database, returns a Promise.
+Resolves directly, if the database is not initial, otherwise waits for the first change of the SyncState to completed (or failed)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentUser"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>currentUser</b></span>
+                        <a href="#currentUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/User.html" target="_self" >User</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/core/session/session-service/local-session.ts:51</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The currently authenticated user entity</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="database"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>database</b></span>
+                        <a href="#database"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/core/session/session-service/local-session.ts:42</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>local (IndexedDb) database PouchDB</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="liveSyncHandle"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>liveSyncHandle</b></span>
+                        <a href="#liveSyncHandle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/core/session/session-service/local-session.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loginState"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loginState</b></span>
+                        <a href="#loginState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/StateHandler.html" target="_self" >StateHandler&lt;LoginState&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/core/session/session-service/local-session.ts:46</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>StateHandler for login state changes</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="syncState"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>syncState</b></span>
+                        <a href="#syncState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/StateHandler.html" target="_self" >StateHandler&lt;SyncState&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/core/session/session-service/local-session.ts:48</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>StateHandler for sync state changes</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import PouchDB from &quot;pouchdb-browser&quot;;
+
+import { Injectable } from &quot;@angular/core&quot;;
+
+import { AppConfig } from &quot;../../app-config/app-config&quot;;
+import { User } from &quot;../../user/user&quot;;
+
+import { SyncState } from &quot;../session-states/sync-state.enum&quot;;
+import { LoginState } from &quot;../session-states/login-state.enum&quot;;
+import { StateHandler } from &quot;../session-states/state-handler&quot;;
+import { EntitySchemaService } from &quot;../../entity/schema/entity-schema.service&quot;;
+
+/**
+ * Responsibilities:
+ * - Hold the local DB
+ * - Hold local user
+ * - Check credentials against DB
+ * - Provide the state of the synchronisation of the local db
+ *   - we want to block before the first full sync
+ * - Provide an interface to access the data
+ */
+@Injectable()
+export class LocalSession {
+  /** local (IndexedDb) database PouchDB */
+  public database: any;
+  public liveSyncHandle: any;
+
+  /** StateHandler for login state changes */
+  public loginState: StateHandler&lt;LoginState&gt;;
+  /** StateHandler for sync state changes */
+  public syncState: StateHandler&lt;SyncState&gt;;
+
+  /** The currently authenticated user entity */
+  public currentUser: User;
+
+  /**
+   * Create a LocalSession and set up the local PouchDB instance based on AppConfig settings.
+   * @param _entitySchemaService
+   */
+  constructor(private _entitySchemaService: EntitySchemaService) {
+    this.database &#x3D; new PouchDB(AppConfig.settings.database.name);
+
+    this.loginState &#x3D; new StateHandler&lt;LoginState&gt;(LoginState.LOGGED_OUT);
+    this.syncState &#x3D; new StateHandler&lt;SyncState&gt;(SyncState.UNSYNCED);
+  }
+
+  /**
+   * Get a login at the local session by fetching the user from the local database and validating the password.
+   * Returns a Promise resolving with the loginState.
+   * Attention: This method waits for the first synchronisation of the database (or a fail of said initial sync).
+   * @param username Username
+   * @param password Password
+   */
+  public async login(username: string, password: string): Promise&lt;LoginState&gt; {
+    try {
+      await this.waitForFirstSync();
+      const userEntity &#x3D; await this.loadUser(username);
+      if (userEntity.checkPassword(password)) {
+        this.currentUser &#x3D; userEntity;
+        this.currentUser.decryptCloudPassword(password);
+        this.loginState.setState(LoginState.LOGGED_IN);
+        return LoginState.LOGGED_IN;
+      } else {
+        this.loginState.setState(LoginState.LOGIN_FAILED);
+        return LoginState.LOGIN_FAILED;
+      }
+    } catch (error) {
+      // possible error: initial sync failed or aborted
+      if (
+        error &amp;&amp;
+        error.toState &amp;&amp;
+        [SyncState.ABORTED, SyncState.FAILED].includes(error.toState)
+      ) {
+        if (this.loginState.getState() &#x3D;&#x3D;&#x3D; LoginState.LOGIN_FAILED) {
+          // The sync failed because the remote rejected
+          return LoginState.LOGIN_FAILED;
+        }
+        // The sync failed for other reasons. The user should try again
+        this.loginState.setState(LoginState.LOGGED_OUT);
+        return LoginState.LOGGED_OUT;
+      }
+      // possible error: user object not found locally, which should return loginFailed.
+      if (error &amp;&amp; error.status &amp;&amp; error.status &#x3D;&#x3D;&#x3D; 404) {
+        this.loginState.setState(LoginState.LOGIN_FAILED);
+        return LoginState.LOGIN_FAILED;
+      }
+      // all other cases must throw an error
+      throw error;
+    }
+  }
+
+  /**
+   * Wait for the first sync of the database, returns a Promise.
+   * Resolves directly, if the database is not initial, otherwise waits for the first change of the SyncState to completed (or failed)
+   */
+  public async waitForFirstSync() {
+    if (await this.isInitial()) {
+      return await this.syncState.waitForChangeTo(SyncState.COMPLETED, [
+        SyncState.FAILED,
+        SyncState.ABORTED,
+      ]);
+    }
+  }
+
+  /**
+   * Check whether the local database is in an initial state.
+   * This check can only be performed async, so this method returns a Promise
+   */
+  public isInitial(): Promise&lt;Boolean&gt; {
+    // &#x60;doc_count &#x3D;&#x3D;&#x3D; 0 &#x3D;&gt; initial&#x60; is a valid assumptions, as documents for users must always be present, even after db-clean
+    return this.database.info().then((result) &#x3D;&gt; result.doc_count &#x3D;&#x3D;&#x3D; 0);
+  }
+
+  /**
+   * Logout
+   */
+  public logout() {
+    this.currentUser &#x3D; undefined;
+    this.loginState.setState(LoginState.LOGGED_OUT);
+  }
+
+  /**
+   * Helper to get a User Entity from the Database without needing the EntityMapperService
+   * @param userId Id of the User to be loaded
+   */
+  public async loadUser(userId: string): Promise&lt;User&gt; {
+    const user &#x3D; new User(&quot;&quot;);
+    const userData &#x3D; await this.database.get(&quot;User:&quot; + userId);
+    this._entitySchemaService.loadDataIntoEntity(user, userData);
+    return user;
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'LocalSession.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
