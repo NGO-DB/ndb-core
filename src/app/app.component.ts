@@ -31,6 +31,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { RecurringActivity } from "./child-dev-project/attendance/model/recurring-activity";
 import { School } from "./child-dev-project/schools/model/school";
 import { HistoricalEntityData } from "./features/historical-data/historical-entity-data";
+import { waitForChangeTo } from "./core/session/session-service/session-utils";
 
 /**
  * Component as the main entry point for the app.
@@ -59,14 +60,14 @@ export class AppComponent implements OnInit {
     // TODO fix this with https://github.com/Aam-Digital/ndb-core/issues/595
     configService.loadConfig(entityMapper);
     // Reload config once the database is synced
-    sessionService
-      .getSyncState()
-      .waitForChangeTo(SyncState.COMPLETED)
+    sessionService.syncStateStream
+      .pipe(waitForChangeTo(SyncState.COMPLETED, true))
+      .toPromise()
       .then(() => configService.loadConfig(entityMapper))
       .then(() => router.navigate([], { relativeTo: this.activatedRoute }));
     // These functions will be executed whenever a new config is available
-    configService.configUpdated.subscribe(() => routerService.initRouting());
     configService.configUpdated.subscribe(() => {
+      routerService.initRouting();
       entityConfigService.addConfigAttributes(Child);
       entityConfigService.addConfigAttributes(School);
       entityConfigService.addConfigAttributes(RecurringActivity);

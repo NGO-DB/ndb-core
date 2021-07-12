@@ -24,8 +24,9 @@ import { User } from "../../user/user";
 
 import { SyncState } from "../session-states/sync-state.enum";
 import { LoginState } from "../session-states/login-state.enum";
-import { StateHandler } from "../session-states/state-handler";
 import { EntitySchemaService } from "../../entity/schema/entity-schema.service";
+import { BehaviorSubject } from "rxjs";
+import { failOnStates, waitForChangeTo } from "./session-utils";
 
 /**
  * Responsibilities:
@@ -33,7 +34,7 @@ import { EntitySchemaService } from "../../entity/schema/entity-schema.service";
  * - Hold local user
  * - Check credentials against DB
  * - Provide the state of the synchronisation of the local db
- *   - we want to block before the first full sync
+ * - we want to block before the first full sync
  * - Provide an interface to access the data
  */
 @Injectable()
@@ -42,10 +43,16 @@ export class LocalSession {
   public database: any;
   public liveSyncHandle: any;
 
-  /** StateHandler for login state changes */
-  public loginState: StateHandler<LoginState>;
-  /** StateHandler for sync state changes */
-  public syncState: StateHandler<SyncState>;
+  public loginStateStream = new BehaviorSubject(LoginState.LOGGED_OUT);
+  get loginState(): LoginState {
+    return this.loginStateStream.value;
+  }
+
+  public syncStateStream = new BehaviorSubject(SyncState.UNSYNCED);
+
+  get syncState(): SyncState {
+    return this.syncStateStream.value;
+  }
 
   /** The currently authenticated user entity */
   public currentUser: User;
@@ -56,9 +63,6 @@ export class LocalSession {
    */
   constructor(private _entitySchemaService: EntitySchemaService) {
     this.database = new PouchDB(AppConfig.settings.database.name);
-
-    this.loginState = new StateHandler<LoginState>(LoginState.LOGGED_OUT);
-    this.syncState = new StateHandler<SyncState>(SyncState.UNSYNCED);
   }
 
   /**
@@ -75,30 +79,26 @@ export class LocalSession {
       if (userEntity.checkPassword(password)) {
         this.currentUser = userEntity;
         this.currentUser.decryptCloudPassword(password);
-        this.loginState.setState(LoginState.LOGGED_IN);
+        this.loginStateStream.next(LoginState.LOGGED_IN);
         return LoginState.LOGGED_IN;
       } else {
-        this.loginState.setState(LoginState.LOGIN_FAILED);
+        this.loginStateStream.next(LoginState.LOGIN_FAILED);
         return LoginState.LOGIN_FAILED;
       }
     } catch (error) {
       // possible error: initial sync failed or aborted
-      if (
-        error &&
-        error.toState &&
-        [SyncState.ABORTED, SyncState.FAILED].includes(error.toState)
-      ) {
-        if (this.loginState.getState() === LoginState.LOGIN_FAILED) {
+      if ([SyncState.ABORTED, SyncState.FAILED].includes(error)) {
+        if (this.loginState === LoginState.LOGIN_FAILED) {
           // The sync failed because the remote rejected
           return LoginState.LOGIN_FAILED;
         }
         // The sync failed for other reasons. The user should try again
-        this.loginState.setState(LoginState.LOGGED_OUT);
+        this.loginStateStream.next(LoginState.LOGGED_OUT);
         return LoginState.LOGGED_OUT;
       }
       // possible error: user object not found locally, which should return loginFailed.
       if (error && error.status && error.status === 404) {
-        this.loginState.setState(LoginState.LOGIN_FAILED);
+        this.loginStateStream.next(LoginState.LOGIN_FAILED);
         return LoginState.LOGIN_FAILED;
       }
       // all other cases must throw an error
@@ -110,12 +110,17 @@ export class LocalSession {
    * Wait for the first sync of the database, returns a Promise.
    * Resolves directly, if the database is not initial, otherwise waits for the first change of the SyncState to completed (or failed)
    */
-  public async waitForFirstSync() {
-    if (await this.isInitial()) {
-      return await this.syncState.waitForChangeTo(SyncState.COMPLETED, [
-        SyncState.FAILED,
-        SyncState.ABORTED,
-      ]);
+  private async waitForFirstSync(): Promise<SyncState> {
+    const isInitial = await this.isInitial();
+    if (isInitial) {
+      return this.syncStateStream
+        .pipe(
+          failOnStates([SyncState.FAILED, SyncState.ABORTED]),
+          waitForChangeTo(SyncState.COMPLETED, true)
+        )
+        .toPromise();
+    } else {
+      return SyncState.COMPLETED;
     }
   }
 
@@ -123,7 +128,7 @@ export class LocalSession {
    * Check whether the local database is in an initial state.
    * This check can only be performed async, so this method returns a Promise
    */
-  public isInitial(): Promise<Boolean> {
+  public isInitial(): Promise<boolean> {
     // `doc_count === 0 => initial` is a valid assumptions, as documents for users must always be present, even after db-clean
     return this.database.info().then((result) => result.doc_count === 0);
   }
@@ -133,14 +138,14 @@ export class LocalSession {
    */
   public logout() {
     this.currentUser = undefined;
-    this.loginState.setState(LoginState.LOGGED_OUT);
+    this.loginStateStream.next(LoginState.LOGGED_OUT);
   }
 
   /**
    * Helper to get a User Entity from the Database without needing the EntityMapperService
    * @param userId Id of the User to be loaded
    */
-  public async loadUser(userId: string): Promise<User> {
+  private async loadUser(userId: string): Promise<User> {
     const user = new User("");
     const userData = await this.database.get("User:" + userId);
     this._entitySchemaService.loadDataIntoEntity(user, userData);

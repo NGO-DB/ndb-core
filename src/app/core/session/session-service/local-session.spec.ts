@@ -19,24 +19,67 @@ import { EntitySchemaService } from "../../entity/schema/entity-schema.service";
 import { AppConfig } from "../../app-config/app-config";
 import { LocalSession } from "./local-session";
 import { SessionType } from "../session-type";
+import { fakeAsync, tick } from "@angular/core/testing";
+import { User } from "../../user/user";
+import { PouchDatabase } from "../../database/pouch-database";
+import { LoginState } from "../session-states/login-state.enum";
+import { SyncState } from "../session-states/sync-state.enum";
 
 describe("LocalSessionService", () => {
   let localSession: LocalSession;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     AppConfig.settings = {
       site_name: "Aam Digital - DEV",
       session_type: SessionType.synced,
       database: {
         name: "integration_tests",
-        remote_url: "https://demo.aam-digital.com/db/",
+        remote_url: "https://some.url.de/db/",
       },
     };
+    const schemaService = new EntitySchemaService();
+    localSession = new LocalSession(schemaService);
+    // @ts-ignore
+    localSession.database = PouchDatabase.createWithInMemoryDB()._pouchDB;
 
-    localSession = new LocalSession(new EntitySchemaService());
+    const user = new User("test");
+    user.setNewPassword("pass");
+    const dbUser = schemaService.transformEntityToDatabaseFormat(user);
+    await localSession.database.put(dbUser);
   });
 
-  it("should be created", async () => {
+  afterEach(async () => {
+    await localSession.database.destroy();
+  });
+
+  it("should be created", () => {
     expect(localSession).toBeDefined();
   });
+
+  it("should login a user after the initial sync if not database is present", fakeAsync(() => {
+    spyOn(localSession.database, "info").and.resolveTo({ doc_count: 0 });
+    localSession.login("test", "pass");
+    tick();
+    expect(localSession.loginState).toBe(LoginState.LOGGED_OUT);
+
+    localSession.syncStateStream.next(SyncState.STARTED);
+    tick();
+    expect(localSession.loginState).toBe(LoginState.LOGGED_OUT);
+
+    localSession.syncStateStream.next(SyncState.COMPLETED);
+    tick();
+    expect(localSession.loginState).toBe(LoginState.LOGGED_IN);
+  }));
+
+  it("should not wait for sync completion if local database already exists", fakeAsync(() => {
+    spyOn(localSession.database, "info").and.resolveTo({ doc_count: 1 });
+    expect(localSession.loginState).toBe(LoginState.LOGGED_OUT);
+    expect(localSession.syncState).toBe(SyncState.UNSYNCED);
+
+    localSession.login("test", "pass");
+    tick();
+
+    expect(localSession.loginState).toBe(LoginState.LOGGED_IN);
+    expect(localSession.syncState).not.toBe(SyncState.COMPLETED);
+  }));
 });
