@@ -49,9 +49,8 @@ export const arrayEntitySchemaDatatype: EntitySchemaDatatype = {
       return value;
     }
 
-    const arrayElementDatatype: EntitySchemaDatatype = schemaService.getDatatypeOrDefault(
-      schemaField.innerDataType
-    );
+    const arrayElementDatatype: EntitySchemaDatatype =
+      schemaService.getDatatypeOrDefault(schemaField.innerDataType);
     return value.map((el) =>
       arrayElementDatatype.transformToDatabaseFormat(
         el,
@@ -70,16 +69,15 @@ export const arrayEntitySchemaDatatype: EntitySchemaDatatype = {
   ) => {
     if (!Array.isArray(value)) {
       console.warn(
-        'property to be transformed with "array" EntitySchema is not an array',
+        "property to be transformed with 'array' EntitySchema is not an array",
         value,
         parent
       );
       return value;
     }
 
-    const arrayElementDatatype: EntitySchemaDatatype = schemaService.getDatatypeOrDefault(
-      schemaField.innerDataType
-    );
+    const arrayElementDatatype: EntitySchemaDatatype =
+      schemaService.getDatatypeOrDefault(schemaField.innerDataType);
 
     return value.map((el) =>
       arrayElementDatatype.transformToObjectFormat(

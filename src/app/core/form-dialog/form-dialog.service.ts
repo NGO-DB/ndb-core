@@ -43,13 +43,13 @@ export class FormDialogService {
       typeof (dialogRef.componentInstance as OnInitDynamicComponent)
         .onInitFromDynamicConfig === "function"
     ) {
-      (dialogRef.componentInstance as OnInitDynamicComponent).onInitFromDynamicConfig(
-        componentConfig
-      );
+      (
+        dialogRef.componentInstance as OnInitDynamicComponent
+      ).onInitFromDynamicConfig(componentConfig);
     }
 
     const dialogWrapper = dialogRef.componentInstance.formDialogWrapper;
-    dialogWrapper.onClose.subscribe((res) => dialogRef.close(res));
+    dialogWrapper.closed.subscribe((res) => dialogRef.close(res));
 
     dialogRef.beforeClosed().subscribe((activelyClosed) => {
       if (!activelyClosed && dialogWrapper.isFormDirty) {
